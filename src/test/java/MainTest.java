@@ -33,6 +33,9 @@ public class MainTest {
         bird.eat();
         Fish fish = new Fish();
         fish.eat();
+        rabbit.train();
+        bird.train();
+        fish.train();
     }
 
 }

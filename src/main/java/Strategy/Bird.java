@@ -5,4 +5,9 @@ public class Bird extends Animal{
     public void setEatingStrategy() {
         this.eatingStrategy = new BirdEating();
     }
+
+    @Override
+    public void setTrainingStrategy() {
+        this.trainingStrategy = new BirdTraining();
+    }
 }

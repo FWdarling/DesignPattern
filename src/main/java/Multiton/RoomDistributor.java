@@ -1,2 +1,4 @@
-package Multiton;public class RoomDistributor {
+package Multiton;
+
+public class RoomDistributor {
 }
