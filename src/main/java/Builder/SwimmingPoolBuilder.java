@@ -12,11 +12,6 @@ public class SwimmingPoolBuilder extends StadiumBuilder {
     }
 
     @Override
-    public Stadium getStadium() {
-        return super.getStadium();
-    }
-
-    @Override
     public void setStadiumType() {
         stadium.setStadiumType("swimming pool");
     }

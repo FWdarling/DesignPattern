@@ -7,8 +7,8 @@ public class StadiumConstractor {
         this.stadiumBuilder = stadiumBuilder;
     }
 
-    public Stadium getStadium() {
-        return stadiumBuilder.getStadium();
+    public void getStadium() {
+        stadiumBuilder.getStadium();
     }
 
     public void constructStadium() {

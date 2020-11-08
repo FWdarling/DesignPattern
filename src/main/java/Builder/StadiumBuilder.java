@@ -1,14 +1,11 @@
 package Builder;
 
-import java.util.Map;
-
-abstract class StadiumBuilder {
+public abstract class StadiumBuilder {
 
     protected Stadium stadium;
 
-    public Stadium getStadium() {
+    public void getStadium() {
         stadium.showStadium();
-        return stadium;
     }
 
     public void buildNewStadium() {
