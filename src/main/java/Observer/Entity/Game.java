@@ -1,10 +1,6 @@
 package Observer.Entity;
 import java.util.ArrayList;
 
-enum SportType{
-    run, swim;
-}
-
 /**
  * description: 比赛实体类
  * date: 11/11/20 12:49 AM
@@ -13,10 +9,11 @@ enum SportType{
 public class Game {
 
     private Referee referee;
-    private ArrayList<Athlete> athletes;
+    private final ArrayList<Athlete> athletes;
     private final SportType sportType;
 
-    Game(SportType sportType){
+    public Game(SportType sportType){
+        this.athletes = new ArrayList<Athlete>();
         this.sportType = sportType;
     }
 
@@ -51,5 +48,14 @@ public class Game {
      */
     public void assignReferee() {
         referee = null;
+    }
+
+    public void over() {
+        referee.setbIsBusy(false);
+    }
+
+    public void setReferee(Referee referee) {
+        this.referee = referee;
+        referee.setbIsBusy(true);
     }
 }

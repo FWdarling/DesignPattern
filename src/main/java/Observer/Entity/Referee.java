@@ -11,12 +11,18 @@ public class Referee {
     private Game game;
     private boolean bIsBusy;
 
+    public Referee(Game _game){
+        game = _game;
+        bIsBusy = false;
+    }
+
     public Game getGame() {
         return game;
     }
 
     public void setGame(Game game) {
         this.game = game;
+
     }
 
     public boolean getbIsBusy() {

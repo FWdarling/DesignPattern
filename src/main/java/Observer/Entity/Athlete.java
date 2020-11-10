@@ -6,7 +6,7 @@ package Observer.Entity;
  * author: fourwood
  */
 public abstract class Athlete {
-    private final String name;
+    protected final String name;
 
     public Athlete(String _name){
         name = _name;
