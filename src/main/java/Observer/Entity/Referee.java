@@ -8,12 +8,18 @@ import java.util.ArrayList;
  * author: fourwood
  */
 public class Referee {
+    private final String name;
     private Game game;
     private boolean bIsBusy;
 
-    public Referee(Game _game){
+    public Referee(Game _game, String _name){
+        name = _name;
         game = _game;
-        bIsBusy = false;
+        bIsBusy = true;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public Game getGame() {
@@ -22,7 +28,7 @@ public class Referee {
 
     public void setGame(Game game) {
         this.game = game;
-
+        this.bIsBusy = true;
     }
 
     public boolean getbIsBusy() {

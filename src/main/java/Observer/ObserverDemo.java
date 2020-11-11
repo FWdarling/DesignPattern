@@ -19,18 +19,20 @@ public class ObserverDemo {
         runGame1.addAthlete(runAthlete1);
         RunAthlete runAthlete2 = new RunAthlete("2号跑步运动员");
         runGame1.addAthlete(runAthlete2);
-        Referee runReferee1 = new Referee(runGame1);
+        runGame1.assignReferee();
+        Referee runReferee1 = runGame1.getReferee();
 
         SwimAthlete swimAthlete1 = new SwimAthlete("1号游泳运动员");
         swimGame1.addAthlete(swimAthlete1);
         SwimAthlete swimAthlete2 = new SwimAthlete("2号游泳运动员");
         swimGame1.addAthlete(swimAthlete2);
-        Referee swimReferee1 = new Referee(swimGame1);
+        swimGame1.assignReferee();
+        Referee swimReferee1 = swimGame1.getReferee();
 
-        System.out.println("跑步比赛1裁判宣布比赛开始！");
+        System.out.println(runReferee1.getName() + "宣布1号跑步比赛开始！");
         runReferee1.announce();
 
-        System.out.println("游泳比赛1裁判宣布比赛开始！");
+        System.out.println(swimReferee1.getName() + "宣布1号游泳比赛开始！");
         swimReferee1.announce();
     }
 }

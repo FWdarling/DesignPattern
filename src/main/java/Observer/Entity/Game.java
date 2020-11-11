@@ -1,4 +1,6 @@
 package Observer.Entity;
+import FlyWeight.RefereeFactory;
+
 import java.util.ArrayList;
 
 /**
@@ -47,15 +49,11 @@ public class Game {
      * @return void
      */
     public void assignReferee() {
-        referee = null;
+        referee = RefereeFactory.getReferee(this);
     }
 
     public void over() {
         referee.setbIsBusy(false);
     }
 
-    public void setReferee(Referee referee) {
-        this.referee = referee;
-        referee.setbIsBusy(true);
-    }
 }
