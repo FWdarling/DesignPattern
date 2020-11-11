@@ -1,4 +1,4 @@
-package Observer.Entity;
+package observer.entity;
 
 /**
  * description: 运动员抽象类

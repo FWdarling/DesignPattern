@@ -1,6 +1,6 @@
-package Observer;
+package observer;
 
-import Observer.Entity.Athlete;
+import observer.entity.Athlete;
 
 /**
  * description: 跑步运动员类，继承于Athlete类，观察者模式使用

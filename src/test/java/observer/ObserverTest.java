@@ -1,4 +1,4 @@
-package Observer;
+package observer;
 
 import org.junit.Test;
 

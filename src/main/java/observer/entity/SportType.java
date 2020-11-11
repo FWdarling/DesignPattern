@@ -1,4 +1,4 @@
-package Observer.Entity;
+package observer.entity;
 
 /**
  * description: 比赛所涉及到的运动类型

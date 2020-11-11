@@ -1,5 +1,5 @@
-package Observer.Entity;
-import FlyWeight.RefereeFactory;
+package observer.entity;
+import flyweight.RefereeFactory;
 
 import java.util.ArrayList;
 

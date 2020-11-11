@@ -1,4 +1,4 @@
-package Observer.Entity;
+package observer.entity;
 
 import java.util.ArrayList;
 

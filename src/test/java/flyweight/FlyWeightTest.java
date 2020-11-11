@@ -1,6 +1,5 @@
-package FlyWeight;
+package flyweight;
 
-import Observer.ObserverDemo;
 import org.junit.Test;
 
 /**
