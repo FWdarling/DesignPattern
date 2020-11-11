@@ -1,5 +1,8 @@
 package Builder;
 
+/**
+ * 游泳比赛场馆建造类
+ */
 public class SwimmingPoolBuilder extends StadiumBuilder {
     @Override
     public void buildSpectatorArea() {

@@ -1,5 +1,8 @@
 package Builder;
 
+/**
+ * 飞行类场馆建造类，继承自场馆建造类
+ */
 public class FlyingVenueBuilder extends StadiumBuilder{
     @Override
     public void buildSpectatorArea() {
