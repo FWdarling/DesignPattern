@@ -1,4 +1,5 @@
 package Command;
+
 import Bridge.Material;
 import Bridge.Medal;
 //Object Medal;
@@ -29,10 +30,7 @@ public class AwardMedalCommand implements Command{
 	}
 	
 	
-	/**
-	 * Test Code
-	 * @param args
-	 */
+	
 	/*public static void main(String args[]) {
 		Player myPlayer=new Player();
 		AwardMedalCommand command=new AwardMedalCommand(myPlayer,"Swimming",Material.Gold);
