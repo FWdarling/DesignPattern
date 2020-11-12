@@ -1,7 +1,10 @@
 import Multiton.RoomDistributor;
-import Multiton.TrainingRoom;
+import Multiton.entity.TrainingRoom;
 import org.junit.Test;
 
+/**
+ * Multiton测试类
+ */
 public class MultitonTest {
     @Test
     public void MultitonTest(){

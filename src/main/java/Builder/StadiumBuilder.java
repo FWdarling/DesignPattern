@@ -1,5 +1,7 @@
 package Builder;
 
+import Builder.entity.Stadium;
+
 /**
  * 场馆建造类，所有场馆建造类的抽象父类
  */

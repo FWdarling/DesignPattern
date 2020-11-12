@@ -1,5 +1,7 @@
 package Proxy;
 
+import Proxy.entity.AnimalAthlete;
+
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 

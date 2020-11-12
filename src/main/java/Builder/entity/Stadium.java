@@ -1,4 +1,4 @@
-package Builder;
+package Builder.entity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,15 +6,15 @@ import java.util.Map;
 /**
  * 所有场馆类的父类
  */
-class Stadium {
+public class Stadium {
 //    场馆类型
     private String stadiumType;
 
 //    观众席
-    private Map<String, Integer> spectatorArea = new HashMap<>();
+    private final Map<String, Integer> spectatorArea = new HashMap<>();
 
 //    竞赛区
-    private Map<String, Integer> competitionArea = new HashMap<>();
+    private final Map<String, Integer> competitionArea = new HashMap<>();
 
 //    竞赛区类型
     private String competitionAreaType;

@@ -1,5 +1,10 @@
 package Strategy;
 
+/**
+ * 鱼类训练类
+ * 继承自TrainingStrategy接口
+ * 实例化鱼类训练方法
+ */
 public class FishTraning implements TrainingStrategy {
     @Override
     public void trainingAlgorithm() {

@@ -1,4 +1,4 @@
-package Multiton;
+package Multiton.entity;
 
 /**
  * 训练室类

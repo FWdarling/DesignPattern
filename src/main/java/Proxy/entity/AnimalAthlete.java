@@ -1,4 +1,4 @@
-package Proxy;
+package Proxy.entity;
 
 import java.util.concurrent.TimeUnit;
 

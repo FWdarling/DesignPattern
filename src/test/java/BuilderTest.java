@@ -4,6 +4,9 @@ import Builder.StadiumBuilder;
 import Builder.StadiumConstractor;
 import org.junit.Test;
 
+/**
+ * Builder测试类
+ */
 public class BuilderTest {
     @Test
     public void builderTest() {

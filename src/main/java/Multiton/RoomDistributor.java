@@ -1,5 +1,7 @@
 package Multiton;
 
+import Multiton.entity.TrainingRoom;
+
 /**
  * 负责分配训练室的类
  */

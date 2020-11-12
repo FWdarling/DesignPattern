@@ -1,10 +1,13 @@
-import Proxy.AnimalAthlete;
+import Proxy.entity.AnimalAthlete;
 import Proxy.AthleteProxy;
 import Proxy.Reporter;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
+/**
+ * Proxy测试类
+ */
 public class ProxyTest {
     @Test
     public void proxyTest() throws InterruptedException {

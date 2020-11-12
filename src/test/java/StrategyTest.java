@@ -1,8 +1,11 @@
-import Strategy.Bird;
-import Strategy.Fish;
-import Strategy.Rabbit;
+import Strategy.entity.Bird;
+import Strategy.entity.Fish;
+import Strategy.entity.Rabbit;
 import org.junit.Test;
 
+/**
+ * Strategy测试类
+ */
 public class StrategyTest {
     @Test
     public void StrategyTest() {
