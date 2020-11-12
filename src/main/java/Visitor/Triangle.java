@@ -1,0 +1,36 @@
+package main.Visitor;
+
+/**
+ * @Author: CINDY DENG
+ * @Date: 2020/11/12,22:02
+ * @Version: 1.0
+ */
+public class Triangle implements Element {
+    private double edgeA;
+    private double edgeB;
+    private double edgeC;
+
+    public Triangle(double edgeA, double edgeB, double edgeC) {
+        this.edgeA = edgeA;
+        this.edgeB = edgeB;
+        this.edgeC = edgeC;
+    }
+
+    public double getEdgeA() {
+        return edgeA;
+    }
+
+    public double getEdgeB() {
+        return edgeB;
+    }
+
+    public double getEdgeC() {
+        return edgeC;
+    }
+
+
+    // 方法接受策略对象为参数，方法内将自身作为参数再传给策略的方法
+    public double accept(Visitor visitor) {
+        return visitor.ofShape(this);
+    }
+}
