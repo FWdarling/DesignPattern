@@ -83,18 +83,4 @@ public class PlayerData /*implements Serializable*/ {
 		System.out.println("运动员动物类型:"+_animalType);
 	}
 	
-	//test code
-	/*public static void main(String args[]) {
-		PlayerData myData=new PlayerData();
-		System.out.println(myData.getPlayerId());
-		System.out.println(myData.getPlayerName());
-		System.out.println(myData.getPlayerType());
-		myData.setPlayerId("CNN1");
-		myData.setPlayerName("KiKi");
-		myData.setPlayerType("Monkey");
-		System.out.println(myData.getPlayerId());
-		System.out.println(myData.getPlayerName());
-		System.out.println(myData.getPlayerType());
-	}*/
-	
 }

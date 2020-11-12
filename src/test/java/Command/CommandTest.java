@@ -9,7 +9,7 @@ import Bridge.Material;
  */
 public class CommandTest {
 	@Test
-	public void CommandTest() {
+	public void commandTest() {
 		System.out.println("------------------");
         System.out.println("This is Command Test");
         System.out.println("------------------");
