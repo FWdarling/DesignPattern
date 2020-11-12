@@ -3,6 +3,9 @@ package extensionobjects.concreteextensions;
 import extensionobjects.abstractextensions.DrawExtension;
 import extensionobjects.overtime.DrawOvertime;
 
+/**
+ * 平局加时类
+ */
 public class Draw implements DrawExtension {
     private final DrawOvertime overtime;
 

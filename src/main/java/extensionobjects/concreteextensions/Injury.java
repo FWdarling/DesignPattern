@@ -3,6 +3,9 @@ package extensionobjects.concreteextensions;
 import extensionobjects.abstractextensions.InjuryExtension;
 import extensionobjects.overtime.InjuryOvertime;
 
+/**
+ * 伤停补时类
+ */
 public class Injury implements InjuryExtension {
     private final InjuryOvertime overtime;
 
