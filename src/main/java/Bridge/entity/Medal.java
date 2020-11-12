@@ -27,16 +27,14 @@ public class Medal{
 	}
 	
 	//test code
-	/*public static void main(String args[]) {
-		Sport nowSport=new Swimming();
+	public static void main(String args[]) {
 		Medal myMedal=new Medal(Material.Gold,"Swimming");
 		myMedal.printMedalInfo();
-		nowSport=new Basketball();
 		myMedal=new Medal(Material.Silver,"Basketball");
 		myMedal.printMedalInfo();
 		//异常输入测试
 		myMedal=new Medal(Material.Silver,"???");
 		myMedal.printMedalInfo();
-	}*/
+	}
 	
 }
