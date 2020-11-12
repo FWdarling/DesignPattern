@@ -9,7 +9,7 @@ import org.junit.Test;
  */
 public class PrivateClassDataTest {
 	@Test
-	public void PrivateClassDataTest() {
+	public void privateClassDataTest() {
 		System.out.println("------------------");
         System.out.println("This is PrivateClassData Test");
         System.out.println("------------------");

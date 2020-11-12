@@ -26,15 +26,4 @@ public class Medal{
 		System.out.println(_sport.getSportName()+"-"+_material.getMaterial());
 	}
 	
-	//test code
-	public static void main(String args[]) {
-		Medal myMedal=new Medal(Material.Gold,"Swimming");
-		myMedal.printMedalInfo();
-		myMedal=new Medal(Material.Silver,"Basketball");
-		myMedal.printMedalInfo();
-		//异常输入测试
-		myMedal=new Medal(Material.Silver,"???");
-		myMedal.printMedalInfo();
-	}
-	
 }

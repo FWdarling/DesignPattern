@@ -5,8 +5,8 @@ import Bridge.Medal;
 //Object Medal;
 
 public class AwardMedalCommand implements Command{
-	Player _awardedPlayer;
-	Medal _medal;
+	private Player _awardedPlayer;
+	private Medal _medal;
 	
 	/**
 	 * 初始化颁发奖牌命令
@@ -29,11 +29,4 @@ public class AwardMedalCommand implements Command{
 		_awardedPlayer.addMedal(_medal);
 	}
 	
-	
-	
-	/*public static void main(String args[]) {
-		Player myPlayer=new Player();
-		AwardMedalCommand command=new AwardMedalCommand(myPlayer,"Swimming",Material.Gold);
-		command.execute();
-	}*/
 }

@@ -8,7 +8,7 @@ import org.junit.Test;
  */
 public class BridgeTest {
 	@Test
-	public void BridgeTest() {
+	public void bridgeTest() {
 		System.out.println("------------------");
         System.out.println("This is Bridge Test");
         System.out.println("------------------");
