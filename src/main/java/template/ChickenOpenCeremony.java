@@ -8,7 +8,7 @@ package template;
  **/
 public class ChickenOpenCeremony extends DefaltOpenCeremony implements OpenCeremony{
     @Override
-    public void OpenCeremonyPerform(){
+    public void openCeremonyPerform(){
         System.out.println("鸡代表队表演了金鸡独立！\n");
     }
 }

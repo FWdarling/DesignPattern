@@ -9,7 +9,7 @@ package template;
 public class BirdOpenCeremony extends DefaltOpenCeremony implements OpenCeremony{
 
     @Override
-    public void OpenCeremonyPerform(){
+    public void openCeremonyPerform(){
         System.out.println("鸟代表队表演了老鹰捉小鸡！\n");
     }
 }

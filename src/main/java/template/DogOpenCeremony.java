@@ -8,7 +8,7 @@ package template;
  **/
 public class DogOpenCeremony extends DefaltOpenCeremony implements OpenCeremony{
     @Override
-    public void OpenCeremonyPerform(){
+    public void openCeremonyPerform(){
         System.out.println("狗代表队表演了蜀犬吠日！\n");
     }
 }

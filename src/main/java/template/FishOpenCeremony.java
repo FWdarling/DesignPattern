@@ -9,7 +9,7 @@ package template;
 public class FishOpenCeremony extends DefaltOpenCeremony implements OpenCeremony{
 
     @Override
-    public void OpenCeremonyPerform(){
+    public void openCeremonyPerform(){
         System.out.println("鱼代表队表演了咸鱼翻身！\n");
     }
 }

@@ -8,7 +8,7 @@ package template;
  **/
 public class BearOpenCeremony extends DefaltOpenCeremony implements OpenCeremony {
     @Override
-    public void OpenCeremonyPerform() {
+    public void openCeremonyPerform() {
         System.out.println("熊代表队表演了老熊蹭树！\n");
     }
 }

@@ -9,18 +9,18 @@ package template;
 public class DefaltOpenCeremony implements OpenCeremony{
 
     @Override
-    public void OpenCeremonyProcess() {
+    public void openCeremonyProcess() {
         System.out.println("代表队进入体育场\n");
         System.out.println("代表队向运动场内观众致意\n");
         System.out.println("代表队走过半场来到最后一个直道\n");
         System.out.println("代表队停止等待前方代表队表演\n");
         System.out.println("代表队到达主席台\n");
-        OpenCeremonyPerform();
+        openCeremonyPerform();
         System.out.println("代表队走出运动场！\n\n");
     }
 
     @Override
-    public void OpenCeremonyPerform(){
+    public void openCeremonyPerform(){
         System.out.println("clapping\n");
     }
 }
