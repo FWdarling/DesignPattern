@@ -2,7 +2,6 @@ package callback;
 
 import callback.entity.ScoreBoard;
 
-import java.awt.event.InputEvent;
 import java.util.Scanner;
 
 /**

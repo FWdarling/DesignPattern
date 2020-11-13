@@ -2,8 +2,6 @@ package callback;
 
 import callback.entity.ScoreBoard;
 
-import java.util.Scanner;
-
 /**
  * @Author Max Leung
  * @Description:

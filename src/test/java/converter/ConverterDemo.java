@@ -1,6 +1,6 @@
 package converter;
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * @Author Max Leung
