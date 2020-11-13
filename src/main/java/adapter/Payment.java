@@ -36,8 +36,8 @@ public interface Payment {
         password: password for the platform.
 
      return value:
-     true: login succeeds.
-     false：login fails.
+        true: login succeeds.
+        false：login fails.
 
      Examples:
      >>Payment payment=new Payment();
