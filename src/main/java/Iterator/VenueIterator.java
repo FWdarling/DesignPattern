@@ -1,4 +1,7 @@
-package Iterator;
+package iterator;
+
+import iterator.entity.CompetitionVenue;
+import iterator.entity.VenueCollection;
 
 public class VenueIterator implements MenuIterator<CompetitionVenue>{
 

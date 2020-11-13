@@ -1,6 +1,8 @@
-package Iterator;
+package iterator;
 
 
+import iterator.entity.ManCollection;
+import iterator.entity.SportsMan;
 
 public class SportsManIterator implements MenuIterator<SportsMan>{
 
@@ -24,6 +26,7 @@ public class SportsManIterator implements MenuIterator<SportsMan>{
     @Override
     public Object Next() {
         SportsMan man = sportsMan.getManAt(index);
+
         index++;
         return man;
     }

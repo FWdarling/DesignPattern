@@ -20,6 +20,10 @@ public class Equipment extends EquipmentRoom {
         return value;
     }
 
+    /**
+     * 输出运动器材的名称和价值
+     * @param Type
+     */
     @Override
     protected void PrintList(String Type) {
         System.out.println(Type + "/" + name+"["+value+"]");

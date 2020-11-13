@@ -18,6 +18,10 @@ public class Locker extends EquipmentRoom{
         return name;
     }
 
+    /**
+     * 会统计当前分类下所有运动器材的总价值
+     * @return
+     */
     @Override
     public int GetValue() {
         int value=0;
@@ -30,6 +34,11 @@ public class Locker extends EquipmentRoom{
         return value;
     }
 
+    /**
+     * 输出当前分类下所有的运动器材的名称和价值
+     * 类似于文件遍历
+     * @param Type
+     */
     @Override
     protected void PrintList(String Type) {
         System.out.println(Type + "/" + this);
@@ -41,6 +50,11 @@ public class Locker extends EquipmentRoom{
 
     }
 
+    /**
+     * 在某个大的分类下添加细化的分类，eg.“球”中再划分“空心球/实心球”
+     * @param equip
+     * @return
+     */
     @Override
     public EquipmentRoom add(EquipmentRoom equip) {
         equipments.add(equip);

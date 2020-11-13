@@ -1,6 +1,6 @@
 package MVC;
 
-import Iterator.SportsMan;
+import iterator.entity.SportsMan;
 
 public class SportsManController {
 

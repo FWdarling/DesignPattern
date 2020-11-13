@@ -6,16 +6,19 @@ import org.junit.Test;
 
 public class CompositeTest {
     @Test
-    public static void main(String []args)
+    public void compositetest()
     {
-        Locker Ball=new Locker("Çò");
+        Locker Ball=new Locker("çƒ");
 
-        Locker HollowBall=new Locker("¿ÕĞÄÇò");
+        Locker HollowBall=new Locker("ç©ºå¿ƒçƒ");
         Ball.add(HollowBall);
 
-        Equipment basketball=new Equipment("ÀºÇò",120);
-        Equipment football=new Equipment("×ãÇò",100);
+        Equipment basketball=new Equipment("ç¯®çƒ",120);
+        Equipment football=new Equipment("è¶³çƒ",100);
 
+        /**
+         *åœ¨ç©ºå¿ƒçƒè¿™ä¸ªåˆ’åˆ†ä¸‹é¢æ·»åŠ å…·ä½“çš„ç¯®çƒå’Œè¶³çƒä¸¤ä¸ªè¿åŠ¨å™¨æã€‚
+         */
         HollowBall.add(basketball).add(football);
 
 
@@ -24,7 +27,7 @@ public class CompositeTest {
         HollowBall.GetFullCategory();
 
 
-        Equipment GymnasticsExhibitionBall=new Equipment("Ìå²Ù±íÑİÇò",500);
+        Equipment GymnasticsExhibitionBall=new Equipment("ä½“æ“è¡¨æ¼”çƒ",500);
         HollowBall.add(GymnasticsExhibitionBall);
 
         Ball.PrintList();

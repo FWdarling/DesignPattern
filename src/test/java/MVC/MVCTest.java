@@ -1,14 +1,14 @@
 package MVC;
 
 
-import Iterator.ManCollection;
-import Iterator.MenuIterator;
-import Iterator.SportsMan;
+import iterator.entity.ManCollection;
+import iterator.MenuIterator;
+import iterator.entity.SportsMan;
 import org.junit.Test;
 
 public class MVCTest {
     @Test
-    public static void main(String []args)
+    public void MVCtest()
     {
         ManCollection manCollection=new ManCollection(5);
         manCollection.appendMan(new SportsMan("Healy",20));
@@ -23,6 +23,9 @@ public class MVCTest {
         MenuIterator it=manCollection.iterator();
 
         while (it.HasNext()) {
+            /**
+             * 利用controller来遍历所有的运动员，并且用View来打印输出运动员的信息。
+             */
             man = (SportsMan) it.Next();
             SportsManController testController=new SportsManController(man,testView);
 
@@ -33,6 +36,9 @@ public class MVCTest {
         man = (SportsMan) its.Next();
         SportsManController testController=new SportsManController(man,testView);
         System.out.println("----------------");
+        /**
+         * 利用controller来改变对应运动员的信息。
+         */
         testController.PrintDetails(testController.GetManName(),testController.GetManAge());
 
 

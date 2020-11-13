@@ -1,4 +1,4 @@
-package Iterator;
+package iterator.entity;
 
 public class SportsMan {
     private String name;
