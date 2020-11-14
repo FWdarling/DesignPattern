@@ -1,4 +1,4 @@
-package main.Prototype.entity;
+package main.prototype.entity;
 
 /**
  * @Author: CINDY DENG
@@ -8,12 +8,9 @@ package main.Prototype.entity;
 public class Athlete {
     protected final String name;
     protected final String sportsType;
-    protected final AnimalType animalType;
 
-
-    public Athlete(String _name, AnimalType _animalType,String _sportsType){
+    public Athlete(String _name,String _sportsType){
         name = _name;
-        animalType = _animalType;
         sportsType = _sportsType;
     }
 

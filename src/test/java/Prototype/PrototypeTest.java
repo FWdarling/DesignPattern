@@ -1,9 +1,8 @@
-package test.Prototype;
+package test.prototype;
 
-import main.Prototype.Certificate;
-import main.Prototype.Prize;
-import main.Prototype.entity.AnimalType;
-import main.Prototype.entity.Athlete;
+import main.prototype.Certificate;
+import main.prototype.Prize;
+import main.prototype.entity.Athlete;
 import org.junit.Test;
 
 /**
@@ -15,10 +14,10 @@ public class PrototypeTest {
     @Test
     public void test() throws CloneNotSupportedException{
         System.out.println("====Prototype===");
-        Athlete athlete1 = new Athlete("ALEX", AnimalType.CAT,"highJump");
-        Athlete athlete2 = new Athlete("Cathy",AnimalType.DOG,"highJump");
-        Athlete athlete3 = new Athlete("Tim",AnimalType.TIGER,"highJump");
-        Athlete athlete4 = new Athlete("Jerry",AnimalType.ELEPHANT,"highJump");
+        Athlete athlete1 = new Athlete("ALEX", "highJump");
+        Athlete athlete2 = new Athlete("Cathy","highJump");
+        Athlete athlete3 = new Athlete("Tim","highJump");
+        Athlete athlete4 = new Athlete("Jerry","highJump");
 
         Certificate tmpCertificate = new Certificate(athlete1.getName(),athlete1.getSportsType(), Prize.FPRSTPRIZE);
         tmpCertificate.printCertificate();

@@ -1,4 +1,4 @@
-package main.AnimalOlympicsYard;
+package main.animalOlympicsYard;
 
 /**
  * @Author: CINDY DENG
@@ -22,11 +22,8 @@ public class OlympicsYard {
                     System.out.println("=== 双重检查锁 Double Checked Locking 模式===");
                     System.out.println("动物运动会总场景初始化中");
                     //=================具体的初始化逻辑=================//
-                    //Dao playYardDao=new DaoImpl();
-                    //if( (_instance = Dao.getFarm()) == null) {
-                        _instance = OlympicsYard.init();
-                        //farmDao.updateFarm(_instance);
-                    //}
+                    //待添加其他场景的初始化
+                    _instance = OlympicsYard.init();
                     System.out.println("总场景OlympicsYard初始化成功！");
                 }
             }

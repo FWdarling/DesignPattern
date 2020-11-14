@@ -1,4 +1,4 @@
-package main.Visitor;
+package main.visitor;
 
 /**
  * @Author: CINDY DENG
@@ -6,5 +6,5 @@ package main.Visitor;
  * @Version: 1.0
  */
 public interface Element {
-    double accept(Visitor visitor);
+    public abstract double accept(Visitor visitor);
 }

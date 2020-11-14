@@ -1,6 +1,6 @@
-package test.DoubleCheckedLocking;
+package test.doubleCheckedLocking;
 
-import main.AnimalOlympicsYard.OlympicsYard;
+import main.animalOlympicsYard.OlympicsYard;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;

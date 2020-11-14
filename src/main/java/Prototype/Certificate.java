@@ -1,4 +1,4 @@
-package main.Prototype;
+package main.prototype;
 
 /**
  * @Author: CINDY DENG
@@ -37,7 +37,6 @@ public class Certificate implements Cloneable {
     @Override
     public Object clone() throws CloneNotSupportedException{
         System.out.println("奖状复制生成成功，且同时完成特定信息修改");
-        //return (Certificate)super.clone();
         Certificate certificate  = null;
         try{
             certificate = (Certificate)super.clone();

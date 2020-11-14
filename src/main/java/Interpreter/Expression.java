@@ -1,4 +1,4 @@
-package main.Interpreter;
+package main.interpreter;
 
 /**
  * @Author: CINDY DENG
@@ -6,5 +6,5 @@ package main.Interpreter;
  * @Version: 1.0
  */
 public interface Expression {
-    double interpret();
+    public abstract double interpret();
 }

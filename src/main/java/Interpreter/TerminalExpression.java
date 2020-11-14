@@ -1,7 +1,7 @@
-package main.Interpreter;
+package main.interpreter;
 
 import java.rmi.UnexpectedException;
-import main.Interpreter.entity.Const;
+import main.interpreter.entity.Const;
 
 /**
  * @Author: CINDY DENG

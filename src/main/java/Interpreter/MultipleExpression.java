@@ -1,4 +1,4 @@
-package main.Interpreter;
+package main.interpreter;
 
 /**
  * @Author: CINDY DENG
@@ -13,6 +13,7 @@ public class MultipleExpression implements  Expression{
         this._right = right;
     }
 
+    //完成该语法表达式的左边部分和右边部分的计算操作，这里为乘法操作
     @Override
     public double interpret(){
         return  _left.interpret()*_right.interpret();

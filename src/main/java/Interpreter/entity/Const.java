@@ -1,4 +1,4 @@
-package main.Interpreter.entity;
+package main.interpreter.entity;
 
 /**
  * @Author: CINDY DENG

@@ -1,4 +1,4 @@
-package main.Visitor;
+package main.visitor;
 
 /**
  * @Author: CINDY DENG
@@ -18,6 +18,7 @@ public class Circle implements Element {
     }
 
     // 方法接受策略对象为参数，方法内将自身作为参数再传给策略的方法
+    @Override
     public double accept(Visitor visitor) {
         return visitor.ofShape(this);
     }

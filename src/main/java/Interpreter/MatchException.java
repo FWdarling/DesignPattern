@@ -1,4 +1,4 @@
-package main.Interpreter;
+package main.interpreter;
 
 /**
  * @Author: CINDY DENG
@@ -7,6 +7,6 @@ package main.Interpreter;
  */
 public class MatchException extends Exception{
     public MatchException(String msg){
-        super(msg);
+        System.out.println("Match Error Occur:"+msg);
     }
 }
