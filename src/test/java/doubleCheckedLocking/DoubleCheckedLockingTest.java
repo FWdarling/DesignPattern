@@ -6,9 +6,9 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertTrue;
 
 /**
- * @Author: CINDY DENG
- * @Date: 2020/11/12,22:57
- * @Version: 1.0
+ * Author: CINDY DENG
+ * Date: 2020/11/12,22:57
+ * Version: 1.0
  */
 public class DoubleCheckedLockingTest {
     private OlympicsYard _yard;
