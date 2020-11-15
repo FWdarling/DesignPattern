@@ -1,9 +1,9 @@
 package animalOlympicsYard;
 
 /**
- * @Author: CINDY DENG
- * @Date: 2020/11/12,22:24
- * @Version: 1.0
+ * Author: CINDY DENG
+ * Date: 2020/11/12,22:24
+ * Version: 1.0
  */
 public class OlympicsYard {
     static OlympicsYard _instance;
