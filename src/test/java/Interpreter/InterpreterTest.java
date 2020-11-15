@@ -1,8 +1,6 @@
-package test.interpreter;
+package interpreter;
 
-import main.interpreter.MatchException;
-import main.interpreter.MatchExpression;
-import main.interpreter.entity.Const;
+import interpreter.entity.Const;
 import org.junit.Test;
 
 /**

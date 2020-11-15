@@ -1,4 +1,4 @@
-package main.prototype;
+package prototype;
 
 /**
  * @Author: CINDY DENG

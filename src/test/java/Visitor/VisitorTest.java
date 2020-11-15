@@ -1,6 +1,5 @@
-package test.visitor;
+package visitor;
 
-import main.visitor.*;
 import org.junit.Test;
 
 import java.util.ArrayList;

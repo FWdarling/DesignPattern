@@ -1,4 +1,4 @@
-package main.animalOlympicsYard;
+package animalOlympicsYard;
 
 /**
  * @Author: CINDY DENG

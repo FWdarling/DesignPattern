@@ -1,4 +1,4 @@
-package main.prototype.entity;
+package prototype.entity;
 
 /**
  * @Author: CINDY DENG

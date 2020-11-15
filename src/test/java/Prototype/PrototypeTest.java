@@ -1,8 +1,6 @@
-package test.prototype;
+package prototype;
 
-import main.prototype.Certificate;
-import main.prototype.Prize;
-import main.prototype.entity.Athlete;
+import prototype.entity.Athlete;
 import org.junit.Test;
 
 /**

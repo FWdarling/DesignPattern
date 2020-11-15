@@ -1,4 +1,4 @@
-package main.interpreter;
+package interpreter;
 
 
 
