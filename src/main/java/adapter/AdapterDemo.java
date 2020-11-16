@@ -65,6 +65,7 @@ public class AdapterDemo {
             }
         }
     }
+
     private boolean transaction(int userOption){
         Scanner scanner = new Scanner(System.in);
         boolean loginStatus=transactionLogin(userOption);
@@ -79,6 +80,7 @@ public class AdapterDemo {
         }
         return true;
     }
+
     public void adapterTest(){
         System.out.println("----------------------------------------------------Adapter Test----------------------------------------------------\n");
         System.out.println("请选择支付方式：1.支付宝 2.微信 3.退出\n");
