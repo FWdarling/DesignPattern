@@ -2,6 +2,8 @@ package composite;
 
 
 public class Equipment extends EquipmentRoom {
+//    所有的方法名，成员名，变量名使用小驼峰命名（我们前面在群里统一过了）把模块内所有文件的命名统一
+//            其他问题见comments
     private String name;
     private int value;
     public Equipment(String name,int value)
@@ -11,12 +13,12 @@ public class Equipment extends EquipmentRoom {
     }
 
     @Override
-    public String GetCategory() {
+    public String getCategory() {
         return name;
     }
 
     @Override
-    public int GetValue() {
+    public int getValue() {
         return value;
     }
 
@@ -25,7 +27,7 @@ public class Equipment extends EquipmentRoom {
      * @param Type
      */
     @Override
-    protected void PrintList(String Type) {
+    protected void printList(String Type) {
         System.out.println(Type + "/" + name+"["+value+"]");
     }
 }

@@ -5,6 +5,6 @@ public interface MenuIterator<T>{
      * 由两种iterator继承
      * @return
      */
-    public abstract boolean HasNext();
-    public abstract Object Next();
+    public abstract boolean hasNext();
+    public abstract Object next();
 }

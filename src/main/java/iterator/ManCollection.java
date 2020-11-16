@@ -1,4 +1,4 @@
-package iterator.entity;
+package iterator;
 
 
 import iterator.Aggregate;

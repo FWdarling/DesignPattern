@@ -7,32 +7,32 @@ public class SportsManController {
     private SportsManView view;
     private SportsMan model;
 
-    public SportsManController(SportsMan _model,SportsManView _view){
-        view=_view;
-        model=_model;
+    public SportsManController(SportsMan model,SportsManView view){
+        this.view=view;
+        this.model=model;
     }
 
-    public void SetManName(String name)
+    public void setManName(String name)
     {
-        model.ModifyName(name);
+        model.modifyName(name);
     }
 
-    public void SetManAge(int age)
+    public void setManAge(int age)
     {
-        model.ModifyAge(age);
+        model.modifyAge(age);
     }
 
-    public String GetManName()
+    public String getManName()
     {
-        return model.GetName();
+        return model.getName();
     }
 
-    public int GetManAge()
+    public int getManAge()
     {
-        return model.GetAge();
+        return model.getAge();
     }
 
-    public void PrintDetails(String name,int age)
+    public void printDetails(String name,int age)
     {
         view.printSportsManDetails(name,age);
     }

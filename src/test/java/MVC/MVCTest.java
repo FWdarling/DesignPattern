@@ -1,7 +1,7 @@
 package MVC;
 
 
-import iterator.entity.ManCollection;
+import iterator.ManCollection;
 import iterator.MenuIterator;
 import iterator.entity.SportsMan;
 import org.junit.Test;
@@ -22,31 +22,31 @@ public class MVCTest {
 
         MenuIterator it=manCollection.iterator();
 
-        while (it.HasNext()) {
+        while (it.hasNext()) {
             /**
              * 利用controller来遍历所有的运动员，并且用View来打印输出运动员的信息。
              */
-            man = (SportsMan) it.Next();
+            man = (SportsMan) it.next();
             SportsManController testController=new SportsManController(man,testView);
 
-            testController.PrintDetails(testController.GetManName(),testController.GetManAge());
+            testController.printDetails(testController.getManName(),testController.getManAge());
         }
 
         MenuIterator its=manCollection.iterator();
-        man = (SportsMan) its.Next();
+        man = (SportsMan) its.next();
         SportsManController testController=new SportsManController(man,testView);
         System.out.println("----------------");
         /**
          * 利用controller来改变对应运动员的信息。
          */
-        testController.PrintDetails(testController.GetManName(),testController.GetManAge());
+        testController.printDetails(testController.getManName(),testController.getManAge());
 
 
         System.out.println("----------------");
-        testController.SetManAge(56);
-        testController.SetManName("HEARLY");
+        testController.setManAge(56);
+        testController.setManName("HEARLY");
 
-        testController.PrintDetails(testController.GetManName(),testController.GetManAge());
+        testController.printDetails(testController.getManName(),testController.getManAge());
 
     }
 }

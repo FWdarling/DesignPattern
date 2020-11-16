@@ -14,7 +14,7 @@ public class Locker extends EquipmentRoom{
     }
 
     @Override
-    public String GetCategory() {
+    public String getCategory() {
         return name;
     }
 
@@ -23,12 +23,12 @@ public class Locker extends EquipmentRoom{
      * @return
      */
     @Override
-    public int GetValue() {
+    public int getValue() {
         int value=0;
         Iterator it = equipments.iterator();
         while (it.hasNext()) {
             EquipmentRoom equip=(EquipmentRoom) it.next();
-            value+=equip.GetValue();
+            value+=equip.getValue();
         }
         values=value;
         return value;
@@ -40,12 +40,12 @@ public class Locker extends EquipmentRoom{
      * @param Type
      */
     @Override
-    protected void PrintList(String Type) {
+    protected void printList(String Type) {
         System.out.println(Type + "/" + this);
         Iterator it = equipments.iterator();
         while (it.hasNext()) {
             EquipmentRoom equip=(EquipmentRoom) it.next();
-            equip.PrintList(Type + "/" + name);
+            equip.printList(Type + "/" + name);
         }
 
     }

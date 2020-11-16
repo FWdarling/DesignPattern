@@ -6,8 +6,8 @@ public abstract class EquipmentRoom{
 
     protected EquipmentRoom parent;
 
-    public abstract String GetCategory();
-    public abstract int GetValue();
+    public abstract String getCategory();
+    public abstract int getValue();
 
     /**
      * 在容器中添加具体的体育器材或者器材分类。
@@ -19,28 +19,28 @@ public abstract class EquipmentRoom{
         return null;
     }
 
-    public void PrintList()
+    public void printList()
     {
-        PrintList("");
+        printList("");
     }
 
-    protected abstract void PrintList(String Type);
+    protected abstract void printList(String Type);
 
     public String toString()
     {
-        return GetCategory()+"["+GetValue()+"]";
+        return getCategory()+"["+getValue()+"]";
     }
 
     /**
      * 当子类调用时，得到运动器材的详细分类情况
      * @return
      */
-    public String GetFullCategory()
+    public String getFullCategory()
     {
         StringBuilder temp = new StringBuilder();
         EquipmentRoom equip=this;
         do {
-            temp.insert(0,"/"+equip.GetCategory());
+            temp.insert(0,"/"+equip.getCategory());
             equip=equip.parent;
         } while (equip != null);
         System.out.println(temp);

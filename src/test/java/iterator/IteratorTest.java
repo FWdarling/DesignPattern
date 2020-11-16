@@ -2,9 +2,7 @@ package iterator;
 
 
 import iterator.entity.CompetitionVenue;
-import iterator.entity.ManCollection;
 import iterator.entity.SportsMan;
-import iterator.entity.VenueCollection;
 import org.junit.Test;
 
 public class IteratorTest {
@@ -22,9 +20,9 @@ public class IteratorTest {
         /**
          * 迭代器遍历一个collection输出相关信息
          */
-        while (it.HasNext()) {
-            SportsMan man = (SportsMan) it.Next();
-            System.out.println("姓名"+man.GetName()+"年龄"+man.GetAge());
+        while (it.hasNext()) {
+            SportsMan man = (SportsMan) it.next();
+            System.out.println("姓名"+man.getName()+"年龄"+man.getAge());
         }
         System.out.println("-----------------");
         VenueCollection venueCollection=new VenueCollection(5);
@@ -39,9 +37,9 @@ public class IteratorTest {
         /**
          * 迭代器遍历一个collection输出相关信息
          */
-        while (its.HasNext()) {
-            CompetitionVenue venue = (CompetitionVenue) its.Next();
-            System.out.println("场地"+venue.GetName()+"面积"+venue.GetSize());
+        while (its.hasNext()) {
+            CompetitionVenue venue = (CompetitionVenue) its.next();
+            System.out.println("场地"+venue.getName()+"面积"+venue.getSize());
         }
 
 

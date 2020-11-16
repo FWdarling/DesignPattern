@@ -5,8 +5,8 @@ public class CompetitionVenue {
     private int size;
 
     public CompetitionVenue(String name,int size){this.name=name;this.size=size;}
-    public String GetName(){return name;}
-    public int GetSize(){return size;}
+    public String getName(){return name;}
+    public int getSize(){return size;}
 
 
 }

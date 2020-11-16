@@ -22,17 +22,17 @@ public class CompositeTest {
         HollowBall.add(basketball).add(football);
 
 
-        Ball.PrintList();
+        Ball.printList();
         System.out.println("");
-        HollowBall.GetFullCategory();
+        HollowBall.getFullCategory();
 
 
         Equipment GymnasticsExhibitionBall=new Equipment("体操表演球",500);
         HollowBall.add(GymnasticsExhibitionBall);
 
-        Ball.PrintList();
+        Ball.printList();
         System.out.println("");
-        GymnasticsExhibitionBall.GetFullCategory();
+        GymnasticsExhibitionBall.getFullCategory();
 
 
 

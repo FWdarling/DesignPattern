@@ -1,7 +1,6 @@
 package iterator;
 
 import iterator.entity.CompetitionVenue;
-import iterator.entity.VenueCollection;
 
 public class VenueIterator implements MenuIterator<CompetitionVenue>{
 
@@ -14,7 +13,7 @@ public class VenueIterator implements MenuIterator<CompetitionVenue>{
     }
 
     @Override
-    public boolean HasNext() {
+    public boolean hasNext() {
         if (index < venue.getLength()) {
             return true;
         } else {
@@ -23,7 +22,7 @@ public class VenueIterator implements MenuIterator<CompetitionVenue>{
     }
 
     @Override
-    public Object Next() {
+    public Object next() {
         CompetitionVenue Venue = venue.getVenueAt(index);
         index++;
         return Venue;
