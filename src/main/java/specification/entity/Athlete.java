@@ -12,4 +12,6 @@ public interface Athlete {
     FoodType getFoodType();
 
     String getName();
+
+    String toString();
 }
