@@ -1,4 +1,4 @@
-package Bridge;
+package bridge.entity;
 
 /**
  * 桥接(Bridge)模式

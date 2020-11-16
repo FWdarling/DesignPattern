@@ -1,4 +1,7 @@
-package Bridge;
+package bridge.entity;
+
+import bridge.Basketball;
+import bridge.Swimming;
 
 /*
  * 表示奖牌

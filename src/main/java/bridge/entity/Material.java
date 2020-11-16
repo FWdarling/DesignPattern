@@ -1,4 +1,4 @@
-package Bridge;
+package bridge.entity;
 
 public enum Material {
 	Gold("金牌"),

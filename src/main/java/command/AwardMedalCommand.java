@@ -1,10 +1,14 @@
-package Command;
+package command;
 
-import Bridge.Material;
-import Bridge.Medal;
+
 //Object Medal;
 
-public class AwardMedalCommand implements Command{
+import bridge.entity.Material;
+import bridge.entity.Medal;
+import command.entity.Command;
+import command.entity.Player;
+
+public class AwardMedalCommand implements Command {
 	private Player _awardedPlayer;
 	private Medal _medal;
 	
@@ -14,7 +18,7 @@ public class AwardMedalCommand implements Command{
 	 * @param sport 体育项目
 	 * @param material	奖牌材质
 	 */
-	public AwardMedalCommand(Player player,String sport,Material material) {
+	public AwardMedalCommand(Player player, String sport, Material material) {
 		//进行初始化
 		_medal=new Medal(material,sport);
 		_awardedPlayer=player;

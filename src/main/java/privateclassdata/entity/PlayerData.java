@@ -1,4 +1,4 @@
-package PrivateClassData;
+package privateclassdata.entity;
 
 //import java.io.Serializable;
 public class PlayerData /*implements Serializable*/ {

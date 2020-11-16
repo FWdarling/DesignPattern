@@ -1,6 +1,7 @@
-package PrivateClassData;
-import Command.Player;
+package privateclassdata;
+import command.entity.Player;
 import org.junit.Test;
+import privateclassdata.entity.PlayerData;
 
 /**
  * 

@@ -1,4 +1,6 @@
-package Bridge;
+package bridge;
+import bridge.entity.Material;
+import bridge.entity.Medal;
 import org.junit.Test;
 
 /**

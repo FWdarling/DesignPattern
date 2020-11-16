@@ -1,4 +1,4 @@
-package animalOlympicsYard;
+package animalolympicsyard;
 
 /**
  * Author: CINDY DENG

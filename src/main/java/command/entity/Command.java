@@ -1,4 +1,4 @@
-package Command;
+package command.entity;
 
 /*
  * 用于实现Command设计模式

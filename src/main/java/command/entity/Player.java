@@ -1,7 +1,7 @@
-package Command;
+package command.entity;
 
-import Bridge.Medal;
-import PrivateClassData.PlayerData;
+import bridge.entity.Medal;
+import privateclassdata.entity.PlayerData;
 
 public class Player {
 	

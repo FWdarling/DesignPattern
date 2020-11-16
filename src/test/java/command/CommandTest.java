@@ -1,7 +1,8 @@
-package Command;
+package command;
 
+import bridge.entity.Material;
+import command.entity.Player;
 import org.junit.Test;
-import Bridge.Material;
 
 /**
  * 
@@ -15,7 +16,7 @@ public class CommandTest {
         System.out.println("This is Command Test");
         System.out.println("------------------");
         Player myPlayer=new Player();
-		AwardMedalCommand command=new AwardMedalCommand(myPlayer,"Swimming",Material.Gold);
+		AwardMedalCommand command=new AwardMedalCommand(myPlayer,"Swimming", Material.Gold);
 		command.execute();
 	}
 }
