@@ -8,7 +8,7 @@ import specification.property.Mass;
  */
 public class Athlete {
     /**
-     * 运动员有 name，mass，foodType 3给属性
+     * 运动员有 name，mass，foodType 3个属性
      */
     private final String name;
     private final Mass mass;
