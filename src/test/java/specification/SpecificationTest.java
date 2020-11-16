@@ -8,7 +8,7 @@ import specification.entity.*;
 
 public class SpecificationTest {
     
-    private void boxingSelector(AbstractAthlete athlete) {
+    private void boxingSelector(Athlete athlete) {
         final var foodTypeSelector = new FoodTypeSelector(FoodType.CARNIVORE);
         final var massSelector = new MassGreaterThanSelector(200);
         foodTypeSelector.and(massSelector).test(athlete);

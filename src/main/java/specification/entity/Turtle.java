@@ -6,7 +6,7 @@ import specification.property.Mass;
 /**
  * 测试实体：海龟
  */
-public class Turtle extends AbstractAthlete {
+public class Turtle extends Athlete {
     public Turtle() {
         this(new Mass(80));
     }

@@ -6,7 +6,7 @@ import specification.property.Mass;
 /**
  * 测试实体：巨魔
  */
-public class Troll extends AbstractAthlete {
+public class Troll extends Athlete {
     public Troll() {
         this(new Mass(450));
     }
