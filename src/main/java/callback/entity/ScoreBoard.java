@@ -15,6 +15,7 @@ public class ScoreBoard {
     private int score[] = new int[5];
     private String teamName[] = new String[5];
     private Map<String,Integer> team = new HashMap<String, Integer>();
+    private int teamSum=5;
 
     public ScoreBoard(){
         team.put("Dog",0);
@@ -52,5 +53,9 @@ public class ScoreBoard {
 
     public int getTeamScore(int teamNo){
         return score[teamNo];
+    }
+
+    public int getTeamSum(){
+        return teamSum;
     }
 }

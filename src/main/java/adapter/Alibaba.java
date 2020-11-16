@@ -11,6 +11,7 @@ public class Alibaba extends Alipay implements Payment{
     private String id;
     private boolean loginStatus=false;
 
+    @Override
     public boolean pay(double amount){
 
         boolean payStatus=payBill(id,amount);
@@ -23,6 +24,7 @@ public class Alibaba extends Alipay implements Payment{
 
     }
 
+    @Override
     public boolean login(String id,String password){
         this.id=id;
         this.loginStatus=validation(id,password);

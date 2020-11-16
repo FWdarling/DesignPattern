@@ -6,7 +6,7 @@ package template;
  * @Date: Created in 13:15 2020/11/13
  * @Modified By:
  **/
-public class FishOpenCeremony extends DefaltOpenCeremony implements OpenCeremony{
+public class FishOpenCeremony extends DefaultOpenCeremony{
 
     @Override
     public void openCeremonyPerform(){

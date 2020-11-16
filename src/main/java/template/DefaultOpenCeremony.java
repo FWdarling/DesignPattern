@@ -3,10 +3,10 @@ package template;
 /**
  * @Author Max Leung
  * @Description:
- * @Date: Created in 13:04 2020/11/13
+ * @Date: Created in 13:07 2020/11/13
  * @Modified By:
  **/
-public interface OpenCeremony {
+public abstract class DefaultOpenCeremony{
     /**
      Open Ceremony is a fixed procedure except the performance of different teams. Teams from all areas perform the
      most typical program of their regions and nations.
@@ -22,7 +22,16 @@ public interface OpenCeremony {
      >> OpenCeremony openceremony = new OpenCeremony();
      >> openceremony.openCeremonyProcess();
      **/
-    public void openCeremonyProcess();
+
+    public void openCeremonyProcess() {
+        System.out.println("代表队进入体育场\n");
+        System.out.println("代表队向运动场内观众致意\n");
+        System.out.println("代表队走过半场来到最后一个直道\n");
+        System.out.println("代表队停止等待前方代表队表演\n");
+        System.out.println("代表队到达主席台\n");
+        openCeremonyPerform();
+        System.out.println("代表队走出运动场！\n\n");
+    }
 
     /**
      openCeremonyPerform is a function that vary for the teams, each team have their own performance, therefore a unique
@@ -37,5 +46,5 @@ public interface OpenCeremony {
 
 
      **/
-    public void openCeremonyPerform();
+    public abstract void openCeremonyPerform();
 }

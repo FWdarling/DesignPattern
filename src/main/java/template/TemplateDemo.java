@@ -19,19 +19,19 @@ public class TemplateDemo {
         DogOpenCeremony dogOpenCeremony = new DogOpenCeremony();
         FishOpenCeremony fishOpenCeremony = new FishOpenCeremony();
         System.out.println("熊代表队：\n");
-        bearOpenCeremony.OpenCeremonyProcess();
+        bearOpenCeremony.openCeremonyProcess();
         System.out.println("\n");
         System.out.println("鸟代表队：\n");
-        birdOpenCeremony.OpenCeremonyProcess();
+        birdOpenCeremony.openCeremonyProcess();
         System.out.println("\n");
         System.out.println("狗代表队：\n");
-        dogOpenCeremony.OpenCeremonyProcess();
+        dogOpenCeremony.openCeremonyProcess();
         System.out.println("\n");
         System.out.println("鸡代表队：\n");
-        chickenOpenCeremony.OpenCeremonyProcess();
+        chickenOpenCeremony.openCeremonyProcess();
         System.out.println("\n");
         System.out.println("鱼代表队：\n");
-        fishOpenCeremony.OpenCeremonyProcess();
+        fishOpenCeremony.openCeremonyProcess();
         System.out.println("\n");
         System.out.println("开幕式结束\n");
     }

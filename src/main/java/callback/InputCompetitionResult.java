@@ -2,7 +2,6 @@ package callback;
 
 import callback.entity.ScoreBoard;
 
-import java.awt.event.InputEvent;
 import java.util.Scanner;
 
 /**
@@ -18,6 +17,7 @@ public class InputCompetitionResult extends Task {
         this.scoreBoard = scoreBoard;
     }
 
+    @Override
     public void exec(){
         System.out.println("请输入对战球队：(Dog,Chicken,Bird,Bear,Fish)\n");
         Scanner scanner =new Scanner(System.in);

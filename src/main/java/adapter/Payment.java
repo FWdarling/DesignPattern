@@ -43,5 +43,5 @@ public interface Payment {
      >>Payment payment=new Payment();
      >>payment.login("abcd","1234");
      **/
-    boolean login(String id,String password);
+    boolean login(String id, String password);
 }

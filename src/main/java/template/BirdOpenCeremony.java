@@ -6,7 +6,7 @@ package template;
  * @Date: Created in 13:17 2020/11/13
  * @Modified By:
  **/
-public class BirdOpenCeremony extends DefaltOpenCeremony implements OpenCeremony{
+public class BirdOpenCeremony extends DefaultOpenCeremony{
 
     @Override
     public void openCeremonyPerform(){
