@@ -4,7 +4,7 @@ import specification.property.FoodType;
 import specification.property.Mass;
 
 /**
- * 运动员抽象类
+ * 运动员类
  */
 public class Athlete {
     /**
