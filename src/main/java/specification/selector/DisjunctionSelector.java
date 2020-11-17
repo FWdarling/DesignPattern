@@ -1,5 +1,7 @@
 package specification.selector;
 
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -7,11 +9,11 @@ import java.util.List;
  */
 public class DisjunctionSelector<T> extends AbstractSelector<T> {
 
-    private final List<AbstractSelector<T>> leafComponents;
+    private final List<AbstractSelector<T>> leafComponents = new LinkedList<>();
 
     @SafeVarargs
     DisjunctionSelector(AbstractSelector<T>... selectors) {
-        this.leafComponents = List.of(selectors);
+        leafComponents.addAll(Arrays.asList(selectors));
     }
 
     /**

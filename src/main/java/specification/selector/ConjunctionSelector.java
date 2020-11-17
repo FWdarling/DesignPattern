@@ -1,5 +1,8 @@
 package specification.selector;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -7,11 +10,11 @@ import java.util.List;
  */
 public class ConjunctionSelector<T> extends AbstractSelector<T> {
 
-    private final List<AbstractSelector<T>> leafComponents;
+    private final List<AbstractSelector<T>> leafComponents = new LinkedList<>();
 
     @SafeVarargs
     ConjunctionSelector(AbstractSelector<T>... selectors) {
-        this.leafComponents = List.of(selectors);
+        leafComponents.addAll(Arrays.asList(selectors));
     }
 
     /**

@@ -9,17 +9,17 @@ import specification.entity.*;
 public class SpecificationTest {
 
     private boolean boxingSelector(Athlete athlete) {
-        final var foodTypeSelector = new FoodTypeSelector(FoodType.CARNIVORE);
-        final var massSelector = new MassGreaterThanSelector(200);
+        final FoodTypeSelector foodTypeSelector = new FoodTypeSelector(FoodType.CARNIVORE);
+        final MassGreaterThanSelector massSelector = new MassGreaterThanSelector(200);
         return foodTypeSelector.and(massSelector).test(athlete);
     }
 
     @Test
     public void SpecificationTest() {
-        final var panda = new Panda();
-        final var slime = new Slime();
-        final var troll = new Troll();
-        final var turtle = new Turtle();
+        final Panda panda = new Panda();
+        final Slime slime = new Slime();
+        final Troll troll = new Troll();
+        final Turtle turtle = new Turtle();
 
         System.out.println("---------------------");
         System.out.println("This is Specification Test");
