@@ -6,14 +6,9 @@ public class FacebookInformationSender extends InformationSender {
 
     @Override
     public void sendInformation(String message) {
-        int messageLength = message.length();
-        String symbols = "===========";
-        int distance = messageLength - symbols.length() * 2;
-        if (distance > 0) {
-            for(int i = 0; i <= distance / 3; i ++) symbols += "=";
-        }
+        //获取相应的wrapper
+        String wrapper = getWrapper("Facebook", message.length(), "#");
 
-        String wrapper = symbols + "Facebook" + symbols;
         System.out.println(wrapper);
         informationSender.sendInformation(message);
         System.out.println(wrapper);

@@ -1,5 +1,3 @@
-package businessDelegate;
-
 import org.junit.Test;
 
 public class BusinessDelegateTest {

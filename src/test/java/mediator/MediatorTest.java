@@ -1,18 +1,21 @@
-package mediator;
+import org.junit.Test;
 
 public class MediatorTest {
+    @Test
     public void mediatorTest() {
         DispatchMediator dispatchMediator = new DispatchMediator();
-        TennisCourt01 tennisCourt01 = new TennisCourt01(dispatchMediator);
-        TennisCourt02 tennisCourt02 = new TennisCourt02(dispatchMediator);
-        TennisCourt03 tennisCourt03 = new TennisCourt03(dispatchMediator);
+        TennisCourt tennisCourt = new TennisCourt(dispatchMediator);
+        FootballCourt footballCourt = new FootballCourt(dispatchMediator);
+        BasketballCourt basketballCourt = new BasketballCourt(dispatchMediator);
 
-        dispatchMediator.setTennisCourt01(tennisCourt01);
-        dispatchMediator.setTennisCourt02(tennisCourt02);
-        dispatchMediator.setTennisCourt03(tennisCourt03);
+        dispatchMediator.setTennisCourt(tennisCourt);
+        dispatchMediator.setFootballCourt(footballCourt);
+        dispatchMediator.setBasketballCourt(basketballCourt);
 
-        tennisCourt01.changeStartTime(2);
-        tennisCourt01.borrow(2);
-        tennisCourt02.borrow(3);
+        tennisCourt.changeStartTime("2");
+        tennisCourt.borrow("BasketballCourt");
+        footballCourt.borrow("BasketballCourt");
+
+        System.out.println("FINISH");
     }
 }

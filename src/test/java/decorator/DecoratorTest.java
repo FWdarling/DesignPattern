@@ -1,6 +1,3 @@
-package decorator;
-
-
 import org.junit.Test;
 
 public class DecoratorTest {
