@@ -1,4 +1,4 @@
-package Facade.entity;
+package facade.entity;
 
 /**
  * description: 用于记录运动会比赛项目的枚举类

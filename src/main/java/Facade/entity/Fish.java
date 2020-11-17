@@ -1,4 +1,4 @@
-package Facade.entity;
+package facade.entity;
 
 /**
  * description: 鱼类，继承自动物类，默认报名项目为游泳

@@ -1,9 +1,6 @@
-package Facade;
+package facade;
 
-import Facade.entity.Bird;
-import Facade.entity.Event;
-import Facade.entity.Fish;
-import Facade.entity.Rabbit;
+import facade.entity.*;
 
 /**
  * description: 外观模式demo调用类
@@ -12,16 +9,16 @@ import Facade.entity.Rabbit;
  */
 public class FacadeDemo {
 
-    public static void main(String[] args) {
-        Bird bird = new Bird("zhizhi");
-        Fish fish = new Fish("paopao");
-        Rabbit rabbit = new Rabbit("tiaotiao");
+    public static void facadeTest(){
+        Animal bird = new Bird("zhizhi");
+        Animal fish = new Fish("paopao");
+        Animal rabbit = new Rabbit("tiaotiao");
 
-        EventSignUp eventSignUp1 = new EventSignUp(bird);   eventSignUp1.signUp();
-        EventSignUp eventSignUp2 = new EventSignUp(fish);   eventSignUp2.signUp();
-        EventSignUp eventSignUp3 = new EventSignUp(rabbit); eventSignUp3.signUp();
+        RegisterForm registerForm1 = new RegisterForm(bird);   registerForm1.signUp();
+        RegisterForm registerForm2 = new RegisterForm(fish);   registerForm2.signUp();
+        RegisterForm registerForm3 = new RegisterForm(rabbit); registerForm3.signUp();
 
         rabbit.setEventToSignUp(Event.RUN);
-        EventSignUp eventSignUp4 = new EventSignUp(rabbit); eventSignUp4.signUp();
+        RegisterForm registerForm4 = new RegisterForm(rabbit); registerForm4.signUp();
     }
 }

@@ -1,4 +1,4 @@
-package Facade.entity;
+package facade.entity;
 
 /**
  * description: 兔子类，继承自动物类，默认报名项目为跳远

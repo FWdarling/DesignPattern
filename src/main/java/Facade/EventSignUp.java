@@ -1,55 +1,33 @@
-package Facade;
+package facade;
 
-import Facade.entity.Animal;
+import facade.entity.Event;
 
 /**
- * description: 外观(Facede)角色,为报名各比赛项目提供接口
- * data: 11/13/20 01:30 AM
+ * description: 子系统类，用于定义产生几种不同的子系统
+ * data: 11/18/20 01：49 AM
  * author: cjsmt
  */
 public class EventSignUp {
-    private Animal athlete;
-    private RunSignUp runSignUp = new RunSignUp();
-    private SwimSignUp swimSignUp = new SwimSignUp();
-    private FlySignUp flySignUp = new FlySignUp();
-    private HighJumpSignUp highJumpSignUp = new HighJumpSignUp();
-    private LongJumpSignUp longJumpSignUp = new LongJumpSignUp();
-    private BasketballSignUp basketballSignUp = new BasketballSignUp();
-    private PingPongSignUp pingPongSignUp = new PingPongSignUp();
-    private BadmintonSignUp badmintonSignUp = new BadmintonSignUp();
+    private Event event;
 
-
-    public EventSignUp(Animal athlete) {
-        this.athlete = athlete;
+    public EventSignUp(Event event) {
+        this.event = event;
     }
-    public void signUp() {
-        switch (athlete.getEventToSignUp()) {
+
+    public void signUp(String name) {
+        String text;
+        switch (event){
             case RUN:
-                runSignUp.signUp(athlete.getName());
-                break;
-            case SWIM:
-                swimSignUp.signUp(athlete.getName());
-                break;
+                text = "running"; break;
             case FLY:
-                flySignUp.signUp(athlete.getName());
-                break;
-            case HIGH_JUMP:
-                highJumpSignUp.signUp(athlete.getName());
-                break;
-            case LONG_JUMP:
-                longJumpSignUp.signUp(athlete.getName());
-                break;
-            case BASKETBALL:
-                basketballSignUp.signUp(athlete.getName());
-                break;
+                text = "flying"; break;
+            case SWIM:
+                text = "swimming";  break;
             case PING_PONG:
-                pingPongSignUp.signUp(athlete.getName());
-                break;
-            case BADMINTON:
-                badmintonSignUp.signUp(athlete.getName());
-                break;
+                text = "table tennis";  break;
             default:
-                break;
+                text = event.toString().toLowerCase();  break;
         }
+        System.out.println("Dear " + name + ", you have successfully signed up for the " + text + " competition.");
     }
 }

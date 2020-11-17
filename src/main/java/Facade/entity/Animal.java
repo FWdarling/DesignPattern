@@ -1,11 +1,11 @@
-package Facade.entity;
+package facade.entity;
 
 /**
  * description: 动物类，父类，用于储存信息：名字、预报名项目
  * data: 11/13/20 01:30 AM
  * author: cjsmt
  */
-public class Animal {
+public abstract class Animal {
     private String name;
     private Event eventToSignUp;
 
