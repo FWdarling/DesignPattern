@@ -49,3 +49,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Mac desktop ###
+.DS_Store
+.DS_Store?
