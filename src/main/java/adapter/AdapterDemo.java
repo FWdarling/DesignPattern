@@ -9,7 +9,12 @@ import java.util.*;
  * @Modified By:
  **/
 public class AdapterDemo {
-
+    /**
+     In the system, we may have lots of methods of paying. However the process of paying for all kinds of methods are
+     similar to each other, instead of implement a paying process for each methods, we add all paying methods into an
+     registry which is a array list storing an instance for all methods, every time when a kind of method is invoked, an
+     instance can be fetched directly from the array list.
+     **/
     private ArrayList<Payment> payerRegistry=new ArrayList<Payment>();
 
     public AdapterDemo(){
