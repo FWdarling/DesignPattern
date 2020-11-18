@@ -1,7 +1,6 @@
 package iterator;
 
 
-import iterator.entity.CompetitionVenue;
 import iterator.entity.SportsMan;
 import org.junit.Test;
 
@@ -24,23 +23,7 @@ public class IteratorTest {
             SportsMan man = (SportsMan) it.next();
             System.out.println("姓名"+man.getName()+"年龄"+man.getAge());
         }
-        System.out.println("-----------------");
-        VenueCollection venueCollection=new VenueCollection(5);
-        venueCollection.appendVenue(new CompetitionVenue("sand trap",20));
-        venueCollection.appendVenue(new CompetitionVenue("grasslands",30));
-        venueCollection.appendVenue(new CompetitionVenue("pools",100));
-        venueCollection.appendVenue(new CompetitionVenue("track and field",50));
-        venueCollection.appendVenue(new CompetitionVenue("ice rink",150));
 
-
-        MenuIterator its=venueCollection.iterator();
-        /**
-         * 迭代器遍历一个collection输出相关信息
-         */
-        while (its.hasNext()) {
-            CompetitionVenue venue = (CompetitionVenue) its.next();
-            System.out.println("场地"+venue.getName()+"面积"+venue.getSize());
-        }
 
 
     }

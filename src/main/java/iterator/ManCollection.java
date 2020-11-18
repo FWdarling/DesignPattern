@@ -32,6 +32,7 @@ public class ManCollection implements Aggregate {
         return last;
     }
 
+    //类似标准iterator返回一个迭代器。
     public MenuIterator iterator() {
         return new SportsManIterator(this);
     }
