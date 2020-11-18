@@ -1,7 +1,7 @@
-package main.java.state.entity;
+package state.entity;
 
-import main.java.state.myapp.PlayingState;
-import main.java.state.myapp.State;
+import state.myapp.PlayingState;
+import state.myapp.State;
 
 /**
  * 乒乓运动员类

@@ -1,6 +1,6 @@
-package main.java.abstractfactory.myapp;
+package abstractfactory.myapp;
 
-import main.java.abstractfactory.framework.MaleResult;
+import abstractfactory.framework.MaleResult;
 
 /**
  * 男子跳远成绩单类

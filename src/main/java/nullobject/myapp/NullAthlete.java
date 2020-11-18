@@ -1,6 +1,6 @@
-package main.java.nullobject.myapp;
+package nullobject.myapp;
 
-import main.java.nullobject.entity.AbstractAthlete;
+import nullobject.entity.AbstractAthlete;
 
 /**
  * 空运动员

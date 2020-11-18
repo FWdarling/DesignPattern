@@ -1,3 +1,5 @@
+package mediator;
+
 public class DispatchMediator extends Mediator {
     public void setTennisCourt(TennisCourt t1) {this.tennisCourt = t1;}
     public void setFootballCourt(FootballCourt t2) {this.footballCourt = t2;}

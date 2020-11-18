@@ -1,6 +1,6 @@
-package main.java.state.myapp;
+package state.myapp;
 
-import main.java.state.entity.PingpongAthlete;
+import state.entity.PingpongAthlete;
 
 /**
  * 正在比赛状态类

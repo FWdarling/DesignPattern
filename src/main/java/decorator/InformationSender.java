@@ -1,3 +1,5 @@
+package decorator;
+
 import java.util.Collections;
 
 public abstract class InformationSender {

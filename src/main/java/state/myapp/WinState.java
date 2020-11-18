@@ -1,6 +1,6 @@
-package main.java.state.myapp;
+package state.myapp;
 
-import main.java.state.myapp.State;
+import state.myapp.State;
 
 /**
  * 胜利状态类

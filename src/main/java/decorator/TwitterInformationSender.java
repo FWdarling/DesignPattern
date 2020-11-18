@@ -1,3 +1,5 @@
+package decorator;
+
 public class TwitterInformationSender extends InformationSender {
     private InformationSender informationSender;
     public TwitterInformationSender(InformationSender informationSender) {

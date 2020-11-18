@@ -1,14 +1,11 @@
-package test.java.state;
+package state;
 
-import main.java.state.StateDemo;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class StateDemoTest {
+public class StateDemoTest {
 
     @Test
-    void runStateDemo() {
+    public void runStateDemo() {
         System.out.println("========  测试状态模式开始  ========");
         StateDemo.runStateDemo();
         System.out.println("========  测试状态模式结束  ========");

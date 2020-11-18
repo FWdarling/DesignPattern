@@ -1,3 +1,5 @@
+package mediator;
+
 public abstract class Mediator {
     protected TennisCourt tennisCourt;
     protected FootballCourt footballCourt;

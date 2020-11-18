@@ -14,12 +14,17 @@ public class BridgeTest {
 		System.out.println("------------------");
         System.out.println("This is Bridge Test");
         System.out.println("------------------");
-		Medal myMedal=new Medal(Material.Gold,"Swimming");
-		myMedal.printMedalInfo();
-		myMedal=new Medal(Material.Silver,"Basketball");
-		myMedal.printMedalInfo();
-		//异常输入测试
-		myMedal=new Medal(Material.Silver,"???");
-		myMedal.printMedalInfo();
+        try {
+			Medal myMedal=new Medal(Material.Gold,"Swimming");
+			myMedal.printMedalInfo();
+			myMedal=new Medal(Material.Silver,"Basketball");
+			myMedal.printMedalInfo();
+			//异常输入测试
+			myMedal=new Medal(Material.Silver,"???");
+			myMedal.printMedalInfo();
+		}
+		catch (RuntimeException e){
+        	 System.out.println("运动项目不存在");
+		}
 	}
 }

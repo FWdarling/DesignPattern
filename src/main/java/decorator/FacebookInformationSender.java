@@ -1,3 +1,5 @@
+package decorator;
+
 public class FacebookInformationSender extends InformationSender {
     private InformationSender informationSender;
     public FacebookInformationSender(InformationSender informationSender) {

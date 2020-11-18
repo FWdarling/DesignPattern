@@ -1,6 +1,6 @@
-package main.java.abstractfactory.framework;
+package abstractfactory.framework;
 
-import main.java.abstractfactory.entity.Result;
+import abstractfactory.entity.Result;
 
 /**
  * 抽象男子成绩单类

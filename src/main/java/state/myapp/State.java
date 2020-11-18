@@ -1,7 +1,7 @@
-package main.java.state.myapp;
+package state.myapp;
 
-import main.java.state.entity.PingpongAthlete;
-import main.java.state.myapp.LostState;
+import state.entity.PingpongAthlete;
+import state.myapp.LostState;
 
 /**
  * 抽象状态类

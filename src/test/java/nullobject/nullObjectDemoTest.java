@@ -1,14 +1,12 @@
-package test.java.nullobject;
+package nullobject;
 
-import main.java.nullobject.NullObjectDemo;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-class nullObjectDemoTest {
+public class nullObjectDemoTest {
 
     @Test
-    void runNullObjectDemo() {
+    public void runNullObjectDemo() {
         System.out.println("========  测试空对象模式开始  ========");
         NullObjectDemo.runNullObjectDemo();
         System.out.println("========  测试空对象模式结束  ========");

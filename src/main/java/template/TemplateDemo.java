@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @Modified By:
  **/
 public class TemplateDemo {
-    public void templateTest(){
+    public static void templateTest(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("----------------------------------------------------Adapter Test----------------------------------------------------\n");
         System.out.println("运动会开幕式开始了！\n\n");

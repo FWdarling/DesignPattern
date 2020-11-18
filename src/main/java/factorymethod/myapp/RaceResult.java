@@ -1,6 +1,6 @@
-package main.java.factorymethod.myapp;
+package factorymethod.myapp;
 
-import main.java.factorymethod.entity.Result;
+import factorymethod.entity.Result;
 
 /**
  * 赛跑成绩单类

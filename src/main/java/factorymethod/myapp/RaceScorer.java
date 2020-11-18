@@ -1,9 +1,9 @@
-package main.java.factorymethod.myapp;
+package factorymethod.myapp;
 
 import java.util.Random;
 
-import main.java.factorymethod.entity.Result;
-import main.java.factorymethod.entity.Scorer;
+import factorymethod.entity.Result;
+import factorymethod.entity.Scorer;
 
 /**
  * 赛跑项目记分员

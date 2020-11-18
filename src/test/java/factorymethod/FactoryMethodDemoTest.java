@@ -1,12 +1,11 @@
-package test.java.factorymethod;
+package factorymethod;
 
-import main.java.factorymethod.FactoryMethodDemo;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-class FactoryMethodDemoTest {
+public class FactoryMethodDemoTest {
 
-    @org.junit.jupiter.api.Test
-    void runFactoryMethodDemo() {
+    @Test
+    public void runFactoryMethodDemo() {
         System.out.println("========  测试工厂方法开始  ========");
         FactoryMethodDemo.runFactoryMethodDemo();
         System.out.println("========  测试工厂方法结束  ========");

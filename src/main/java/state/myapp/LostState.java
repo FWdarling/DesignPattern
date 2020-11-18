@@ -1,4 +1,4 @@
-package main.java.state.myapp;
+package state.myapp;
 
 /**
  * 失败状态类

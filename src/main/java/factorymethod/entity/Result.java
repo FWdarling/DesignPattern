@@ -1,4 +1,4 @@
-package main.java.factorymethod.entity;
+package factorymethod.entity;
 
 public abstract class Result {
     protected String name;

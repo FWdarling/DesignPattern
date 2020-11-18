@@ -1,6 +1,6 @@
-package main.java.factorymethod.entity;
+package factorymethod.entity;
 
-import main.java.factorymethod.entity.Result;
+import factorymethod.entity.Result;
 
 import java.util.Vector;
 
@@ -28,7 +28,7 @@ public abstract class Scorer {
      * 打印成绩列表中的所有人的成绩
      */
     public void showResults(){
-        for(var result : results){
+        for(Result result : results){
             result.showResult();
         }
 

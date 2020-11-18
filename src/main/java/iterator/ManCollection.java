@@ -1,9 +1,6 @@
 package iterator;
 
 
-import iterator.Aggregate;
-import iterator.MenuIterator;
-import iterator.SportsManIterator;
 import iterator.entity.SportsMan;
 
 public class ManCollection implements Aggregate {

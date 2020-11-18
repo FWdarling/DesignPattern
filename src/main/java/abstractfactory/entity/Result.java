@@ -1,4 +1,4 @@
-package main.java.abstractfactory.entity;
+package abstractfactory.entity;
 
 /**
  * 成绩单类

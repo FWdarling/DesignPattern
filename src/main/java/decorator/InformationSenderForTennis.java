@@ -1,3 +1,5 @@
+package decorator;
+
 public class InformationSenderForTennis extends InformationSender {
     @Override
     public void sendInformation(String message) {

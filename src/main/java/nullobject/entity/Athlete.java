@@ -1,4 +1,4 @@
-package main.java.nullobject.entity;
+package nullobject.entity;
 
 /**
  * 实际运动员类

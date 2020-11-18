@@ -1,8 +1,6 @@
 package proxy;
 
 import proxy.entity.AnimalAthlete;
-import proxy.AthleteProxy;
-import proxy.Reporter;
 import org.junit.Test;
 
 import java.util.ArrayList;

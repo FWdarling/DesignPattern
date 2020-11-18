@@ -1,6 +1,5 @@
 package MVC;
 
-
 import iterator.ManCollection;
 import iterator.MenuIterator;
 import iterator.entity.SportsMan;

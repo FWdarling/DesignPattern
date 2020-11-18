@@ -1,6 +1,6 @@
-package main.java.nullobject;
+package nullobject;
 
-import main.java.nullobject.entity.Coach;
+import nullobject.entity.Coach;
 
 import java.util.Vector;
 

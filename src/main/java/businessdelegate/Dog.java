@@ -1,3 +1,5 @@
+package businessdelegate;
+
 public class Dog {
     private QueryDelegate _queryDelegate;
 

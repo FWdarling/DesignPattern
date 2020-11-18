@@ -1,3 +1,5 @@
+package mediator;
+
 public class TennisCourt extends AbstractTennisCourt{
     private Mediator mediator;
 

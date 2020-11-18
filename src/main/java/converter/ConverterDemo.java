@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @Modified By:
  **/
 public class ConverterDemo {
-    public void converterTest(){
+    public static void converterTest(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("----------------------------------------------------Adapter Test----------------------------------------------------\n");
         System.out.println("欢迎来到货币兑换区域！\n");

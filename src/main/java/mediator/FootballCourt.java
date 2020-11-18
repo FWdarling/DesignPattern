@@ -1,3 +1,5 @@
+package mediator;
+
 public class FootballCourt extends AbstractTennisCourt{
     private Mediator mediator;
     private String startTime;

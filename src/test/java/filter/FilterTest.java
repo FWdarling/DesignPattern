@@ -1,6 +1,5 @@
 package filter;
 
-import flyweight.FlyWeightDemo;
 import org.junit.Test;
 
 /**

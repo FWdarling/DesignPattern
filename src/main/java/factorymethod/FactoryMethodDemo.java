@@ -1,7 +1,7 @@
-package main.java.factorymethod;
+package factorymethod;
 
-import main.java.factorymethod.myapp.RaceScorer;
-import main.java.factorymethod.myapp.ShootingScorer;
+import factorymethod.myapp.RaceScorer;
+import factorymethod.myapp.ShootingScorer;
 
 /**
  * 工厂方法 Demo 类

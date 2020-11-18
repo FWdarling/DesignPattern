@@ -1,7 +1,7 @@
-package main.java.factorymethod.myapp;
+package factorymethod.myapp;
 
-import main.java.factorymethod.entity.Result;
-import main.java.factorymethod.entity.Scorer;
+import factorymethod.entity.Result;
+import factorymethod.entity.Scorer;
 
 import java.util.Random;
 import java.util.Vector;
@@ -27,7 +27,7 @@ public class ShootingScorer extends Scorer{
             shootingResults.add(random.nextInt()%5 + 6);
         }
 
-        var shootingResult = new ShootingResult(name, shootingResults);
+        ShootingResult shootingResult = new ShootingResult(name, shootingResults);
 
         System.out.println("ShootingScorer: shootingResult of " + name + " is created.");
 

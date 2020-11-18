@@ -1,6 +1,6 @@
-package main.java.state;
+package state;
 
-import main.java.state.entity.PingpongAthlete;
+import state.entity.PingpongAthlete;
 
 /**
  * 状态模式 Demo 类

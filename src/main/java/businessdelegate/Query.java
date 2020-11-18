@@ -1,3 +1,5 @@
+package businessdelegate;
+
 public class Query {
     public static QueryService getQuery(String queryName) {
         if("OfflineQuery".equals(queryName)) {

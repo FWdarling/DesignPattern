@@ -1,15 +1,12 @@
-package test.java.abstractfactory;
+package abstractfactory;
 
-import main.java.abstractfactory.AbstractFactoryDemo;
-import main.java.factorymethod.FactoryMethodDemo;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-class AbstractFactoryDemoTest {
+public class AbstractFactoryDemoTest {
 
     @Test
-    void runAbstractFactoryDemo() {
+    public void runAbstractFactoryDemo() {
         System.out.println("========  测试抽象工厂开始  ========");
         AbstractFactoryDemo.runAbstractFactoryDemo();
         System.out.println("========  测试抽象工厂结束  ========");

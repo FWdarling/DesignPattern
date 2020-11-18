@@ -12,7 +12,7 @@ public class ConverterTest {
     @Test
     public void converterTest(){
         System.out.println("========  测试转换器模式开始  ========");
-        ConvterDemo.converterTest();
+        ConverterDemo.converterTest();
         System.out.println("========  测试转换器模式结束  ========");
     }
 }

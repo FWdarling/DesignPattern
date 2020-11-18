@@ -14,7 +14,7 @@ public class Medal{
 	 * 构造函数
 	 * @param material 材质 sport 比赛项目
 	 */
-	public Medal(Material material,String sport) {
+	public Medal(Material material,String sport){
 		this._material=material;
 		if (sport.equals("Swimming")){_sport=new Swimming();}
 		else if(sport.equals("Basketball")) {_sport=new Basketball();}

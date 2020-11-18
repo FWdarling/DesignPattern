@@ -1,3 +1,5 @@
+package businessdelegate;
+
 public class OfflineQuery implements QueryService {
     @Override
     public void lookUp() {

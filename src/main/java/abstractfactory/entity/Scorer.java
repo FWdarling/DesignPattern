@@ -1,6 +1,6 @@
-package main.java.abstractfactory.entity;
+package abstractfactory.entity;
 
-import main.java.abstractfactory.entity.Result;
+import abstractfactory.entity.Result;
 import java.util.Vector;
 
 /**
@@ -26,7 +26,7 @@ public abstract class Scorer {
      * 打印保存下来的所有成绩单
      */
     public void showResults(){
-        for(var result : results){
+        for(Result result : results){
             result.showResult();
         }
 

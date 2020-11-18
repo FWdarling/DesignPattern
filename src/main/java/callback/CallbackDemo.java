@@ -11,7 +11,8 @@ import java.util.Scanner;
  * @Modified By:
  **/
 public class CallbackDemo {
-    public void CallbackTest(){
+
+    public static void callbackTest(){
         ScoreBoard scoreBoard = new ScoreBoard();
         GetScoreBoard getScoreBoard = new GetScoreBoard(scoreBoard);
         while(true) {

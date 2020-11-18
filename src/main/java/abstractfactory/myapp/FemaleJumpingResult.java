@@ -1,6 +1,6 @@
-package main.java.abstractfactory.myapp;
+package abstractfactory.myapp;
 
-import main.java.abstractfactory.framework.FemaleResult;
+import abstractfactory.framework.FemaleResult;
 
 /**
  * 女子跳远成绩类

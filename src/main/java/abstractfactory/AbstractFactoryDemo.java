@@ -1,6 +1,6 @@
-package main.java.abstractfactory;
+package abstractfactory;
 
-import main.java.abstractfactory.myapp.JumpingScorer;
+import abstractfactory.myapp.JumpingScorer;
 
 /**
  * 抽象工厂模式 Demo 类

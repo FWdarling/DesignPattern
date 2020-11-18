@@ -13,6 +13,6 @@ public class CallbackTest {
     public void callbackTest(){
         System.out.println("========  测试回调模式开始  ========");
         CallbackDemo.callbackTest();
-        System.out.println("========  测试享元模式结束  ========");
+        System.out.println("========  测试回调模式结束  ========");
     }
 }

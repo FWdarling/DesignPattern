@@ -1,6 +1,6 @@
-package main.java.nullobject.entity;
+package nullobject.entity;
 
-import main.java.nullobject.myapp.NullAthlete;
+import nullobject.myapp.NullAthlete;
 
 import java.util.Vector;
 

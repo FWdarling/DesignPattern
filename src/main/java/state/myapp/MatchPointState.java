@@ -1,4 +1,4 @@
-package main.java.state.myapp;
+package state.myapp;
 
 /**
  * 赛点状态类

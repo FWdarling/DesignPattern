@@ -1,6 +1,5 @@
 package multiton;
 
-import multiton.RoomDistributor;
 import multiton.entity.TrainingRoom;
 import org.junit.Test;
 

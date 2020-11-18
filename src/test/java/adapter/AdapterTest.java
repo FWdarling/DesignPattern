@@ -13,7 +13,8 @@ public class AdapterTest {
     @Test
     public void adapterTest(){
         System.out.println("========  测试适配器模式开始  ========");
-        AdapterDemo.adapterTest();
+        AdapterDemo adapterDemo = new AdapterDemo();
+        adapterDemo.adapterTest();
         System.out.println("========  测试适配器模式结束  ========");
     }
 }

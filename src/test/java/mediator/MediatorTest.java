@@ -1,3 +1,5 @@
+package mediator;
+
 import org.junit.Test;
 
 public class MediatorTest {

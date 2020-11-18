@@ -38,6 +38,7 @@ hs_err_pid*
 *.ipr
 *.kotlin_module
 *.kotlin_builtins
+target/
 
 ### NetBeans ###
 /nbproject/private/
