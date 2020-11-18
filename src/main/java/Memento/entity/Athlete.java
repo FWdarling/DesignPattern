@@ -1,4 +1,4 @@
-package Memento.entity;
+package memento.entity;
 
 /**
  * description: 运动员类，物种属性的载体

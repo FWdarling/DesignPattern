@@ -1,4 +1,4 @@
-package Memento;
+package memento;
 
 /**
  * description: 管理者(Caretaker),对备忘录进行管理，能够访问或暂存备忘录

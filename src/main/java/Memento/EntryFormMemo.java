@@ -1,9 +1,9 @@
-package Memento;
+package memento;
 
-import Memento.entity.Species;
+import memento.entity.Species;
 
 /**
- * description: 备忘录(Memento),用于存储报名表状态
+ * description: 备忘录(memento),用于存储报名表状态
  * data: 11/13/20 17:28 PM
  * author: cjsmt
  */

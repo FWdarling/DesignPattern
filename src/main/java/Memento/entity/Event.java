@@ -1,4 +1,4 @@
-package Memento.entity;
+package memento.entity;
 
 /**
  * description: 随便罗列了一些运动项目,在备忘录设计模式中没有充分利用,仅作为项目报名表(EventEntryForm)属性出现

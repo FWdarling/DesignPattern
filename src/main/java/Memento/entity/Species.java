@@ -1,4 +1,4 @@
-package Memento.entity;
+package memento.entity;
 
 /**
  * description: 记录物种的枚举类，彼此之间包含一定的食物链关系，在运动会报名时，存在食物链关系的物种不能报名参与同一个项目
