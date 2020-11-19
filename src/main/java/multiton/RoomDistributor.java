@@ -1,6 +1,6 @@
 package multiton;
 
-import multiton.entity.TrainingRoom;
+import entity.TrainingRoom;
 
 /**
  * 负责分配训练室的类

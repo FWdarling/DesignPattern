@@ -1,7 +1,5 @@
 package converter;
 
-import converter.entity.ExchangeRate;
-
 /**
  * @Author Max Leung
  * @Description:

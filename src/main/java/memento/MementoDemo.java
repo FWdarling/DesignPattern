@@ -1,8 +1,8 @@
 package memento;
 
-import memento.entity.Athlete;
-import memento.entity.Event;
-import memento.entity.Species;
+import entity.Athlete;
+import entity.Event;
+import entity.Species;
 
 /**
  * description: 备忘录模式(memento)调用类

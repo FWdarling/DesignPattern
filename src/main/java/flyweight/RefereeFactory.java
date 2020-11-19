@@ -1,8 +1,8 @@
 package flyweight;
 
-import observer.entity.Game;
-import observer.entity.Referee;
-import observer.entity.SportType;
+import entity.Game;
+import entity.Referee;
+import entity.SportType;
 
 import java.util.ArrayList;
 import java.util.HashMap;

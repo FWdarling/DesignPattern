@@ -1,7 +1,7 @@
 package filter;
 
-import filter.entity.Dishes;
-import filter.entity.Taste;
+import entity.Dishes;
+import entity.Taste;
 
 import java.util.ArrayList;
 

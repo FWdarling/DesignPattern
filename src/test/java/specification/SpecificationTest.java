@@ -1,10 +1,10 @@
 package specification;
 
 import org.junit.Test;
-import specification.property.FoodType;
+import entity.FoodType;
 import specification.selector.FoodTypeSelector;
 import specification.selector.MassGreaterThanSelector;
-import specification.entity.*;
+import entity.Athlete;
 
 public class SpecificationTest {
 

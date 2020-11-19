@@ -1,7 +1,7 @@
 package flyweight;
 
-import observer.entity.Game;
-import observer.entity.SportType;
+import entity.Game;
+import entity.SportType;
 
 /**
  * description: 享元模式demo调用类

@@ -1,6 +1,6 @@
 package nullobject;
 
-import nullobject.entity.Coach;
+import entity.Coach;
 
 import java.util.Vector;
 

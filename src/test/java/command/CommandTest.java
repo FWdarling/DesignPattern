@@ -1,7 +1,7 @@
 package command;
 
-import bridge.entity.Material;
-import command.entity.Player;
+import entity.Material;
+import entity.Player;
 import org.junit.Test;
 
 /**

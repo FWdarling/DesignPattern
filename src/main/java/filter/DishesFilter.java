@@ -1,6 +1,6 @@
 package filter;
 
-import filter.entity.Dishes;
+import entity.Dishes;
 
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public interface DishesFilter {
      * author: fourwood 
      * 
      * @param dishes 要被过滤的菜品数组
-     * @return java.util.ArrayList<filter.entity.Dishes> 过滤出来的菜品数组
+     * @return java.util.ArrayList<entity.Dishes> 过滤出来的菜品数组
      */ 
     public abstract ArrayList<Dishes> filter(ArrayList<Dishes> dishes);
 }

@@ -1,7 +1,7 @@
 package factorymethod.myapp;
 
-import factorymethod.entity.Result;
-import factorymethod.entity.Scorer;
+import entity.Result;
+import factorymethod.Scorer;
 
 import java.util.Random;
 import java.util.Vector;

@@ -1,5 +1,5 @@
 package privateclassdata;
-import command.entity.Player;
+import entity.Player;
 import org.junit.Test;
 import privateclassdata.entity.PlayerData;
 

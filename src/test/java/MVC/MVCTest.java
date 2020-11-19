@@ -2,7 +2,7 @@ package MVC;
 
 import iterator.ManCollection;
 import iterator.MenuIterator;
-import iterator.entity.SportsMan;
+import entity.SportsMan;
 import org.junit.Test;
 
 public class MVCTest {

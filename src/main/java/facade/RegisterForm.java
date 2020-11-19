@@ -1,7 +1,7 @@
 package facade;
 
-import facade.entity.Animal;
-import facade.entity.Event;
+import entity.Animal;
+import entity.Event;
 
 /**
  * description: 外观(Facede)角色,为报名各比赛项目提供接口

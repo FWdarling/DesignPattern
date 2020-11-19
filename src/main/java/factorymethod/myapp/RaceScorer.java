@@ -2,8 +2,8 @@ package factorymethod.myapp;
 
 import java.util.Random;
 
-import factorymethod.entity.Result;
-import factorymethod.entity.Scorer;
+import entity.Result;
+import factorymethod.Scorer;
 
 /**
  * 赛跑项目记分员

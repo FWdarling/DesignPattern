@@ -1,8 +1,5 @@
 package strategy;
 
-import strategy.entity.Bird;
-import strategy.entity.Fish;
-import strategy.entity.Rabbit;
 import org.junit.Test;
 
 /**

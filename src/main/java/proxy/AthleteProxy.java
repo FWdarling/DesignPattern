@@ -1,6 +1,6 @@
 package proxy;
 
-import proxy.entity.AnimalAthlete;
+import entity.Athlete;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -11,15 +11,15 @@ import java.util.concurrent.TimeUnit;
  */
 public class AthleteProxy {
     //    代理类负责代理的真实运动员列表
-    private final ArrayList<AnimalAthlete> animalAthletes;
+    private final ArrayList<Athlete> athletes;
 
     /**
      * 设置运动员
      *
-     * @param animalAthletes 运动员列表
+     * @param athletes 运动员列表
      */
-    public AthleteProxy(ArrayList<AnimalAthlete> animalAthletes) {
-        this.animalAthletes = animalAthletes;
+    public AthleteProxy(ArrayList<Athlete> athletes) {
+        this.athletes = athletes;
     }
 
     /**
@@ -67,9 +67,9 @@ public class AthleteProxy {
      * @throws InterruptedException 异常
      */
     public void interview(String interviewer, String interviewee, String[] questions) throws InterruptedException {
-        AnimalAthlete animalAthlete = null;
+        Athlete animalAthlete = null;
 //        查找欲采访运动员是否在本代理类中
-        for (AnimalAthlete athlete : animalAthletes
+        for (Athlete athlete : athletes
         ) {
             if (athlete.getName().equals(interviewee)) {
                 animalAthlete = athlete;

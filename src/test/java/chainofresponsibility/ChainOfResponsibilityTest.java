@@ -1,8 +1,9 @@
 package chainofresponsibility;
 
-import chainofresponsibility.entity.Assistant;
-import chainofresponsibility.entity.Referee;
-import chainofresponsibility.entity.Robot;
+import entity.AbstractReferees;
+import entity.Assistant;
+import entity.Referee;
+import entity.Robot;
 import org.junit.Test;
 
 public class ChainOfResponsibilityTest {

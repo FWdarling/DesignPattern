@@ -1,6 +1,6 @@
 package prototype;
 
-import prototype.entity.Athlete;
+import entity.Athlete;
 import org.junit.Test;
 
 /**

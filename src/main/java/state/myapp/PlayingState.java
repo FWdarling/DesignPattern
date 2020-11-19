@@ -1,6 +1,6 @@
 package state.myapp;
 
-import state.entity.PingpongAthlete;
+import state.PingpongAthlete;
 
 /**
  * 正在比赛状态类

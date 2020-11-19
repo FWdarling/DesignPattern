@@ -1,6 +1,6 @@
 package callback;
 
-import callback.entity.ScoreBoard;
+import entity.ScoreBoard;
 
 /**
  * @Author Max Leung

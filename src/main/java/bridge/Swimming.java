@@ -1,6 +1,6 @@
 package bridge;
 
-import bridge.entity.Sport;
+import entity.Sport;
 
 /**
  *游泳项目

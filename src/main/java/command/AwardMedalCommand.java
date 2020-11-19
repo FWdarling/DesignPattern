@@ -3,10 +3,9 @@ package command;
 
 //Object Medal;
 
-import bridge.entity.Material;
-import bridge.entity.Medal;
-import command.entity.Command;
-import command.entity.Player;
+import entity.Material;
+import entity.Medal;
+import entity.Player;
 
 public class AwardMedalCommand implements Command {
 	private Player _awardedPlayer;

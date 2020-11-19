@@ -1,6 +1,6 @@
 package abstractfactory.framework;
 
-import abstractfactory.entity.Result;
+import entity.Result;
 
 /**
  * 抽象女子成绩单类

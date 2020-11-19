@@ -1,5 +1,7 @@
 package strategy;
 
+import entity.EatingStrategy;
+
 /**
  * 鸟类进食策略类
  * 继承自EatingStrategy

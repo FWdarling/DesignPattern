@@ -1,6 +1,6 @@
 package memento;
 
-import memento.entity.Species;
+import entity.Species;
 
 /**
  * description: 备忘录(memento),用于存储报名表状态

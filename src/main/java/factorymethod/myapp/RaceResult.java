@@ -1,6 +1,6 @@
 package factorymethod.myapp;
 
-import factorymethod.entity.Result;
+import entity.Result;
 
 /**
  * 赛跑成绩单类

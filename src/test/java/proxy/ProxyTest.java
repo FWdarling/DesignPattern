@@ -1,6 +1,6 @@
 package proxy;
 
-import proxy.entity.AnimalAthlete;
+import entity.Athlete;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,11 +14,11 @@ public class ProxyTest {
         System.out.println("------------------");
         System.out.println("This is Proxy Test");
         System.out.println("------------------");
-        ArrayList<AnimalAthlete> animalAthletes = new ArrayList<>();
-        animalAthletes.add(new AnimalAthlete("Bunny","rabbit"));
-        animalAthletes.add(new AnimalAthlete("Bubble","golden fish"));
-        animalAthletes.add(new AnimalAthlete("Tom","cat"));
-        AthleteProxy athleteProxy = new AthleteProxy(animalAthletes);
+        ArrayList<Athlete> athletes = new ArrayList<>();
+        athletes.add(new Athlete("Bunny","rabbit"));
+        athletes.add(new Athlete("Bubble","golden fish"));
+        athletes.add(new Athlete("Tom","cat"));
+        AthleteProxy athleteProxy = new AthleteProxy(athletes);
         Reporter reporter = new Reporter("Henry");
         String[] questions = {"How are you?", "How old are you?", "Can you win?"};
         reporter.interview(athleteProxy,"Bubble",questions);

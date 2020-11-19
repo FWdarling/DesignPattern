@@ -1,5 +1,7 @@
 package strategy;
 
+import entity.TrainingStrategy;
+
 /**
  * 兔类训练类
  * 继承自TrainingStrategy接口

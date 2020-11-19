@@ -1,7 +1,5 @@
 package state;
 
-import state.entity.PingpongAthlete;
-
 /**
  * 状态模式 Demo 类
  * 拥有一个静态方法，用于运行状态模式 Demo

@@ -1,7 +1,7 @@
 package specification.selector;
 
-import specification.entity.Athlete;
-import specification.property.Mass;
+import entity.Athlete;
+import entity.Mass;
 
 /**
  * Mass selector for values exactly equal than the parameter.

@@ -1,6 +1,6 @@
 package facade;
 
-import facade.entity.Event;
+import entity.Event;
 
 /**
  * description: 子系统类，用于定义产生几种不同的子系统

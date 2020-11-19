@@ -1,7 +1,7 @@
 package iterator;
 
 
-import iterator.entity.SportsMan;
+import entity.SportsMan;
 import org.junit.Test;
 
 public class IteratorTest {

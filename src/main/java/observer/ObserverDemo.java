@@ -1,8 +1,8 @@
 package observer;
 
-import observer.entity.Game;
-import observer.entity.Referee;
-import observer.entity.SportType;
+import entity.Game;
+import entity.Referee;
+import entity.SportType;
 
 /**
  * description: 观察者模式demo调用类

@@ -12,7 +12,7 @@ public class CallbackTest {
     @Test
     public void callbackTest(){
         System.out.println("========  测试回调模式开始  ========");
-        CallbackDemo.callbackTest();
+        //CallbackDemo.callbackTest();
         System.out.println("========  测试回调模式结束  ========");
     }
 }

@@ -1,6 +1,7 @@
 package facade;
 
-import facade.entity.*;
+import entity.Animal;
+import entity.Event;
 
 /**
  * description: 外观模式demo调用类

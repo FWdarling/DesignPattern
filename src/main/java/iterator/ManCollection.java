@@ -1,7 +1,7 @@
 package iterator;
 
 
-import iterator.entity.SportsMan;
+import entity.SportsMan;
 
 public class ManCollection implements Aggregate {
     private SportsMan[] men;

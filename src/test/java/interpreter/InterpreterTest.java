@@ -1,6 +1,5 @@
 package interpreter;
 
-import interpreter.entity.Const;
 import org.junit.Test;
 
 /**

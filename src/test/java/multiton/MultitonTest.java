@@ -1,6 +1,6 @@
 package multiton;
 
-import multiton.entity.TrainingRoom;
+import entity.TrainingRoom;
 import org.junit.Test;
 
 /**

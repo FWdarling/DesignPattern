@@ -2,9 +2,9 @@ package memento;
 
 import java.util.*;
 
-import memento.entity.Athlete;
-import memento.entity.Event;
-import memento.entity.Species;
+import entity.Athlete;
+import entity.Event;
+import entity.Species;
 
 /**
  *description: 发起者(originator),用户记录当前项目报名表状态,报名表表项为动物物种,为避免天敌动物相互吃掉而存在的设计模式。

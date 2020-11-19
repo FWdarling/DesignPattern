@@ -1,7 +1,7 @@
 package iterator;
 
 
-import iterator.entity.SportsMan;
+import entity.SportsMan;
 
 public class SportsManIterator implements MenuIterator<SportsMan>{
 

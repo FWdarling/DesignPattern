@@ -1,6 +1,6 @@
 package nullobject.myapp;
 
-import nullobject.entity.AbstractAthlete;
+import entity.AbstractAthlete;
 
 /**
  * 空运动员

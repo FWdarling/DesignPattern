@@ -1,7 +1,6 @@
 package state.myapp;
 
-import state.entity.PingpongAthlete;
-import state.myapp.LostState;
+import state.PingpongAthlete;
 
 /**
  * 抽象状态类

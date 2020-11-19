@@ -1,6 +1,6 @@
 package observer;
 
-import observer.entity.Athlete;
+import entity.Athlete;
 
 /**
  * description: 游泳运动员类，继承于Athlete类，观察者模式使用

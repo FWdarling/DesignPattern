@@ -1,7 +1,7 @@
 package factorymethod.myapp;
 
 import java.util.Vector;
-import factorymethod.entity.Result;
+import entity.Result;
 
 /**
  * 射击成绩类

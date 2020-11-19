@@ -1,7 +1,7 @@
 package specification.selector;
 
-import specification.entity.Athlete;
-import specification.property.FoodType;
+import entity.Athlete;
+import entity.FoodType;
 
 /**
  * 食物属性选择类
