@@ -8,24 +8,35 @@ package converter;
  **/
 public class ConverterDemo {
     public static void converterTest(){
+
         System.out.println("VO to DTO\n");
         String account="id_001";
         String currencyType="USD";
         double amount=100;
+
+
         TransactionVO transactionVOTest1=new TransactionVO();
         transactionVOTest1.setAmount(amount);
         transactionVOTest1.setTargetCurrencyType(currencyType);
         transactionVOTest1.setAccount(account);
+
+
         TransactionConverter transactionConverter=new TransactionConverter();
+
+
         TransactionDTO transactionDTOTest1=transactionConverter.convertToDTO(transactionVOTest1);
         System.out.println("account:"+transactionDTOTest1.getAccount()+"\n");
         System.out.println("currencyType:"+transactionDTOTest1.getCurrencyType()+"\n");
         System.out.println("amount:"+transactionDTOTest1.getConvertedAmount()+"\n");
         System.out.println("DTO to VO\n");
+
+
         TransactionDTO transactionDTOTest2=new TransactionDTO();
         transactionDTOTest2.setConvertedAmount(amount);
         transactionDTOTest2.setCurrencyType(currencyType);
         transactionDTOTest2.setAccount(account);
+
+
         TransactionVO transactionVOTest2=transactionConverter.convertFromDTO(transactionDTOTest2);
         System.out.println("account:"+transactionVOTest2.getAccount()+"\n");
         System.out.println("currencyType:"+transactionVOTest2.getTargetCurrencyType()+"\n");

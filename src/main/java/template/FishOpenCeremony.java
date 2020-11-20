@@ -7,7 +7,6 @@ package template;
  * @Modified By:
  **/
 public class FishOpenCeremony extends DefaultOpenCeremony{
-
     @Override
     public void openCeremonyPerform(){
         System.out.println("鱼代表队表演了咸鱼翻身！\n");

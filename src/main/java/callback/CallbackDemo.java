@@ -1,8 +1,7 @@
 package callback;
 
-import callback.entity.ScoreBoard;
+import entity.ScoreBoard;
 
-import java.util.Scanner;
 
 /**
  * @Author Max Leung
@@ -13,10 +12,13 @@ import java.util.Scanner;
 public class CallbackDemo {
     static public void callbackTest(){
         ScoreBoard scoreBoard = new ScoreBoard();
+
         GetScoreBoard getScoreBoard = new GetScoreBoard(scoreBoard);
+
         for(int i=0;i<5;i++){
             Competition competition = new Competition(scoreBoard);
             competition.executer(getScoreBoard);
         }
+
     }
 }

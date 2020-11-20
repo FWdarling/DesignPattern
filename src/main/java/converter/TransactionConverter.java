@@ -1,6 +1,6 @@
 package converter;
 
-import converter.entity.ExchangeRate;
+import entity.ExchangeRate;
 
 import java.util.function.Function;
 
@@ -17,6 +17,7 @@ public class TransactionConverter extends Converter<TransactionDTO,TransactionVO
     }
 
     static class TransactionfromDTO implements Function<TransactionDTO,TransactionVO>{
+
         @Override
         public TransactionVO apply(TransactionDTO dto){
             String account=dto.getAccount();
@@ -29,9 +30,11 @@ public class TransactionConverter extends Converter<TransactionDTO,TransactionVO
             vo.setAmount(amount*exchangeRate.getExchangeRateMap(currencyType));
             return vo;
         }
+
     }
 
     static class TransactiontoDTO implements Function<TransactionVO, TransactionDTO> {
+
         @Override
         public TransactionDTO apply(TransactionVO vo){
             String account=vo.getAccount();
@@ -44,5 +47,6 @@ public class TransactionConverter extends Converter<TransactionDTO,TransactionVO
             dto.setConvertedAmount(amount/exchangeRate.getExchangeRateMap(currencyType));
             return dto;
         }
+
     }
 }
