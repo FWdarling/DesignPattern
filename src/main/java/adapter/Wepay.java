@@ -8,6 +8,12 @@ package adapter;
  **/
 
 public class Wepay {
+    private double transactionLimits=5000;
+
+    public double getTransactionLimits(){
+        return transactionLimits;
+    }
+
     public boolean loginWechat(String weId,String pwd){
         if(pwd.equals("1234")){
             return true;

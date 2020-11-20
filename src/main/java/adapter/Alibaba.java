@@ -30,4 +30,9 @@ public class Alibaba extends Alipay implements Payment{
         this.loginStatus=validation(id,password);
         return this.loginStatus;
     }
+
+    @Override
+    public double getLimits(){
+        return getLimitAmount();
+    }
 }
