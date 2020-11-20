@@ -10,7 +10,7 @@ public class SelectorDemo {
      * 测试规则：拳击比赛
      * 参赛选手需要满足：
      * - 是肉食动物
-     * - 体重大于 300kg
+     * - 体重大于 200kg
      * @param athlete
      * @return boolean
      */
