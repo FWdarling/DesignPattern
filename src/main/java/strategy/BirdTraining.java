@@ -10,6 +10,6 @@ import entity.TrainingStrategy;
 public class BirdTraining implements TrainingStrategy {
     @Override
     public void trainingAlgorithm() {
-        System.out.println("——叽叽喳喳训练了一会——");
+        System.out.println("This bird is training for flying competition!");
     }
 }

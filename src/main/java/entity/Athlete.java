@@ -69,18 +69,18 @@ public class Athlete extends AbstractAthlete {
      * @throws InterruptedException timeunit sleep被打断异常抛出
      */
     public boolean interview(String[] questions) throws InterruptedException {
-//        采访开始
-        System.out.println("————开始录制采访————");
 //        运动员介绍
-        System.out.println(this.name + "是参加" + getSportsType() + "的运动员");
+        System.out.println(this.name + " is a " + this.species);
+//        采访开始
+        System.out.println("The interview is start!");
 //        回答每一个问题
         for (String question : questions
         ) {
-            System.out.println(this.name + "正在回答问题：" + question);
+            System.out.println(name + " answered the question: " + question);
             TimeUnit.SECONDS.sleep(1);
         }
 //        采访结束
-        System.out.println("————采访录制结束————");
+        System.out.println("The interview is over!");
         return true;
     }
 

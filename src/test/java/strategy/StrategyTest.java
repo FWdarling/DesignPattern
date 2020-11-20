@@ -11,18 +11,14 @@ public class StrategyTest {
         System.out.println("---------------------");
         System.out.println("This is Strategy Test");
         System.out.println("---------------------");
-//        创建动物并进行进食、训练以及表演
-        Rabbit rabbit = new Rabbit("兔斯基", "跑步");
+        Rabbit rabbit = new Rabbit();
         rabbit.eat();
-        Bird bird = new Bird("愤怒的小鸟", "竞速飞行");
+        Bird bird = new Bird();
         bird.eat();
-        Fish fish = new Fish("小丑鱼", "花样游泳");
+        Fish fish = new Fish();
         fish.eat();
         rabbit.train();
         bird.train();
         fish.train();
-        bird.perform();
-        fish.perform();
-        rabbit.perform();
     }
 }
