@@ -21,6 +21,7 @@ public class Stadium {
 
     /**
      * 设置观众区
+     * @param cnt 观众区数量
      * @param sz  观众区大小
      */
     public void setSpectatorArea(int cnt, int sz) {
@@ -30,6 +31,7 @@ public class Stadium {
 
     /**
      * 设置竞赛区
+     * @param cnt 竞赛区数量
      * @param sz 竞赛区大小
      * @param tp 竞赛区类型
      */
@@ -51,13 +53,13 @@ public class Stadium {
      * 打印出场馆信息
      */
     public void showStadium() {
-        System.out.println("建造了场馆：" + this.stadiumType);
-        System.out.println("——该场馆有" + this.competitionArea.get("count") + "个" +
-                this.competitionAreaType + "，每个" +
-                this.competitionArea.get("size") + "平方米");
-        System.out.println("——该场馆有" + this.spectatorArea.get("count") +
-                "个观众席，每个" +
-                this.spectatorArea.get("size") + "平方米");
+        System.out.println("Built a " + this.stadiumType + " with:");
+        System.out.println(this.competitionArea.get("count") + " " +
+                this.competitionAreaType + "s, each of " +
+                this.competitionArea.get("size") + " acres");
+        System.out.println(this.spectatorArea.get("count") +
+                " spectator areas of " +
+                this.spectatorArea.get("size") + " acres");
         System.out.println("===================");
     }
 }

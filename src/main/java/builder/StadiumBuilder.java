@@ -23,14 +23,8 @@ public abstract class StadiumBuilder {
     //    建设观众席抽象方法
     public abstract void buildSpectatorArea();
 
-    //    重载建设观众席方法，传入自定义建造数量
-    public abstract void buildSpectatorArea(int count);
-
     //    建造竞赛区抽象方法
     public abstract void buildCompetitionArea();
-
-    //    重载建设竞赛区方法，传入自定义建造数量
-    public abstract void buildCompetitionArea(int count);
 
     //    设置场馆类型抽象方法
     public abstract void setStadiumType();
