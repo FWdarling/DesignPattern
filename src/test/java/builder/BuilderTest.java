@@ -17,10 +17,10 @@ public class BuilderTest {
         StadiumBuilder flyingVenueBuilder = new FlyingVenueBuilder();
         StadiumBuilder swimmingPoolBuilder = new SwimmingPoolBuilder();
         stadiumDirector.setStadiumBuilder(racingTrackBuilder);
-        stadiumDirector.constructStadium();
+        stadiumDirector.CompetitionAreaCount(-3).constructStadium();
 
         stadiumDirector.setStadiumBuilder(flyingVenueBuilder);
-        stadiumDirector.constructStadium();
+        stadiumDirector.SpectatorAreaCount(-3).constructStadium();
 
         stadiumDirector.setStadiumBuilder(swimmingPoolBuilder);
         stadiumDirector.CompetitionAreaCount(20).SpectatorAreaCount(12).constructStadium();
