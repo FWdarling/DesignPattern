@@ -1,5 +1,6 @@
 package builder;
 
+import entity.Stadium;
 import org.junit.Test;
 
 /**
@@ -11,15 +12,17 @@ public class BuilderTest {
         System.out.println("--------------------");
         System.out.println("This is Builder Test");
         System.out.println("--------------------");
-        StadiumConstractor stadiumConstractor = new StadiumConstractor();
+        StadiumDirector stadiumDirector = new StadiumDirector();
         StadiumBuilder racingTrackBuilder = new RacingTrackBuilder();
         StadiumBuilder flyingVenueBuilder = new FlyingVenueBuilder();
-        stadiumConstractor.setStadiumBuilder(racingTrackBuilder);
-        stadiumConstractor.constructStadium();
-        stadiumConstractor.getStadium();
+        StadiumBuilder swimmingPoolBuilder = new SwimmingPoolBuilder();
+        stadiumDirector.setStadiumBuilder(racingTrackBuilder);
+        stadiumDirector.constructStadium();
 
-        stadiumConstractor.setStadiumBuilder(flyingVenueBuilder);
-        stadiumConstractor.constructStadium();
-        stadiumConstractor.getStadium();
+        stadiumDirector.setStadiumBuilder(flyingVenueBuilder);
+        stadiumDirector.constructStadium();
+
+        stadiumDirector.setStadiumBuilder(swimmingPoolBuilder);
+        stadiumDirector.CompetitionAreaCount(20).SpectatorAreaCount(12).constructStadium();
     }
 }
