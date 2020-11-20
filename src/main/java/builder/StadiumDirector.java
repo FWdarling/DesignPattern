@@ -36,17 +36,17 @@ public class StadiumDirector {
     public void constructStadium() {
         stadiumBuilder.buildNewStadium();
         stadiumBuilder.setStadiumType();
-        if (this.competitionAreaCount == 0) {
+        if (this.spectatorAreaCount == 0) {
             stadiumBuilder.buildCompetitionArea();
         } else {
-            stadiumBuilder.buildCompetitionArea(this.competitionAreaCount);
-            this.competitionAreaCount = 0;
+            stadiumBuilder.buildCompetitionArea(this.spectatorAreaCount);
+            this.spectatorAreaCount = 0;
         }
-        if (this.spectatorAreaCount == 0) {
+        if (this.competitionAreaCount == 0) {
             stadiumBuilder.buildSpectatorArea();
         } else {
-            stadiumBuilder.buildSpectatorArea(this.spectatorAreaCount);
-            this.spectatorAreaCount = 0;
+            stadiumBuilder.buildSpectatorArea(this.competitionAreaCount);
+            this.competitionAreaCount = 0;
         }
         this.getStadium();
     }
