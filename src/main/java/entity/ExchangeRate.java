@@ -1,5 +1,5 @@
-package converter.entity;
-import java.util.ArrayList;
+package entity;
+
 import java.util.HashMap;
 import java.util.Map;
 

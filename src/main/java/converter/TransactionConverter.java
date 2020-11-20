@@ -1,6 +1,6 @@
 package converter;
 
-import converter.entity.ExchangeRate;
+import entity.ExchangeRate;
 
 import java.util.function.Function;
 

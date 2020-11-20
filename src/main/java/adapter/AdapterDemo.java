@@ -1,6 +1,4 @@
 package adapter;
-import jdk.nashorn.internal.runtime.regexp.joni.ScanEnvironment;
-
 import java.util.*;
 /**
  * @Author Max Leung
