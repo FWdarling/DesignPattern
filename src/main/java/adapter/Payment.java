@@ -35,7 +35,7 @@ public interface Payment {
         id： user's account for the chosen platform.
         password: password for the platform.
 
-     return value:
+     Return value:
         true: login succeeds.
         false：login fails.
 
@@ -44,4 +44,20 @@ public interface Payment {
      >>payment.login("abcd","1234");
      **/
     boolean login(String id, String password);
+
+    /**
+     The amount of a single transaction is restricted by the paying platform.The platform provides a interface to
+     imform the users of the limits.
+
+     Args:
+
+     Return Values:
+        double: The exact amounts of the restriction.
+
+     Examples:
+     >>Payment payment=new Payment();
+     >>double limits=payment.getLimits();
+
+     **/
+    double getLimits();
 }

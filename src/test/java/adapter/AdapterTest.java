@@ -14,7 +14,7 @@ public class AdapterTest {
     public void adapterTest(){
         System.out.println("========  测试适配器模式开始  ========");
         AdapterDemo adapterDemo = new AdapterDemo();
-        //adapterDemo.adapterTest();
+        adapterDemo.adapterTest();
         System.out.println("========  测试适配器模式结束  ========");
     }
 }
