@@ -12,19 +12,12 @@ public class BuilderTest {
         System.out.println("--------------------");
         System.out.println("This is Builder Test");
         System.out.println("--------------------");
-
-//        生成指挥者类
         StadiumDirector stadiumDirector = new StadiumDirector();
-
-//        场馆建造者类
         StadiumBuilder racingTrackBuilder = new RacingTrackBuilder();
         StadiumBuilder flyingVenueBuilder = new FlyingVenueBuilder();
         StadiumBuilder swimmingPoolBuilder = new SwimmingPoolBuilder();
-
-//        给指挥者类设定建造者
         stadiumDirector.setStadiumBuilder(racingTrackBuilder);
-
-        stadiumDirector.CompetitionAreaCount(-3).SpectatorAreaCount(14).constructStadium();
+        stadiumDirector.CompetitionAreaCount(-3).constructStadium();
 
         stadiumDirector.setStadiumBuilder(flyingVenueBuilder);
         stadiumDirector.SpectatorAreaCount(-3).constructStadium();
