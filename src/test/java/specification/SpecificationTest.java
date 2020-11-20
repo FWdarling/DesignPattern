@@ -1,18 +1,9 @@
 package specification;
 
 import org.junit.Test;
-import entity.FoodType;
-import specification.selector.FoodTypeSelector;
-import specification.selector.MassGreaterThanSelector;
-import entity.Athlete;
+import static specification.SelectorDemo.boxingSelector;
 
 public class SpecificationTest {
-
-    private boolean boxingSelector(Athlete athlete) {
-        final FoodTypeSelector foodTypeSelector = new FoodTypeSelector(FoodType.CARNIVORE);
-        final MassGreaterThanSelector massSelector = new MassGreaterThanSelector(200);
-        return foodTypeSelector.and(massSelector).test(athlete);
-    }
 
     @Test
     public void SpecificationTest() {

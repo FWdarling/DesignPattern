@@ -6,13 +6,11 @@ import entity.Mass;
 
 /**
  * 测试实体：史莱姆
+ * - 草食动物
+ * - 体重 5kg
  */
 public class Slime extends Athlete {
     public Slime() {
-        this(new Mass(5));
-    }
-
-    public Slime(Mass mass) {
-        super("Slime", mass, FoodType.HERBIVORE);
+        super("Slime", new Mass(5), FoodType.HERBIVORE);
     }
 }

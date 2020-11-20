@@ -6,13 +6,11 @@ import entity.Mass;
 
 /**
  * 测试实体：熊猫
+ * - 肉食动物
+ * - 体重 300kg
  */
 public class Panda extends Athlete {
     public Panda() {
-        this(new Mass(300));
-    }
-
-    public Panda(Mass mass) {
-        super("Panda", mass, FoodType.CARNIVORE);
+        super("Panda", new Mass(300), FoodType.CARNIVORE);
     }
 }
