@@ -24,6 +24,7 @@ public class AdapterDemo {
 
     private boolean transactionLogin(int userOption) {
         Payment payer = payerRegistry.get(userOption-1);
+
         boolean loginStatus = payer.login("test1","4567");
         if(loginStatus==false){
             System.out.println("账号：test1,密码：4567 登陆失败！\n");
@@ -31,6 +32,8 @@ public class AdapterDemo {
         else{
             System.out.println("账号：test1,密码：4567 登陆成功！\n");
         }
+
+
         loginStatus=payer.login("test2","1234");
         if(loginStatus==false){
             System.out.println("账号：test2,密码：1234 登陆失败！\n");
@@ -38,11 +41,13 @@ public class AdapterDemo {
         else {
             System.out.println("账号：test2,密码：1234 登陆成功！\n");
         }
+
         return loginStatus;
     }
 
     private boolean transactionPay(int userOption){
         Payment payer = payerRegistry.get(userOption-1);
+
         System.out.println("支付100000元！\n");
         boolean payStatus = payer.pay(100000);
         if (payStatus) {
@@ -52,6 +57,7 @@ public class AdapterDemo {
             System.out.println("支付失败！单笔交易不能超过"+payer.getLimits()+"元！\n");
         }
         payStatus = payer.pay(100);
+
         System.out.println("支付100元！\n");
         if (payStatus) {
             System.out.println("支付成功！\n");
@@ -64,10 +70,12 @@ public class AdapterDemo {
 
     private boolean transaction(int userOption){
         boolean loginStatus=transactionLogin(userOption);
+
         if(loginStatus==false){
             System.out.println("登陆失败，正在退出...\n\n");
             return false;
         }
+
         boolean payStatus=transactionPay(userOption);
         if(payStatus==false){
             System.out.println("支付失败，正在退出...\n\n");
@@ -77,8 +85,10 @@ public class AdapterDemo {
     }
 
     public void adapterTest(){
+
         System.out.println("Alipay:\n");
         transaction(1);
+
         System.out.println("Wepay:\n");
         transaction(2);
     }
