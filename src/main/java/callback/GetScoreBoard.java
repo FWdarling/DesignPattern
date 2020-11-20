@@ -1,6 +1,8 @@
 package callback;
 
-import entity.ScoreBoard;
+import callback.entity.ScoreBoard;
+
+import java.util.Scanner;
 
 /**
  * @Author Max Leung
@@ -15,7 +17,6 @@ public class GetScoreBoard implements Callback{
     public GetScoreBoard(ScoreBoard scoreBoard){
         this.scoreBoard = scoreBoard;
     }
-
     @Override
     public void call(){
         System.out.println("最新的排行榜：\n");

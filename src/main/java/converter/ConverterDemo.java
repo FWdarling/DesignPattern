@@ -1,60 +1,34 @@
 package converter;
 
-import java.util.Scanner;
-
 /**
  * @Author Max Leung
  * @Description:
- * @Date: Created in 12:27 2020/11/13
+ * @Date: Created in 16:05 2020/11/20
  * @Modified By:
  **/
 public class ConverterDemo {
     public static void converterTest(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("----------------------------------------------------Adapter Test----------------------------------------------------\n");
-        System.out.println("欢迎来到货币兑换区域！\n");
-        System.out.println("请输入您所持有的货币： 1.EUR 2.USD 3.GBP\n");
-        int concurrencyType=scanner.nextInt();
-        System.out.println("请输入您要兑换的金额（原货币）：\n");
-        double amount=scanner.nextDouble();
-        if(concurrencyType==1){
-            EUR eur=new EUR();
-            double rmb=eur.toRMB(amount);
-            System.out.println("您兑换得到"+rmb+"人民币");
-        }
-        else if(concurrencyType==2){
-            USD usd=new USD();
-            double rmb=usd.toRMB(amount);
-            System.out.println("您兑换得到"+rmb+"人民币");
-        }
-        else{
-            GBP gbp=new GBP();
-            double rmb=gbp.toRMB(amount);
-            System.out.println("您兑换得到"+rmb+"人民币");
-        }
-        System.out.println("\n\n");
-        System.out.println("按c键+Enter键继续...\n");
-        scanner.next();
-        System.out.println("欢迎来到结算区域：\n");
-        System.out.println("请输入您卡中的货币类型：1.EUR 2.USD 3.GBP\n");
-        concurrencyType=scanner.nextInt();
-        System.out.println("请输入您本次结算的总金额：\n");
-        amount=scanner.nextDouble();
-        if(concurrencyType==1){
-            EUR eur=new EUR();
-            double eurCost=eur.fromRMB(amount);
-            System.out.println("您支付了"+eurCost+"EUD");
-        }
-        else if(concurrencyType==2){
-            USD usd=new USD();
-            double usdCost=usd.fromRMB(amount);
-            System.out.println("您支付了"+usdCost+"USD");
-        }
-        else{
-            GBP gbp=new GBP();
-            double gbpCost=gbp.toRMB(amount);
-            System.out.println("您支付了"+gbpCost+"GBP");
-        }
-        System.out.println("\n\n");
+        System.out.println("VO to DTO\n");
+        String account="id_001";
+        String currencyType="USD";
+        double amount=100;
+        TransactionVO transactionVOTest1=new TransactionVO();
+        transactionVOTest1.setAmount(amount);
+        transactionVOTest1.setTargetCurrencyType(currencyType);
+        transactionVOTest1.setAccount(account);
+        TransactionConverter transactionConverter=new TransactionConverter();
+        TransactionDTO transactionDTOTest1=transactionConverter.convertToDTO(transactionVOTest1);
+        System.out.println("account:"+transactionDTOTest1.getAccount()+"\n");
+        System.out.println("currencyType:"+transactionDTOTest1.getCurrencyType()+"\n");
+        System.out.println("amount:"+transactionDTOTest1.getConvertedAmount()+"\n");
+        System.out.println("DTO to VO\n");
+        TransactionDTO transactionDTOTest2=new TransactionDTO();
+        transactionDTOTest2.setConvertedAmount(amount);
+        transactionDTOTest2.setCurrencyType(currencyType);
+        transactionDTOTest2.setAccount(account);
+        TransactionVO transactionVOTest2=transactionConverter.convertFromDTO(transactionDTOTest2);
+        System.out.println("account:"+transactionVOTest2.getAccount()+"\n");
+        System.out.println("currencyType:"+transactionVOTest2.getTargetCurrencyType()+"\n");
+        System.out.println("amount:"+transactionVOTest2.getAmount()+"\n");
     }
 }

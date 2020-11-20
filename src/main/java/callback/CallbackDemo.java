@@ -1,6 +1,6 @@
 package callback;
 
-import entity.ScoreBoard;
+import callback.entity.ScoreBoard;
 
 import java.util.Scanner;
 
@@ -11,19 +11,12 @@ import java.util.Scanner;
  * @Modified By:
  **/
 public class CallbackDemo {
-
-    public static void callbackTest(){
+    static public void callbackTest(){
         ScoreBoard scoreBoard = new ScoreBoard();
         GetScoreBoard getScoreBoard = new GetScoreBoard(scoreBoard);
-        while(true) {
-            InputCompetitionResult inputCompetitionResult = new InputCompetitionResult(scoreBoard);
-            inputCompetitionResult.executer(getScoreBoard);
-            System.out.println("是否所有比赛结束？ 0：是 1：否\n");
-            Scanner scanner = new Scanner(System.in);
-            int isGameOver = scanner.nextInt();
-            if(isGameOver == 0) {
-                break;
-            }
+        for(int i=0;i<5;i++){
+            Competition competition = new Competition(scoreBoard);
+            competition.executer(getScoreBoard);
         }
     }
 }
