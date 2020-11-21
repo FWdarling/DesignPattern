@@ -1,17 +1,17 @@
-package prototype;
+package prototypedeepcopy;
 
 import entity.Athlete;
 import org.junit.Test;
 
 /**
- * @Author: CINDY DENG
- * @Date: 2020/11/12,22:54
- * @Version: 1.0
+ * Author: CINDY DENG 1850477
+ * Date: 2020/11/21,12:51
+ * Version: 1.0
  */
-public class PrototypeTest {
+public class PrototypeDeepCopyTest {
     @Test
     public void test() throws CloneNotSupportedException{
-        System.out.println("====Prototype===");
+        System.out.println("---------------- [Pattern] Prototype ----------------");
         Athlete athlete1 = new Athlete("ALEX", "highJump");
         Athlete athlete2 = new Athlete("Cathy","highJump");
         Athlete athlete3 = new Athlete("Tim","highJump");
@@ -35,5 +35,6 @@ public class PrototypeTest {
         tmpCertificate2.printCertificate();
         tmpCertificate3.printCertificate();
         tmpCertificate4.printCertificate();
+        System.out.println("------------------------ END ------------------------");
     }
 }
