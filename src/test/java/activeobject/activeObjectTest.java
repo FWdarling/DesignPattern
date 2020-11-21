@@ -3,12 +3,14 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import org.junit.Test;
 
-import java.text.SimpleDateFormat;
-
+/**
+ * @Author Amonkey00
+ * @Description: ActiveObject模式代码测试
+ **/
 public class activeObjectTest {
     @Test
     public void activeObjectTest() {
-        System.out.println("---------------- [Pattern] Prototype ----------------");
+        System.out.println("---------------- [Pattern] ActiveObject ----------------");
         SecuritySystem system = new SecuritySystem();
         Alarm carnivoreAreaAlarm = new Alarm(2000, "肉食动物区警报", system);
         Alarm herbivoreAreaAlarm = new Alarm(5000, "草食动物区警报", system);
