@@ -9,9 +9,7 @@ import org.junit.Test;
 public class MultitonTest {
     @Test
     public void MultitonTest(){
-        System.out.println("---------------------");
-        System.out.println("This is Multiton Test");
-        System.out.println("---------------------");
+        System.out.println("---------------- [Pattern] Multiton ----------------");
         RoomDistributor roomDistributor = new RoomDistributor();
         TrainingRoom trainingRoom1 = roomDistributor.applyRoom();
         TrainingRoom trainingRoom2 = roomDistributor.applyRoom();
@@ -23,5 +21,6 @@ public class MultitonTest {
         trainingRoom2.repayRoom();
         trainingRoom4 = roomDistributor.applyRoom();
         trainingRoom4.showRoom();
+        System.out.println("------------------------ END ------------------------");
     }
 }

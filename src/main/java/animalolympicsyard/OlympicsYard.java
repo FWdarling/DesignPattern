@@ -19,7 +19,6 @@ public class OlympicsYard {
                 //当第一个进程结束初始化后，所有进程来到这里发现已经初始化，直接返回
                 //这样就避免了多个进程进行多次初始化
                 if(_instance == null){
-                    System.out.println("=== 双重检查锁 Double Checked Locking 模式===");
                     System.out.println("动物运动会总场景初始化中");
                     //=================具体的初始化逻辑=================//
                     //待添加其他场景的初始化

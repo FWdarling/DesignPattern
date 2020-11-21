@@ -8,9 +8,7 @@ import org.junit.Test;
 public class StrategyTest {
     @Test
     public void StrategyTest() {
-        System.out.println("---------------------");
-        System.out.println("This is Strategy Test");
-        System.out.println("---------------------");
+        System.out.println("---------------- [Pattern] Strategy ----------------");
         Rabbit rabbit = new Rabbit();
         rabbit.eat();
         Bird bird = new Bird();
@@ -20,5 +18,6 @@ public class StrategyTest {
         rabbit.train();
         bird.train();
         fish.train();
+        System.out.println("------------------------ END ------------------------");
     }
 }

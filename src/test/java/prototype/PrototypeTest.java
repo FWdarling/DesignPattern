@@ -11,7 +11,7 @@ import org.junit.Test;
 public class PrototypeTest {
     @Test
     public void test() throws CloneNotSupportedException{
-        System.out.println("====Prototype===");
+        System.out.println("---------------- [Pattern] Prototype ----------------");
         Athlete athlete1 = new Athlete("ALEX", "highJump");
         Athlete athlete2 = new Athlete("Cathy","highJump");
         Athlete athlete3 = new Athlete("Tim","highJump");
@@ -35,5 +35,6 @@ public class PrototypeTest {
         tmpCertificate2.printCertificate();
         tmpCertificate3.printCertificate();
         tmpCertificate4.printCertificate();
+        System.out.println("------------------------ END ------------------------");
     }
 }

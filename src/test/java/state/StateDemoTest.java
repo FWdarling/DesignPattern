@@ -6,8 +6,8 @@ public class StateDemoTest {
 
     @Test
     public void runStateDemo() {
-        System.out.println("========  测试状态模式开始  ========");
+        System.out.println("---------------- [Pattern] StateDemo ----------------");
         StateDemo.runStateDemo();
-        System.out.println("========  测试状态模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }

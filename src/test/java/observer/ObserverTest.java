@@ -12,8 +12,8 @@ public class ObserverTest {
     @Test
     public void observerTest(){
 
-        System.out.println("========  测试观察者模式开始  ========");
+        System.out.println("---------------- [Pattern] Observer ----------------");
         ObserverDemo.observerTest();
-        System.out.println("========  测试观察者模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }

@@ -11,8 +11,8 @@ public class FlyWeightTest {
 
     @Test
     public void flyWeightTest(){
-        System.out.println("========  测试享元模式开始  ========");
+        System.out.println("---------------- [Pattern] FlyWeight ----------------");
         FlyWeightDemo.flyWeightTest();
-        System.out.println("========  测试享元模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }
