@@ -1,24 +1,20 @@
 package extensionobjects.concreteextensions;
 
-import extensionobjects.abstractextensions.InjuryExtension;
-import extensionobjects.overtime.InjuryOvertime;
+import extensionobjects.Race;
+import extensionobjects.abstractextensions.InjuryOvertime;
 
 /**
- * 伤停补时类
+ * 继承并实现 InjuryOvertime 类。实现其扩展功能。
  */
-public class Injury implements InjuryExtension {
-    private final InjuryOvertime overtime;
-
-    public Injury(InjuryOvertime injuryOvertime) {
-        this.overtime = injuryOvertime;
+public class Injury extends InjuryOvertime {
+    public Injury(Race race) {
+        super(race);
     }
 
     @Override
-    public void viewInjuryOvertime() {
-        System.out.println("Injury overtime: "+overtime.getTime()+"");
-    }
-
-    public InjuryOvertime getOvertime() {
-        return overtime;
+    public void SetOvertime(int overtime) {
+        race.Overtime(overtime);
+        System.out.println("Set an injury overtime for " + overtime + " minutes");
+        race.GetTime();
     }
 }
