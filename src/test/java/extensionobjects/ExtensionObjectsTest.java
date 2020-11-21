@@ -1,8 +1,5 @@
 package extensionobjects;
 
-import extensionobjects.concreteextensions.Draw;
-import extensionobjects.concreteextensions.Injury;
-import extensionobjects.overtime.*;
 import org.junit.Test;
 
 public class ExtensionObjectsTest {
@@ -12,9 +9,10 @@ public class ExtensionObjectsTest {
         System.out.println("---------------------");
         System.out.println("This is Extension Objects Test");
         System.out.println("---------------------");
-        final Injury injury = new Injury(new InjuryOvertime(5));
-        final Draw draw = new Draw(new DrawOvertime(15));
-        injury.viewInjuryOvertime();
-        draw.viewDrawOvertime();
+        Race race = new ConcreteRace();
+        Overtime overtimeInjury = race.GetExtension("Injury");
+        Overtime overtimeDraw = race.GetExtension("Draw");
+        overtimeInjury.SetOvertime(5);
+        overtimeDraw.SetOvertime(15);
     }
 }
