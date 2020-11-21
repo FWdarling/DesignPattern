@@ -8,6 +8,10 @@ public class Referee extends AbstractReferees {
     private Game game;
     private boolean bIsBusy;
 
+    /**
+     * 构造裁判（使用 String）（责任链模式）
+     * @param myJudgement
+     */
     public Referee(String myJudgement){
         this.myJudgement = myJudgement;
     }
@@ -18,6 +22,10 @@ public class Referee extends AbstractReferees {
         bIsBusy = true;
     }
 
+    /**
+     * 打印裁判的判罚（责任链模式）
+     * @param message String
+     */
     @Override
     protected void write(String message) {
         System.out.println("The referee's judgement: " + myJudgement);

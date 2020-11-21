@@ -1,24 +1,20 @@
 package extensionobjects.concreteextensions;
 
-import extensionobjects.abstractextensions.DrawExtension;
-import extensionobjects.overtime.DrawOvertime;
+import extensionobjects.Race;
+import extensionobjects.abstractextensions.DrawOvertime;
 
 /**
- * 平局加时类
+ * 继承并实现 DrawOvertime 类。实现其扩展功能。
  */
-public class Draw implements DrawExtension {
-    private final DrawOvertime overtime;
-
-    public Draw(DrawOvertime drawOvertime) {
-        this.overtime = drawOvertime;
+public class Draw extends DrawOvertime {
+    public Draw(Race race) {
+        super(race);
     }
 
     @Override
-    public void viewDrawOvertime() {
-        System.out.println("Draw overtime: "+overtime.getTime()+"");
-    }
-
-    public DrawOvertime getOvertime() {
-        return overtime;
+    public void SetOvertime(int overtime) {
+        race.Overtime(overtime);
+        System.out.println("Set a draw overtime for " + overtime + " minutes");
+        race.GetTime();
     }
 }

@@ -8,6 +8,12 @@ package adapter;
  **/
 
 public class Alipay {
+    private double limits=10000;
+
+    public double getLimitAmount(){
+        return limits;
+    }
+
     public boolean validation(String aliAcount,String password){
         if(password.equals("1234")){
             return true;
@@ -24,4 +30,5 @@ public class Alipay {
             return true;
         }
     }
+
 }
