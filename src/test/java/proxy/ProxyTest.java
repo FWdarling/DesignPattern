@@ -11,9 +11,7 @@ import java.util.ArrayList;
 public class ProxyTest {
     @Test
     public void proxyTest() throws InterruptedException {
-        System.out.println("------------------");
-        System.out.println("This is Proxy Test");
-        System.out.println("------------------");
+        System.out.println("---------------- [Pattern] Proxy ----------------");
 //        定义运动员列表
         ArrayList<Athlete> athletes = new ArrayList<>();
 //        加入运动员
@@ -30,5 +28,7 @@ public class ProxyTest {
         reporter.interview(athleteProxy, "Jerry", questions);
         reporter.interview(athleteProxy, "泡泡", questions);
         reporter.interview(athleteProxy, "李华", questions);
+        System.out.println("------------------------ END ------------------------");
+
     }
 }

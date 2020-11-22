@@ -9,9 +9,7 @@ import org.junit.Test;
 public class BuilderTest {
     @Test
     public void builderTest() {
-        System.out.println("--------------------");
-        System.out.println("This is Builder Test");
-        System.out.println("--------------------");
+        System.out.println("---------------- [Pattern] Prototype ----------------");
 
 //        生成指挥者类
         StadiumDirector stadiumDirector = new StadiumDirector();
@@ -31,5 +29,7 @@ public class BuilderTest {
 
         stadiumDirector.setStadiumBuilder(swimmingPoolBuilder);
         stadiumDirector.CompetitionAreaCount(20).SpectatorAreaCount(12).constructStadium();
+
+        System.out.println("------------------------ END ------------------------");
     }
 }
