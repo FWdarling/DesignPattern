@@ -12,9 +12,9 @@ public class AdapterTest {
 
     @Test
     public void adapterTest(){
-        System.out.println("========  测试适配器模式开始  ========");
+        System.out.println("---------------- [Pattern] Adapter----------------");
         AdapterDemo adapterDemo = new AdapterDemo();
         adapterDemo.adapterTest();
-        System.out.println("========  测试适配器模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }

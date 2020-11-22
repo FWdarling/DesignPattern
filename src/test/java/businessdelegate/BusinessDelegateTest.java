@@ -5,6 +5,7 @@ import org.junit.Test;
 public class BusinessDelegateTest {
     @Test
     public void businessDelegateTest() {
+        System.out.println("---------------- [Pattern] BusinessDelegate ----------------");
         try {
             QueryDelegate queryDelegate = new QueryDelegate(OfflineQuery.class.getName());
             queryDelegate.setQueryType();
@@ -17,5 +18,6 @@ public class BusinessDelegateTest {
         } catch (InstantiationException e) {
             System.out.println(e.getMessage());
         }
+        System.out.println("------------------------ END ------------------------");
     }
 }

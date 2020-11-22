@@ -8,9 +8,7 @@ import org.junit.Test;
 public class BuilderTest {
     @Test
     public void builderTest() {
-        System.out.println("--------------------");
-        System.out.println("This is Builder Test");
-        System.out.println("--------------------");
+        System.out.println("---------------- [Pattern] Builder ----------------");
         StadiumConstractor stadiumConstractor = new StadiumConstractor();
         StadiumBuilder racingTrackBuilder = new RacingTrackBuilder();
         StadiumBuilder flyingVenueBuilder = new FlyingVenueBuilder();
@@ -21,5 +19,6 @@ public class BuilderTest {
         stadiumConstractor.setStadiumBuilder(flyingVenueBuilder);
         stadiumConstractor.constructStadium();
         stadiumConstractor.getStadium();
+        System.out.println("------------------------ END ------------------------");
     }
 }

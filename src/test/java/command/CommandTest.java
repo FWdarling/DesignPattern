@@ -12,11 +12,10 @@ import org.junit.Test;
 public class CommandTest {
 	@Test
 	public void commandTest() {
-		System.out.println("------------------");
-        System.out.println("This is Command Test");
-        System.out.println("------------------");
+		System.out.println("---------------- [Pattern] Command ----------------");
         Player myPlayer=new Player();
 		AwardMedalCommand command=new AwardMedalCommand(myPlayer,"Swimming", Material.Gold);
 		command.execute();
+		System.out.println("------------------------ END ------------------------");
 	}
 }

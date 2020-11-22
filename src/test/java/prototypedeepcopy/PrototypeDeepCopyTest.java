@@ -1,14 +1,14 @@
-package prototype;
+package prototypedeepcopy;
 
 import entity.Athlete;
 import org.junit.Test;
 
 /**
- * @Author: CINDY DENG
- * @Date: 2020/11/12,22:54
- * @Version: 1.0
+ * Author: CINDY DENG 1850477
+ * Date: 2020/11/21,12:51
+ * Version: 1.0
  */
-public class PrototypeTest {
+public class PrototypeDeepCopyTest {
     @Test
     public void test() throws CloneNotSupportedException{
         System.out.println("---------------- [Pattern] Prototype ----------------");
