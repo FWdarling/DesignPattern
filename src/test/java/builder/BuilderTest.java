@@ -10,7 +10,6 @@ public class BuilderTest {
     @Test
     public void builderTest() {
         System.out.println("---------------- [Pattern] Builder ----------------");
-
 //        生成指挥者类
         StadiumDirector stadiumDirector = new StadiumDirector();
 

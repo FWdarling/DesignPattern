@@ -11,8 +11,9 @@ public class FacadeTest {
     @Test
     public void facadeTest(){
 
-        System.out.println("========  测试外观模式开始  ========");
+        System.out.println("---------------- [Pattern] Facade ----------------");
         FacadeDemo.facadeTest();
         System.out.println("========  测试外观模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }

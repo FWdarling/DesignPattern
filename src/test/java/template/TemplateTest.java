@@ -12,8 +12,8 @@ public class TemplateTest {
 
     @Test
     public void templateTest(){
-        System.out.println("========  测试模板模式开始  ========");
+        System.out.println("---------------- [Pattern] Template ----------------");
         TemplateDemo.templateTest();
-        System.out.println("========  测试模板模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }

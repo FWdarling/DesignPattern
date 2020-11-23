@@ -23,6 +23,7 @@ public class ScoreBoard {
         team.put("Bird",2);
         team.put("Bear",3);
         team.put("Fish",4);
+
         teamName[0] = "Dog";
         teamName[1] = "Chicken";
         teamName[2] = "Bird";

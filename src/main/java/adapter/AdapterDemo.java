@@ -1,6 +1,4 @@
 package adapter;
-import jdk.nashorn.internal.runtime.regexp.joni.ScanEnvironment;
-
 import java.util.*;
 /**
  * @Author Max Leung
@@ -25,59 +23,59 @@ public class AdapterDemo {
     }
 
     private boolean transactionLogin(int userOption) {
-        int isBreak;
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("请输入您的账户以及密码\n账户:");
-            String id = scanner.next();
-            System.out.println("\n密码：");
-            String password = scanner.next();
-            System.out.println(password);
-            Payment payer = payerRegistry.get(userOption-1);
-            boolean loginStatus = payer.login(id, password);
-            if (loginStatus) {
-                System.out.println("\n登录成功！\n");
-                return true;
-            } else {
-                System.out.println("登陆失败！\n");
-            }
-            System.out.println("重新输入账号密码，输入0\n想要退出登录请输入1\n");
-            isBreak = scanner.nextInt();
-            if (isBreak == 1) {
-                return false;
-            }
+        Payment payer = payerRegistry.get(userOption-1);
+
+        boolean loginStatus = payer.login("test1","4567");
+        if(loginStatus==false){
+            System.out.println("账号：test1,密码：4567 登陆失败！\n");
         }
+        else{
+            System.out.println("账号：test1,密码：4567 登陆成功！\n");
+        }
+
+
+        loginStatus=payer.login("test2","1234");
+        if(loginStatus==false){
+            System.out.println("账号：test2,密码：1234 登陆失败！\n");
+        }
+        else {
+            System.out.println("账号：test2,密码：1234 登陆成功！\n");
+        }
+
+        return loginStatus;
     }
 
     private boolean transactionPay(int userOption){
-        Scanner scanner = new Scanner(System.in);
-        int isPayAgain;
         Payment payer = payerRegistry.get(userOption-1);
-        while(true) {
-            System.out.println("请输入支付金额：\n");
-            double amount = scanner.nextDouble();
-            boolean payStatus = payer.pay(amount);
-            if (payStatus) {
-                System.out.println("支付成功！\n");
-                return true;
-            } else {
-                System.out.println("支付失败！单笔交易不能超过10000元！\n");
-            }
-            System.out.println("重新支付请输入0\n退出请输入1\n");
-            isPayAgain = scanner.nextInt();
-            if(isPayAgain==1){
-                return false;
-            }
+
+        System.out.println("支付100000元！\n");
+        boolean payStatus = payer.pay(100000);
+        if (payStatus) {
+            System.out.println("支付成功！\n");
+            return true;
+        } else {
+            System.out.println("支付失败！单笔交易不能超过"+payer.getLimits()+"元！\n");
         }
+        payStatus = payer.pay(100);
+
+        System.out.println("支付100元！\n");
+        if (payStatus) {
+            System.out.println("支付成功！\n");
+            return true;
+        } else {
+            System.out.println("支付失败！单笔交易不能超过"+payer.getLimits()+"元！\n");
+        }
+        return payStatus;
     }
 
     private boolean transaction(int userOption){
-        Scanner scanner = new Scanner(System.in);
         boolean loginStatus=transactionLogin(userOption);
+
         if(loginStatus==false){
             System.out.println("登陆失败，正在退出...\n\n");
             return false;
         }
+
         boolean payStatus=transactionPay(userOption);
         if(payStatus==false){
             System.out.println("支付失败，正在退出...\n\n");
@@ -87,18 +85,11 @@ public class AdapterDemo {
     }
 
     public void adapterTest(){
-        System.out.println("----------------------------------------------------Adapter Test----------------------------------------------------\n");
-        System.out.println("请选择支付方式：1.支付宝 2.微信 3.退出\n");
-        Scanner scanner = new Scanner(System.in);
-        int userOption = scanner.nextInt();
-        if (userOption == 3) {
-            System.out.println("正在退出...");
-        }
-        else{
-            boolean transactionStatus=transaction(userOption);
-            if(transactionStatus==true){
-                System.out.println("支付成功，正在退出...\n\n");
-            }
-        }
+
+        System.out.println("Alipay:\n");
+        transaction(1);
+
+        System.out.println("Wepay:\n");
+        transaction(2);
     }
 }

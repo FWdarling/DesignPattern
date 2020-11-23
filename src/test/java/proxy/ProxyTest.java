@@ -29,6 +29,5 @@ public class ProxyTest {
         reporter.interview(athleteProxy, "泡泡", questions);
         reporter.interview(athleteProxy, "李华", questions);
         System.out.println("------------------------ END ------------------------");
-
     }
 }

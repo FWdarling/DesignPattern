@@ -12,8 +12,8 @@ public class MementoTest {
     @Test
     public void mementoTest(){
 
-        System.out.println("========  测试备忘录模式开始  ========");
+        System.out.println("---------------- [Pattern] Memento ----------------");
         MementoDemo.mementoTest();
-        System.out.println("========  测试备忘录模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }

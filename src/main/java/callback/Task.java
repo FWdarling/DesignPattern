@@ -14,6 +14,7 @@ public abstract class Task {
         }
     }
 
+
     /**
      exec is an abstract function to be defined by users, in the callback design patterns. The process is mainly devides into
      2 parts, first part is to finish a defined action which is implemented in exec. After finishing the exec function, then
