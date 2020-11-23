@@ -5,7 +5,7 @@ import entity.Material;
 
 /**
  * description: 管道模式(pipeline)调用类
- * data: 11/23/20 14:15 PM
+ * date: 11/23/20 14:15 PM
  * author: cjsmt
  */
 public class PipelineDemo {

@@ -2,7 +2,7 @@ package pipeline;
 
 /**
  * description: 管道类，用于进行奖牌的排序
- * data: 11/23/20 00:21 AM
+ * date: 11/23/20 00:21 AM
  * author: cjsmt
  * @param <I>
  * @param <O>

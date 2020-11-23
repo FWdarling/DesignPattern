@@ -2,7 +2,7 @@ package pipeline;
 
 /**
  * description: 管道模式测试类
- * data: 11/23/20 20:06 PM
+ * date: 11/23/20 20:06 PM
  * author: cjsmt
  */
 public class PipelineTest {

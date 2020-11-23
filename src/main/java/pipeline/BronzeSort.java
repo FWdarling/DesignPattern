@@ -4,7 +4,7 @@ import entity.MedalBoard;
 
 /**
  * description: 阶段类，按铜牌数目排序
- * data: 11/23/20 20:10 PM
+ * date: 11/23/20 20:10 PM
  * author: cjsmt
  */
 public class BronzeSort implements Sort<MedalBoard, MedalBoard>{

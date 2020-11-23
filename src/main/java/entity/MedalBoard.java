@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * description: 奖牌榜类,用于记录奖牌榜上各个动物获得奖牌的数目及排名等信息
- * data: 11/23/20 14:15 PM
+ * date: 11/23/20 14:15 PM
  * author: cjsmt
  */
 public class MedalBoard {
