@@ -14,6 +14,7 @@ public class ProducerConsumerTest {
     public void producerConsumerTest() {
     //public static void main(String[] args) {
         //这行备注放这里主要是提醒多线程的test无法真正测试运行情况，最后写main函数需要注意。合并后删除本注释
+        System.out.println("---------------- [Pattern] Producer-Customer ----------------");
 
         Table table = new Table(2);
         new MakerThread("MakerThread-1",table,31415).start();
@@ -22,6 +23,7 @@ public class ProducerConsumerTest {
         new DrinkerThread("DrinkerThread-1",table,76536).start();
 
         //需要一个终止线程的条件；
+        System.out.println("------------------------ END ------------------------");
     }
 
 

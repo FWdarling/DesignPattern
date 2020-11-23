@@ -14,6 +14,7 @@ public class BalkingTest {
 
     @Test
     public void balkingTest(){
+        System.out.println("---------------- [Pattern] Balking ----------------");
         ArrayList<Vest> vestArrayList = new ArrayList<Vest>();
         for (int i = 0; i < 10; i++) {
             Vest vest = new Vest(i);
@@ -24,6 +25,6 @@ public class BalkingTest {
         SaveThread saveThread = new SaveThread("Saver",vestArrayList);
         changeThread.start();
         saveThread.start();
-
+        System.out.println("------------------------ END ------------------------");
     }
 }
