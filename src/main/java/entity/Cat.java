@@ -1,6 +1,5 @@
 package entity;
 
-import org.junit.jupiter.api.DynamicTest;
 import transferobject.PersonalInformation;
 import transferobject.QuerySystem;
 import transferobject.Response;
