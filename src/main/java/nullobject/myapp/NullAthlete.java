@@ -4,7 +4,7 @@ import entity.AbstractAthlete;
 
 /**
  * 空运动员
- * 用于答到时告知该运动员不在
+ * 用于答到时声明该运动员缺席
  */
 public class NullAthlete extends AbstractAthlete {
     public NullAthlete(String name){
@@ -17,6 +17,6 @@ public class NullAthlete extends AbstractAthlete {
      */
     @Override
     public void play() {
-        System.out.println(name+"不在！");
+        System.out.println(name+"缺席！");
     }
 }
