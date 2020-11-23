@@ -97,7 +97,7 @@ public class RelayRaceTeam {
                 locations.add(location);
                 this.RelayRaceAthletes.get(i).setDistance(location + movedDistance);
                 // 到达交接处
-                if (location >= 100 * (i + 1)) {
+                if (location + movedDistance >= 100 * (i + 1)) {
                     this.RelayRaceAthletes.get(i).setMoving(false);
                     if (i < 2) {
                         this.RelayRaceAthletes.get(i + 1).setMoving(true);

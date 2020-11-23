@@ -43,7 +43,7 @@ public class RelayRace {
         double minTime = RelayRaceTeams.get(0).getUsingTime();
         int win = 0;
         for (int i = 1; i < RelayRaceTeams.size(); i++) {
-            if (RelayRaceTeams.get(0).getUsingTime() < minTime) {
+            if (RelayRaceTeams.get(i).getUsingTime() < minTime) {
                 minTime = RelayRaceTeams.get(i).getUsingTime();
                 win = i;
             }
