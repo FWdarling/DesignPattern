@@ -11,10 +11,9 @@ public class ChainOfResponsibilityTest {
 
     @Test
     public void ChainOfResponsibilityTest() {
-        System.out.println("---------------------");
-        System.out.println("This is Chain Of Responsibility Test");
-        System.out.println("---------------------");
+        System.out.println("---------------- [Pattern] ChainOfResponsibility ----------------");
         referees.judgement();
+        System.out.println("------------------------ END ------------------------");
     }
 
 

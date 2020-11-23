@@ -11,8 +11,8 @@ public class FilterTest {
 
     @Test
     public void filterTest() {
-        System.out.println("========  测试过滤器模式开始  ========");
+        System.out.println("---------------- [Pattern] Filter ----------------");
         DishesFilterDemo.dishesFilterTest();
-        System.out.println("========  测试过滤器模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }

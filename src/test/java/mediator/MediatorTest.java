@@ -5,6 +5,7 @@ import org.junit.Test;
 public class MediatorTest {
     @Test
     public void mediatorTest() {
+        System.out.println("---------------- [Pattern] Mediator ----------------");
         DispatchMediator dispatchMediator = new DispatchMediator();
         TennisCourt tennisCourt = new TennisCourt(dispatchMediator);
         FootballCourt footballCourt = new FootballCourt(dispatchMediator);
@@ -18,6 +19,6 @@ public class MediatorTest {
         tennisCourt.borrow("BasketballCourt");
         footballCourt.borrow("BasketballCourt");
 
-        System.out.println("FINISH");
+        System.out.println("------------------------ END ------------------------");
     }
 }

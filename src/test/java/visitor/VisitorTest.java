@@ -13,7 +13,7 @@ import java.util.List;
 public class VisitorTest {
     @Test
     public void test(){
-        System.out.println("====Visitor===");
+        System.out.println("---------------- [Pattern] Visitor ----------------");
         System.out.println("利用visitor模式为多个类提供多种方法");
         System.out.println("此时有4座形状不同的建筑物，求出他们的周长和面积");
 
@@ -33,6 +33,7 @@ public class VisitorTest {
         for (Element shape : shapes) {
             System.out.printf("周长 : %5.2f\t 面积 : %5.2f\n", shape.accept(perimeter), shape.accept(area));
         }
+        System.out.println("------------------------ END ------------------------");
     }
 
 }

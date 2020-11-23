@@ -9,6 +9,7 @@ public class MVCTest {
     @Test
     public void MVCtest()
     {
+        System.out.println("---------------- [Pattern] MVC ----------------");
         ManCollection manCollection=new ManCollection(5);
         manCollection.appendMan(new SportsMan("Healy",20));
         manCollection.appendMan(new SportsMan("Gerald ",21));
@@ -46,6 +47,6 @@ public class MVCTest {
         testController.setManName("HEARLY");
 
         testController.printDetails(testController.getManName(),testController.getManAge());
-
+        System.out.println("------------------------ END ------------------------");
     }
 }

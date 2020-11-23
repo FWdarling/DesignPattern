@@ -1,10 +1,11 @@
 package prototype;
 
 /**
- * @Author: CINDY DENG
- * @Date: 2020/11/12,11:06
- * @Version: 1.0
+ * Author: CINDY DENG 1850477
+ * Date: 2020/11/21,12:12
+ * Version: 1.0
  */
 public enum Prize {
-    FPRSTPRIZE,SECONDPRIZE,THIRDPRIZE
+    //一、二、三等奖的奖品 for 浅克隆模式
+    GrassSet,DeliciousBeans,BakedToast
 }
