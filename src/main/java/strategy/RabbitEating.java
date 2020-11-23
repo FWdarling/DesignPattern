@@ -9,6 +9,6 @@ import entity.EatingStrategy;
 public class RabbitEating implements EatingStrategy {
     @Override
     public void eatingAlgorithm() {
-        System.out.println("This rabbit is eating a meal of grass!");
+        System.out.println("吃了一筐萝卜");
     }
 }
