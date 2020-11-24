@@ -3,7 +3,7 @@ package mediator;
 /**
  *
  */
-public abstract class AbstractTennisCourt {
+public abstract class AbstractCourt {
     /**
      *
      * @param startTime 球场开始使用的时间
