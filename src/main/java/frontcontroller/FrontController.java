@@ -37,41 +37,14 @@ public class FrontController {
                      * 管理员
                      */
                     System.out.println("你好，管理员！--查看场地信息--");
-                    StadiumView stadiumView=new StadiumView();
-
-                    //这里的两个构造器builder直接默认给出。
-                    //主main合并可以由全局变量给出。
-                    StadiumDirector stadiumConstractor = new StadiumDirector();
-
-                    StadiumBuilder racingTrackBuilder = new RacingTrackBuilder();
-                    StadiumBuilder flyingVenueBuilder = new FlyingVenueBuilder();
-
-                    stadiumConstractor.CompetitionAreaCount(20).SpectatorAreaCount(12).setStadiumBuilder(racingTrackBuilder);
-                    stadiumConstractor.constructStadium();
-
-                    StadiumController stadiumController1=new StadiumController(stadiumConstractor,stadiumView);
-                    //Stadium的construct接口直接打印输出信息。。。。View再调用就显得多余，要不要改一改Builder?
-
-
-                    //stadiumController1.printDetails();
-
-                    stadiumConstractor.CompetitionAreaCount(20).SpectatorAreaCount(12).setStadiumBuilder(flyingVenueBuilder);
-                    stadiumConstractor.constructStadium();
-
-                    StadiumController stadiumController2=new StadiumController(stadiumConstractor,stadiumView);
-                    //stadiumController2.printDetails();
+                    moveToStadium();
                 }
                 else{
                     /**
                      * 普通运动员
                      */
                     System.out.println("你好，运动员！--查看自己的个人信息--");
-                    SportsMan man=new SportsMan(name,50);
-                    //如果主main里面有全局变量，这里man就可以直接由全局变量给出。
-                    //这里年龄随便给了。
-                    SportsManView testView=new SportsManView();
-                    SportsManController testController=new SportsManController(man,testView);
-                    testController.printDetails(name,50);
+                    moveToSportsMan(name);
                 }
                 flag=1;
                 break;
@@ -84,19 +57,59 @@ public class FrontController {
              * 其他人
              */
             System.out.println("你好，来宾！--查看比赛情况--");
-            ScoreBoard scoreBoard=new ScoreBoard();
-            //这个scoreBoard还是应该先用callback模式去构建一下增添信息
-            //由于另一个同学的计分板是需要和观众互动（需要输入），建议这个直接写到主main里面展示。
-            //到时候这个scoreBoard作为一个全局变量，改动这里的代码，让用户先输入有具体输赢战绩再展示。
-            ScoreBoardView scoreBoardView=new ScoreBoardView();
-            ScoreBoardController scoreBoardController=new ScoreBoardController(scoreBoard,scoreBoardView);
-            scoreBoardController.printDetails(scoreBoard);
+            moveToScoreBoard();
         }
 
 
     }
 
+    void moveToSportsMan(String name)
+    {
+        SportsMan man=new SportsMan(name,50);
+        //如果主main里面有全局变量，这里man就可以直接由全局变量给出。
+        //这里年龄随便给了。
+        SportsManView testView=new SportsManView();
+        SportsManController testController=new SportsManController(man,testView);
+        testController.printDetails(name,50);
+    }
 
+    void moveToScoreBoard()
+    {
+        ScoreBoard scoreBoard=new ScoreBoard();
+        //这个scoreBoard还是应该先用callback模式去构建一下增添信息
+        //由于另一个同学的计分板是需要和观众互动（需要输入），建议这个直接写到主main里面展示。
+        //到时候这个scoreBoard作为一个全局变量，改动这里的代码，让用户先输入有具体输赢战绩再展示。
+        ScoreBoardView scoreBoardView=new ScoreBoardView();
+        ScoreBoardController scoreBoardController=new ScoreBoardController(scoreBoard,scoreBoardView);
+        scoreBoardController.printDetails(scoreBoard);
+    }
+
+    void moveToStadium()
+    {
+        StadiumView stadiumView=new StadiumView();
+
+        //这里的两个构造器builder直接默认给出。
+        //主main合并可以由全局变量给出。
+        StadiumDirector stadiumConstractor = new StadiumDirector();
+
+        StadiumBuilder racingTrackBuilder = new RacingTrackBuilder();
+        StadiumBuilder flyingVenueBuilder = new FlyingVenueBuilder();
+
+        stadiumConstractor.CompetitionAreaCount(20).SpectatorAreaCount(12).setStadiumBuilder(racingTrackBuilder);
+        stadiumConstractor.constructStadium();
+
+        StadiumController stadiumController1=new StadiumController(stadiumConstractor,stadiumView);
+        //Stadium的construct接口直接打印输出信息。。。。View再调用就显得多余，要不要改一改Builder?
+
+
+        //stadiumController1.printDetails();
+
+        stadiumConstractor.CompetitionAreaCount(20).SpectatorAreaCount(12).setStadiumBuilder(flyingVenueBuilder);
+        stadiumConstractor.constructStadium();
+
+        StadiumController stadiumController2=new StadiumController(stadiumConstractor,stadiumView);
+        //stadiumController2.printDetails();
+    }
 
 
 }
