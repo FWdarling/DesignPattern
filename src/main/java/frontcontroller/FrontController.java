@@ -3,7 +3,7 @@ import MVC.*;
 import builder.FlyingVenueBuilder;
 import builder.RacingTrackBuilder;
 import builder.StadiumBuilder;
-import builder.StadiumConstractor;
+import builder.StadiumDirector;
 import entity.SportsMan;
 import entity.Stadium;
 import entity.ScoreBoard;
@@ -41,22 +41,25 @@ public class FrontController {
 
                     //这里的两个构造器builder直接默认给出。
                     //主main合并可以由全局变量给出。
-                    StadiumConstractor stadiumConstractor = new StadiumConstractor();
+                    StadiumDirector stadiumConstractor = new StadiumDirector();
 
                     StadiumBuilder racingTrackBuilder = new RacingTrackBuilder();
                     StadiumBuilder flyingVenueBuilder = new FlyingVenueBuilder();
 
-                    stadiumConstractor.setStadiumBuilder(racingTrackBuilder);
+                    stadiumConstractor.CompetitionAreaCount(20).SpectatorAreaCount(12).setStadiumBuilder(racingTrackBuilder);
                     stadiumConstractor.constructStadium();
 
                     StadiumController stadiumController1=new StadiumController(stadiumConstractor,stadiumView);
-                    stadiumController1.printDetails();
+                    //Stadium的construct接口直接打印输出信息。。。。View再调用就显得多余，要不要改一改Builder?
 
-                    stadiumConstractor.setStadiumBuilder(flyingVenueBuilder);
+
+                    //stadiumController1.printDetails();
+
+                    stadiumConstractor.CompetitionAreaCount(20).SpectatorAreaCount(12).setStadiumBuilder(flyingVenueBuilder);
                     stadiumConstractor.constructStadium();
 
                     StadiumController stadiumController2=new StadiumController(stadiumConstractor,stadiumView);
-                    stadiumController2.printDetails();
+                    //stadiumController2.printDetails();
                 }
                 else{
                     /**

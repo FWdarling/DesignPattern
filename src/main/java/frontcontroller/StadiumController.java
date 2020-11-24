@@ -5,11 +5,11 @@ import entity.Stadium;
 
 public class StadiumController {
 
-    private StadiumConstractor model;
+    private StadiumDirector model;
     private StadiumView view;
 
 
-    public StadiumController(StadiumConstractor model, StadiumView view)
+    public StadiumController(StadiumDirector model, StadiumView view)
     {
         this.model=model;
         this.view=view;
