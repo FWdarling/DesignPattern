@@ -13,8 +13,10 @@ public class PrintMedalThread extends Thread{
         this.medal = medal;
     }
     public void run() {
-        while (true){
+        int i = 0;
+        while (i < 50){
             System.out.println(Thread.currentThread().getName() + " prints " + medal);
+            i++;
         }
     }
 }

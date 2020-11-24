@@ -4,8 +4,8 @@ package pipeline;
  * description: 管道类，用于进行奖牌的排序
  * date: 11/23/20 00:21 AM
  * author: cjsmt
- * @param <I>
- * @param <O>
+ * @param <I> 输入管道类型名
+ * @param <O> 输出管道类型名
  */
 public class RankSort<I, O> {
     private final Sort<I, O> currentSort;
