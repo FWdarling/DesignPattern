@@ -11,9 +11,7 @@ import org.junit.Test;
 public class BridgeTest {
 	@Test
 	public void bridgeTest() {
-		System.out.println("------------------");
-        System.out.println("This is Bridge Test");
-        System.out.println("------------------");
+		System.out.println("---------------- [Pattern] Bridge ----------------");
         try {
 			Medal myMedal=new Medal(Material.Gold,"Swimming");
 			myMedal.printMedalInfo();
@@ -26,5 +24,6 @@ public class BridgeTest {
 		catch (RuntimeException e){
         	 System.out.println("运动项目不存在");
 		}
+		System.out.println("------------------------ END ------------------------");
 	}
 }

@@ -11,8 +11,8 @@ import org.junit.Test;
 public class ConverterTest {
     @Test
     public void converterTest(){
-        System.out.println("========  测试转换器模式开始  ========");
-        //ConverterDemo.converterTest();
-        System.out.println("========  测试转换器模式结束  ========");
+        System.out.println("---------------- [Pattern] Converter ----------------");
+        ConverterDemo.converterTest();
+        System.out.println("------------------------ END ------------------------");
     }
 }

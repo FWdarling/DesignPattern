@@ -11,9 +11,7 @@ import privateclassdata.entity.PlayerData;
 public class PrivateClassDataTest {
 	@Test
 	public void privateClassDataTest() {
-		System.out.println("------------------");
-        System.out.println("This is PrivateClassData Test");
-        System.out.println("------------------");
+		System.out.println("---------------- [Pattern] PrivateClassData ----------------");
 		Player myPlayer=new Player();
 		//初始化运动员信息
 		myPlayer.initPlayerData();
@@ -31,6 +29,7 @@ public class PrivateClassDataTest {
 		System.out.println(myPlayer.playerData.getPlayerId());
 		System.out.println(myPlayer.playerData.getPlayerName());
 		System.out.println(myPlayer.playerData.getPlayerType());
+		System.out.println("------------------------ END ------------------------");
 	}
 }
 

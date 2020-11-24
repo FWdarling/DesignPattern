@@ -7,8 +7,8 @@ public class AbstractFactoryDemoTest {
 
     @Test
     public void runAbstractFactoryDemo() {
-        System.out.println("========  测试抽象工厂开始  ========");
+        System.out.println("---------------- [Pattern] AbstractFactory ----------------");
         AbstractFactoryDemo.runAbstractFactoryDemo();
-        System.out.println("========  测试抽象工厂结束  ========");
+        System.out.println("------------------------ END ------------------------");
     }
 }

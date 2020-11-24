@@ -11,7 +11,6 @@ public class PlayerData /*implements Serializable*/ {
 	 * 无参构造函数
 	 */
 	public PlayerData(){
-		System.out.println("----使用私有类数据Private Class Data模式----");
 		this._id="Unknown";
 		this._name="Unknown";
 		this._animalType="Unknown";

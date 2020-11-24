@@ -8,7 +8,9 @@ public class CompositeTest {
     @Test
     public void compositetest()
     {
-        System.out.println("========  测试组合模式开始  ========");
+
+        System.out.println("---------------- [Pattern] Composite ----------------");
+
         Locker Ball=new Locker("球");
 
         Locker HollowBall=new Locker("空心球");
@@ -35,8 +37,7 @@ public class CompositeTest {
         System.out.println("");
         GymnasticsExhibitionBall.getFullCategory();
 
-
-        System.out.println("========  测试组合模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
 
 
     }

@@ -8,8 +8,8 @@ public class IteratorTest {
 
     @Test
     public void iteratortest() {
-        System.out.println("========  测试迭代器模式开始  ========");
 
+        System.out.println("---------------- [Pattern] Iterator ----------------");
 
         ManCollection manCollection=new ManCollection(5);
         manCollection.appendMan(new SportsMan("Healy",20));
@@ -27,8 +27,7 @@ public class IteratorTest {
             System.out.println("姓名"+man.getName()+"年龄"+man.getAge());
         }
 
-
-        System.out.println("========  测试迭代器模式结束  ========");
+        System.out.println("------------------------ END ------------------------");
 
     }
 }

@@ -9,7 +9,8 @@ public class MVCTest {
     @Test
     public void MVCtest()
     {
-        System.out.println("========  测试MVC模式开始  ========");
+
+        System.out.println("---------------- [Pattern] MVC ----------------");
 
         ManCollection manCollection=new ManCollection(5);
         manCollection.appendMan(new SportsMan("Healy",20));
@@ -48,7 +49,8 @@ public class MVCTest {
         testController.setManName("HEARLY");
 
         testController.printDetails(testController.getManName(),testController.getManAge());
-        System.out.println("========  测试MVC模式结束  ========");
+
+        System.out.println("------------------------ END ------------------------");
 
     }
 }

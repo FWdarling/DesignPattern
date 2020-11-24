@@ -23,4 +23,9 @@ public class Wechat extends Wepay implements Payment {
         this.loginStatus=loginWechat(id,password);
         return this.loginStatus;
     }
+
+    @Override
+    public double getLimits(){
+        return getTransactionLimits();
+    }
 }
