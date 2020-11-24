@@ -26,7 +26,7 @@ public class FrontController {
      * 此处给出的model的构建方法都不太合理，展示的信息效果不是很好。
      * @param name
      */
-    void IdentityVerification(String name){
+    void identityVerification(String name){
         int flag=0;
         for (String temp:Authorization) {
             if(name.equals(temp))
