@@ -7,7 +7,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 运动员代理类，在疫情期间举办的运动会不能让记者和运动员直接接触，而运动员也没有太多时间被采访
- * 因此代理会将采访的前期工作和后续安排准备好，并将收集到的问题交给运动员本人进行回答
+ * 因此代理会将采访的前期工作和后续安排准备好，并将录制好的记者提问播放给运动员本人进行回答
+ * 回答时由代理录制采访视频
  */
 public class AthleteProxy {
     //    代理类负责代理的真实运动员列表
@@ -29,9 +30,9 @@ public class AthleteProxy {
      * @throws InterruptedException 抛出异常
      */
     private void prepareSpace(String interviewee) throws InterruptedException {
-        System.out.println("Preparing answering space for " + interviewee + " ...");
+        System.out.println("正在为运动员" + interviewee + "准备录制场地...");
         TimeUnit.SECONDS.sleep(1);
-        System.out.println("Finished.");
+        System.out.println("准备完毕");
     }
 
     /**
@@ -41,9 +42,9 @@ public class AthleteProxy {
      * @throws InterruptedException 抛出异常
      */
     private void prepareEquipment(String interviewer) throws InterruptedException {
-        System.out.println("Preparing recording equipments for " + interviewer + " ...");
+        System.out.println("正在为记者" + interviewer + "录制采访问题...");
         TimeUnit.SECONDS.sleep(1);
-        System.out.println("Finished.");
+        System.out.println("录制完毕");
     }
 
     /**
@@ -53,9 +54,9 @@ public class AthleteProxy {
      * @throws InterruptedException 抛出异常
      */
     private void publishRecord(String interviewee) throws InterruptedException {
-        System.out.println("Publishing the answers of " + interviewee + " ...");
+        System.out.println("正在发布" + interviewee + "的采访视频...");
         TimeUnit.SECONDS.sleep(1);
-        System.out.println("Finished.");
+        System.out.println("————完成————");
     }
 
     /**
@@ -78,7 +79,7 @@ public class AthleteProxy {
         }
 //        未找到运动员，采访中断
         if (animalAthlete == null) {
-            System.out.println("Ooops, you've got a wrong name: " + interviewee);
+            System.out.println("抱歉，并没有名为" + interviewee + "的运动员");
             return;
         }
 //        进行采访前期准备

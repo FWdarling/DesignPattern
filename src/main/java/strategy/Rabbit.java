@@ -8,6 +8,10 @@ import entity.Animal;
  * 通过override实现了具体策略
  */
 public class Rabbit extends Animal {
+    public Rabbit(String name, String training) {
+        super(name, training);
+    }
+
     @Override
     public void setEatingStrategy() {
         this.eatingStrategy = new RabbitEating();
@@ -16,5 +20,10 @@ public class Rabbit extends Animal {
     @Override
     public void setTrainingStrategy() {
         this.trainingStrategy = new RabbitTraining();
+    }
+
+    @Override
+    public void setPerformingStrategy() {
+        this.performingStrategy = new RabbitPerforming();
     }
 }
