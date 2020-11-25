@@ -22,7 +22,7 @@ public class MakerThread extends Thread{
     @Override
     public void run(){
         try{
-            while(true){
+            while(id<6){
                 Thread.sleep(random.nextInt(1000));
                 String water = "[" + getName() + "放置的" + "矿泉水 No." + nextId() +"]";
                 table.put(water);

@@ -23,8 +23,16 @@ public class BalkingTest {
 
         ChangeThread changeThread = new ChangeThread("Athlete",vestArrayList);
         SaveThread saveThread = new SaveThread("Saver",vestArrayList);
-        changeThread.start();
-        saveThread.start();
+        try{
+            changeThread.start();
+            saveThread.start();
+            changeThread.join();
+            saveThread.join();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
         System.out.println("------------------------ END ------------------------");
     }
 }

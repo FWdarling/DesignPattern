@@ -458,12 +458,23 @@ public class Main {
         System.out.println("---------------- [Pattern] Producer-Customer ----------------");
 
         Table table = new Table(2);
-        new MakerThread("MakerThread-1",table,31415).start();
-        new MakerThread("MakerThread-2",table,12345).start();
-        new DrinkerThread("DrinkerThread-2",table,33333).start();
-        new DrinkerThread("DrinkerThread-1",table,76536).start();
+        MakerThread m1 = new MakerThread("MakerThread-1",table,31415);
+        MakerThread m2 = new MakerThread("MakerThread-2",table,12345);
+        DrinkerThread d1 = new DrinkerThread("DrinkerThread-2",table,33333);
+        DrinkerThread d2 = new DrinkerThread("DrinkerThread-1",table,76536);
+        try{
+            m1.start();
+            m2.start();
+            d1.start();
+            d2.start();
+            m1.join();
+            m2.join();
+            d1.join();
+            d2.join();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-        //需要一个终止线程的条件；
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
@@ -567,8 +578,14 @@ public class Main {
 
         ChangeThread changeThread = new ChangeThread("Athlete",vestArrayList);
         SaveThread saveThread = new SaveThread("Saver",vestArrayList);
-        changeThread.start();
-        saveThread.start();
+        try{
+            changeThread.start();
+            saveThread.start();
+            changeThread.join();
+            saveThread.join();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
