@@ -12,7 +12,6 @@ public class ProducerConsumerTest {
 
     @Test
     public void producerConsumerTest() {
-    //public static void main(String[] args) {
         //这行备注放这里主要是提醒多线程的test无法真正测试运行情况，最后写main函数需要注意。合并后删除本注释
         System.out.println("---------------- [Pattern] Producer-Customer ----------------");
 

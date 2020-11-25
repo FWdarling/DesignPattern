@@ -8,7 +8,7 @@ package doublecheckedlocking;
 public class MyThread implements Runnable{
     private OlympicsYard _yard;
     private int _id;
-    MyThread(int id){
+    public MyThread(int id){
         _id = id;
     }
     @Override

@@ -2,7 +2,6 @@ package doublecheckedlocking;
 
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertTrue;
 
 /**
  * Author: CINDY DENG
