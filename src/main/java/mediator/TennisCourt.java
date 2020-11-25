@@ -1,6 +1,6 @@
 package mediator;
 
-public class TennisCourt extends AbstractTennisCourt{
+public class TennisCourt extends AbstractCourt {
     private Mediator mediator;
 
     private String startTime;
