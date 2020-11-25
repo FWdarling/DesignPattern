@@ -12,6 +12,10 @@ public class PrintMedalThread extends Thread{
     public PrintMedalThread(Medal medal) {
         this.medal = medal;
     }
+
+    /**
+     * description:打印当前进程名字，及进程中使用的medal
+     */
     public void run() {
         int i = 0;
         while (i < 50){

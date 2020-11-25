@@ -23,6 +23,10 @@ public class RegisterForm {
     public RegisterForm(Animal athlete) {
         this.athlete = athlete;
     }
+
+    /**
+     * description:根据Athlete的eventToSignUp属性选择运动项目报名子系统
+     */
     public void signUp() {
         switch (athlete.getEventToSignUp()) {
             case RUN:

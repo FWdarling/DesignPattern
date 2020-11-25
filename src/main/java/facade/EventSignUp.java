@@ -14,6 +14,10 @@ public class EventSignUp {
         this.event = event;
     }
 
+    /**
+     * description:处理Athlete的运动报名请求
+     * @param name
+     */
     public void signUp(String name) {
         String text;
         switch (event){

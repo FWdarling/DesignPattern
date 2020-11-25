@@ -36,24 +36,24 @@ public class PipelineDemo {
         medalBoard.showRank();
 
         /**
-         * 测试模式
-         * 添加奖牌，更新奖牌榜，检查排名 x 4
+         * 测试设计模式
+         * 添加奖牌，更新排名，展示检查榜 x 4
          */
-        medalBoard.updateMedalBoard("Fish", Material.Silver);
-        medalBoard = rankSort.execute(medalBoard);
-        medalBoard.showRank();
+        medalBoard.updateMedalBoard("Fish", Material.Silver);  //添加奖牌
+        medalBoard = rankSort.execute(medalBoard);  //更新排名
+        medalBoard.showRank();  //展示奖牌榜
 
-        medalBoard.updateMedalBoard("Fish", Material.Silver);
-        medalBoard = rankSort.execute(medalBoard);
-        medalBoard.showRank();
+        medalBoard.updateMedalBoard("Fish", Material.Silver);  //添加奖牌
+        medalBoard = rankSort.execute(medalBoard);  //更新排名
+        medalBoard.showRank();  //展示奖牌榜
 
-        medalBoard.updateMedalBoard("Bear", Material.Gold);
-        medalBoard = rankSort.execute(medalBoard);
-        medalBoard.showRank();
+        medalBoard.updateMedalBoard("Bear", Material.Gold);  //添加奖牌
+        medalBoard = rankSort.execute(medalBoard);  //更新排名
+        medalBoard.showRank();  //展示奖牌榜
 
-        medalBoard.updateMedalBoard("Bear", Material.Gold);
-        medalBoard = rankSort.execute(medalBoard);
-        medalBoard.showRank();
+        medalBoard.updateMedalBoard("Bear", Material.Gold);  //添加奖牌
+        medalBoard = rankSort.execute(medalBoard);  //更新排名
+        medalBoard.showRank();  //展示奖牌榜
 
     }
 }

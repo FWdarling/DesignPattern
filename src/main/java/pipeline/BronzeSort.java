@@ -36,6 +36,13 @@ public class BronzeSort implements Sort<MedalBoard, MedalBoard>{
         return input;
     }
 
+    /**
+     * description:快速排序算法，按照银牌数目，对奖牌榜中金牌和银牌数相等的队伍排序，筛选金牌和银牌数相等的队伍在上process方法中
+     * @param input 排序前的奖牌榜
+     * @param rawLow
+     * @param rawHigh
+     * @return 排序后的奖牌榜
+     */
     public MedalBoard sort(MedalBoard input, int rawLow, int rawHigh) {
         int low = rawLow, high = rawHigh;
         int key = input.getTeamBronze(input.getRank()[low]);

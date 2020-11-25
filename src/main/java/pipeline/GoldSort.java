@@ -14,6 +14,13 @@ public class GoldSort implements Sort<MedalBoard, MedalBoard>{
         return sort(input, low, high);
     }
 
+    /**
+     * description:快速排序算法，按照金牌数目，对奖牌榜所有队伍排序
+     * @param input 排序前的奖牌榜
+     * @param rawLow
+     * @param rawHigh
+     * @return 排序后的奖牌榜
+     */
     public MedalBoard sort(MedalBoard input, int rawLow, int rawHigh) {
         int low = rawLow, high = rawHigh;
         int key = input.getTeamGold(input.getRank()[low]);
