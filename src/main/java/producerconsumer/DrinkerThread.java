@@ -12,6 +12,7 @@ import java.util.Random;
 public class DrinkerThread extends Thread{
     private final Random random;
     private final Table table;
+    private static int id = 0;
     public DrinkerThread(String name, Table table, long seed){
         super(name);
         this.table = table;
@@ -21,12 +22,16 @@ public class DrinkerThread extends Thread{
     @Override
     public void run(){
         try{
-            while (true){
+            while (id<6){
                 String water = table.take();
                 Thread.sleep(random.nextInt(1000));
+                nextId();
             }
         }catch (InterruptedException e){
             e.printStackTrace();
         }
+    }
+    private static synchronized int nextId(){
+        return id++;
     }
 }
