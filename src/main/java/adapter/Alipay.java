@@ -14,7 +14,7 @@ public class Alipay {
         return limits;
     }
 
-    public boolean validation(String aliAcount,String password){
+    public boolean validation(String aliAccount,String password){
         if(password.equals("1234")){
             return true;
         }
