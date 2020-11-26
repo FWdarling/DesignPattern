@@ -63,6 +63,10 @@ public class FrontController {
 
     }
 
+    /**
+     * 转移到运动员控制器
+     * @param name
+     */
     void moveToSportsMan(String name)
     {
         SportsMan man=new SportsMan(name,50);
@@ -73,6 +77,9 @@ public class FrontController {
         testController.printDetails(name,50);
     }
 
+    /**
+     * 转移到计分板控制器
+     */
     void moveToScoreBoard()
     {
         ScoreBoard scoreBoard=new ScoreBoard();
@@ -84,6 +91,9 @@ public class FrontController {
         scoreBoardController.printDetails(scoreBoard);
     }
 
+    /**
+     * 转移到体育场地控制器
+     */
     void moveToStadium()
     {
         StadiumView stadiumView=new StadiumView();
