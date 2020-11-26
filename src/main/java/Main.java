@@ -671,6 +671,7 @@ public class Main {
             System.out.println(e.getMessage());
         }
         System.out.println("------------------------ END ------------------------");
+        System.out.println("");
 
 
         System.out.println("---------------- [Pattern] Command ----------------");
