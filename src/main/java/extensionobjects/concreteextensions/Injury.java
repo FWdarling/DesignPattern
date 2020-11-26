@@ -11,6 +11,10 @@ public class Injury extends InjuryOvertime {
         super(race);
     }
 
+    /**
+     * 设置加时赛
+     * @param overtime int
+     */
     @Override
     public void SetOvertime(int overtime) {
         race.Overtime(overtime);
