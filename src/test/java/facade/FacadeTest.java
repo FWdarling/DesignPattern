@@ -13,7 +13,6 @@ public class FacadeTest {
 
         System.out.println("---------------- [Pattern] Facade ----------------");
         FacadeDemo.facadeTest();
-        System.out.println("========  测试外观模式结束  ========");
         System.out.println("------------------------ END ------------------------");
     }
 }

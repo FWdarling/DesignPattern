@@ -8,6 +8,7 @@ public class CompositeTest {
     @Test
     public void compositetest()
     {
+
         System.out.println("---------------- [Pattern] Composite ----------------");
 
         Locker Ball=new Locker("球");
@@ -35,7 +36,9 @@ public class CompositeTest {
         Ball.printList();
         System.out.println("");
         GymnasticsExhibitionBall.getFullCategory();
+
         System.out.println("------------------------ END ------------------------");
+
 
     }
 
