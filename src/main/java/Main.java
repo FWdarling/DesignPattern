@@ -68,6 +68,8 @@ import template.TemplateDemo;
 import transferobject.PersonalInformation;
 import transferobject.QuerySystem;
 import visitor.*;
+import workerthread.CheckPoint;
+import workerthread.RunnerThread;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -205,9 +207,12 @@ public class Main {
         SecuritySystem system = new SecuritySystem();
         Alarm carnivoreAreaAlarm = new Alarm(2000, "肉食动物区警报", system);
         Alarm herbivoreAreaAlarm = new Alarm(5000, "草食动物区警报", system);
-
+        System.out.println("                                        " +
+                "[ SecuritySystem : addAlarm() : 向系统添加警报 ]");
         system.addAlarm(carnivoreAreaAlarm);
         system.addAlarm(herbivoreAreaAlarm);
+        System.out.println("                                        " +
+                "[ SecuritySystem : shutCommand() : 向系统提交关闭指令 ]");
         Alarm.ShutCommand shutCommand = new Alarm.ShutCommand();
         system.addCommand(new SleepCommand(10100, system, shutCommand));
         SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");//设置日期格式
@@ -648,9 +653,17 @@ public class Main {
 
         System.out.println("---------------- [Pattern] Bridge ----------------");
         try {
+            System.out.println("                                        " +
+                    "[ Medal : Medal(Material,sport) : 构造奖牌 ]");
             Medal myMedal=new Medal(Material.Gold,"Swimming");
+            System.out.println("                                        " +
+                    "[ Medal : printMedalInfo() : 打印奖牌信息 ]");
             myMedal.printMedalInfo();
+            System.out.println("                                        " +
+                    "[ Medal : Medal(Material,sport) : 构造奖牌 ]");
             myMedal=new Medal(Material.Silver,"Basketball");
+            System.out.println("                                        " +
+                    "[ Medal : printMedalInfo() : 打印奖牌信息 ]");
             myMedal.printMedalInfo();
             //异常输入测试
             myMedal=new Medal(Material.Silver,"???");
@@ -665,6 +678,8 @@ public class Main {
 
         System.out.println("---------------- [Pattern] Command ----------------");
         AwardMedalCommand command=new AwardMedalCommand(myPlayer,"Swimming", Material.Gold);
+        System.out.println("                                        " +
+                "[ command : execute() : 执行命令 ]");
         command.execute();
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -693,5 +708,35 @@ public class Main {
         }
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
+
+
+        System.out.println("---------------- [Pattern] WorkerThread ----------------");
+
+        final CheckPoint checkPoint = new CheckPoint(99);
+        checkPoint.startVolunteer();
+
+        RunnerThread t1 = new RunnerThread("Nemo", checkPoint);
+        RunnerThread t2 = new RunnerThread("Four", checkPoint);
+        RunnerThread t3 = new RunnerThread("Wood", checkPoint);
+
+        // 开始并等待所有 Runner 线程结束
+        try {
+            t1.start();
+            t2.start();
+            t3.start();
+
+            t1.join();
+            t2.join();
+            t3.join();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            // 手动结束所有的 Volunteer 线程
+            checkPoint.stopVolunteer();
+            System.out.println("------------------------ END ------------------------");
+            System.out.println("");
+        }
     }
 }
