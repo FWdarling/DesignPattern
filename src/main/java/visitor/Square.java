@@ -8,11 +8,11 @@ package visitor;
 public class Square implements Element{
     private double edge; //square 四边相等
 
-
+    //初始化
     public Square(double edge) {
         this.edge = edge;
     }
-
+    //获得正方形边长
     public double getEdge() {
         return edge;
     }

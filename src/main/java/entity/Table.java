@@ -11,6 +11,7 @@ public class Table {
     private int head;
     private int count;
 
+    //初始化
     public Table(int count){
         this.buffer = new String[count];
         this.head = 0;

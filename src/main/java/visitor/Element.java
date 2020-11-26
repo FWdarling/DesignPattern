@@ -6,5 +6,6 @@ package visitor;
  * @Version: 1.0
  */
 public interface Element {
+    //接受具体的visitor操作类
     public abstract double accept(Visitor visitor);
 }

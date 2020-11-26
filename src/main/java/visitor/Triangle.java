@@ -9,21 +9,21 @@ public class Triangle implements Element {
     private double edgeA;
     private double edgeB;
     private double edgeC;
-
+    //三角形初始化
     public Triangle(double edgeA, double edgeB, double edgeC) {
         this.edgeA = edgeA;
         this.edgeB = edgeB;
         this.edgeC = edgeC;
     }
-
+    //获得A边长
     public double getEdgeA() {
         return edgeA;
     }
-
+    //获得B边长
     public double getEdgeB() {
         return edgeB;
     }
-
+    //获得C边长
     public double getEdgeC() {
         return edgeC;
     }

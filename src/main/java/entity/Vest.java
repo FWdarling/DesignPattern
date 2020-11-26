@@ -14,6 +14,7 @@ public class Vest {
     private boolean changed;  //flag-是否修改过
 
 
+    //初始化
     public Vest(int ID) {
         this.ID = ID;
         this.userName = null;
