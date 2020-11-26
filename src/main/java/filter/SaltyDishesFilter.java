@@ -12,6 +12,14 @@ import java.util.ArrayList;
  */
 public class SaltyDishesFilter implements DishesFilter {
 
+    /*
+     * description: 重载父类的抽象方法，筛选咸味的菜
+     * date: 11/26/20 12:32 PM
+     * author: fourwood
+     *
+     * @param dishes 总菜单
+     * @return java.util.ArrayList<entity.Dishes> 过滤出的菜单
+     */
     @Override
     public ArrayList<Dishes> filter(ArrayList<Dishes> dishes) {
         ArrayList<Dishes> saltyDishes = new ArrayList<Dishes>();

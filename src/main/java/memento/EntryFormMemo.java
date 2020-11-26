@@ -24,7 +24,4 @@ public class EntryFormMemo {
         return currentNum;
     }
 
-    public void setAthleteList(Species[] athleteList) {
-        this.athleteList = athleteList;
-    }
 }

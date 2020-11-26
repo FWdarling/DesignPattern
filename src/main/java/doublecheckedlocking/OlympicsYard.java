@@ -1,4 +1,4 @@
-package animalolympicsyard;
+package doublecheckedlocking;
 
 /**
  * Author: CINDY DENG
@@ -14,10 +14,10 @@ public class OlympicsYard {
 
     public static OlympicsYard getInstance() {
         if(_instance == null) {
-            //当多个线程同时发现instance为null时，除了第一个线程/进程，所有线程/进程只能到达这里
+            //若有多个线程同时发现当前_instance为null，可能出现多个进程同时通过if条件进入if()语句体内
             synchronized (_mutex){
-                //当第一个进程结束初始化后，所有进程来到这里发现已经初始化，直接返回
-                //这样就避免了多个进程进行多次初始化
+                //避免多个进程重复初始化
+                //双重确认 - double checked locking
                 if(_instance == null){
                     System.out.println("动物运动会总场景初始化中");
                     //=================具体的初始化逻辑=================//

@@ -51,7 +51,7 @@ public class Alarm implements Command {
     /**
      * 调用关闭警报命令，可以让警报处于关闭状态
      */
-    static class ShutCommand implements Command{
+    public static class ShutCommand implements Command{
         @Override
         public void execute(){
             System.out.println("关闭警报命令执行");
