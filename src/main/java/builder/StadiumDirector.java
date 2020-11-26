@@ -9,8 +9,10 @@ public class StadiumDirector {
     //    场馆建造抽象类
     private StadiumBuilder stadiumBuilder;
 
-    private int spectatorAreaCount = 0;
+//    观众席数量
+private int spectatorAreaCount = 0;
 
+    //    竞赛区数量
     private int competitionAreaCount = 0;
 
     /**

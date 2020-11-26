@@ -6,8 +6,10 @@ package entity;
  * author: cjsmt
  */
 public class Animal {
-    private String name;
+//    动物名称
+private String name;
     private Event eventToSignUp;
+    //    训练方式
     private String training = "默认训练";
 
     //    进食行为的策略
@@ -18,6 +20,11 @@ public class Animal {
     //    开幕式表演策略
     protected PerformingStrategy performingStrategy;
 
+    /**
+     * 构造函数
+     *
+     * @param name 动物名
+     */
     public Animal(String name) {
         this.name = name;
 
@@ -37,6 +44,11 @@ public class Animal {
         this.setPerformingStrategy();
     }
 
+    /**
+     * 获取名称
+     *
+     * @return 动物名
+     */
     public String getName() {
         return name;
     }

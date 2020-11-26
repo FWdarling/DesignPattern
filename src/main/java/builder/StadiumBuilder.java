@@ -10,12 +10,16 @@ public abstract class StadiumBuilder {
     //    场馆类实例
     protected Stadium stadium;
 
-    //    获取场馆类
+    /**
+     * 获取场馆类
+     */
     public void getStadium() {
         stadium.showStadium();
     }
 
-    //    场馆类实例化
+    /**
+     * 场馆类实例化
+     */
     public void buildNewStadium() {
         stadium = new Stadium();
     }
