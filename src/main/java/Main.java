@@ -342,6 +342,9 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] TransferObject ----------------");
+        System.out.println("PersonalInformation:PersonalInformation():创建用于传输的POJO信息类，以便一次性传输多种数据");
+        System.out.println("Cat:Cat():创建使用传输POJO的实体运动员类");
+        System.out.println("QuerySystem:QuerySystem():创建传输POJO的服务类");
         //录入个人信息
         ArrayList<String> sportEvents = new ArrayList<String>();
         sportEvents.add("baskerball");
@@ -360,6 +363,7 @@ public class Main {
         QuerySystem querySystem = new QuerySystem();
 
         //进行查询
+        System.out.println("                                        [ QuerySystem : query() : 利用QuerySystem.query()接收POJO并查询，随后返回POJO信息类]");
         querySystem.query(Judy.getPersonalInformation(), querySystem); //第一次查询不到创建
         querySystem.query(Judy.getPersonalInformation(), querySystem); //第二次查询到显示查询结果
         System.out.println("------------------------ END ------------------------");
@@ -385,16 +389,26 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] Decorator ----------------");
+        System.out.println("InformationSenderForTennis:InformationSenderForTennis():创建网球基础比赛信息对象");
+        System.out.println("FacebookInformationSender:sendInformation():发送信息");
+
         String message = "Peter has won the tennis game!";
         InformationSenderForTennis informationSenderForTennis = new InformationSenderForTennis();
         FacebookInformationSender facebookInformationSender = new FacebookInformationSender(informationSenderForTennis);
         TwitterInformationSender twitterInformationSender = new TwitterInformationSender(facebookInformationSender);
+
+        System.out.println("                                        [ TwitterInformationSender : sendInformation() : 经过Twitter装饰后开始发送信息]");
         twitterInformationSender.sendInformation(message);
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
 
         System.out.println("---------------- [Pattern] Mediator ----------------");
+        System.out.println("DispatchMediator:DispatchMediator():创建中介对象降低多个对象和类之间的通信复杂性");
+        System.out.println("TennisCourt:TennisCourt():创建网球场对象");
+        System.out.println("FootballCourt:FootballCourt():创建足球场对象");
+        System.out.println("BasketballCourt:BasketballCourt():创建篮球场对象");
+
         DispatchMediator dispatchMediator = new DispatchMediator();
         TennisCourt tennisCourt = new TennisCourt(dispatchMediator);
         FootballCourt footballCourt = new FootballCourt(dispatchMediator);
@@ -404,8 +418,11 @@ public class Main {
         dispatchMediator.setFootballCourt(footballCourt);
         dispatchMediator.setBasketballCourt(basketballCourt);
 
+        System.out.println("                                        [ TennisCourt : changeStartTime() : 网球场提出修改开始使用时间请求]");
         tennisCourt.changeStartTime("2");
+        System.out.println("                                        [ TennisCourt : borrow() : 网球场向篮球场借用设备]");
         tennisCourt.borrow("BasketballCourt");
+        System.out.println("                                        [ TennisCourt : borrow() : 足球场向篮球场借用设备]");
         footballCourt.borrow("BasketballCourt");
 
         System.out.println("------------------------ END ------------------------");
@@ -597,10 +614,14 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] BusinessDelegate ----------------");
+        System.out.println("QueryDelegate:QueryDelegate():创建查询委托对象做到表示层和业务层解耦");
+        System.out.println("Dog:Dog():创建使用业务客户对象");
+
         try {
             QueryDelegate queryDelegate = new QueryDelegate(OfflineQuery.class.getName());
             queryDelegate.setQueryType();
             Dog dogAthlete = new Dog(queryDelegate);
+            System.out.println("                                        [ Dog : doQuery() : Dog开始使用查询服务]");
             dogAthlete.doQuery();
         } catch (ClassNotFoundException e) {
             System.out.println("此查询类型不存在！");
