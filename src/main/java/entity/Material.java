@@ -8,6 +8,10 @@ public enum Material {
 	public String _material;
 	
 	private Material(String str) {_material=str;}
-	
+
+	/**
+	 * 获取材质名称
+	 * @return String
+	 */
 	public String getMaterial() {return _material;}
 }
