@@ -20,6 +20,10 @@ public class EventEntryForm {
     private Map predationMap = new HashMap();
 
 
+    /**
+     * description:构造函数，向捕食映射表中添加互相具有捕食关系的物种类别
+     * @param event 预报名运动项目
+     */
     public EventEntryForm(Event event) {
         this.event = event;
         athleteList = new Species[maxNum];
@@ -66,7 +70,7 @@ public class EventEntryForm {
      * description: 用于从备忘录中恢复运动员报名表信息
      * @param entryFormMemo 备忘录
      */
-    public  void restoreMemo(EntryFormMemo entryFormMemo) {
+    public void restoreMemo(EntryFormMemo entryFormMemo) {
         setAthleteList(entryFormMemo.getAthleteList());
         currentNum = entryFormMemo.getCurrentNum();
     }
@@ -78,11 +82,14 @@ public class EventEntryForm {
      */
     public void processRegistration(EntryFormMemo entryFormMemo, Athlete athlete) {
         this.addAthlete(athlete.getSpecies());  //修改状态
+        System.out.println("Dear sir, your application has been submitted, please wait for the security check.");
         if (!this.checkSafety()){  //如果不安全
             this.restoreMemo(entryFormMemo);  //恢复状态
-            System.out.println("Not Safe! The current EventEntryForm is " + this.showAthleteList());
+            System.out.println("Not Safe! Your registration has failed. " +
+                    "The current EventEntryForm is " + this.showAthleteList());
         }else {
-            System.out.println("The current EventEntryForm is " + this.showAthleteList());
+            System.out.println("Congratulations! Your registration is successful. " +
+                    "The current EventEntryForm is " + this.showAthleteList());
         }
     }
 
@@ -98,6 +105,10 @@ public class EventEntryForm {
         this.athleteList = athleteList;
     }
 
+    /**
+     * description:生成记载当前运动员报名表信息的备忘录
+     * @return
+     */
     public EntryFormMemo createMemo() {
         return new EntryFormMemo(athleteList, currentNum);
     }
