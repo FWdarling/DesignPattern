@@ -8,7 +8,11 @@ package immutable;
 public class ImmutableTest {
     public void immutableTest(){
         System.out.println("---------------- [Pattern] Immutable ----------------");
-        ImmutableDemo.immutableTest();
+        try {
+            ImmutableDemo.immutableTest();
+        }catch (InterruptedException e){
+            System.out.println(e.getMessage());
+        }
         System.out.println("------------------------ END ------------------------");
     }
 }
