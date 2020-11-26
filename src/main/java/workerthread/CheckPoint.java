@@ -49,6 +49,13 @@ public class CheckPoint {
     }
 
     /**
+     * 结束所有志愿者线程
+     */
+    public void stopVolunteer() {
+        Arrays.asList(volunteerPool).forEach(VolunteerThread::stop);
+    }
+
+    /**
      * 运动员新建请求
      * @param request
      */
