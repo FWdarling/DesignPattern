@@ -91,6 +91,7 @@ public class Main {
         }
 
         for(MyThread thread : threads){
+            System.out.println("                                        [ MyThread : run() : 重写run()方法，根据具体情景启动线程 ]");
             thread.run();
         }
         System.out.println("------------------------ END ------------------------");
@@ -120,25 +121,7 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] Visitor ----------------");
-        System.out.println("利用visitor模式为多个类提供多种方法");
-        System.out.println("此时有4座形状不同的建筑物，求出他们的周长和面积");
-
-        // 一个含有5个元素的List，包含三种不同的形状
-        List<Element> shapes = new ArrayList<Element>();
-        shapes.add(new Triangle(1.3, 2.2, 3.1));
-        shapes.add(new Circle(1.2));
-        shapes.add(new Triangle(2.4, 3.3, 4.2));
-        //shapes.add(new Rectangle(2.1, 3.2));
-        shapes.add(new Circle(5.6));
-
-        // 计算周长和面积的不同策略（访问者）
-        Perimeter perimeter = new Perimeter();
-        Area area = new Area();
-
-        // 将周长和面积的计算策略传入（接受不同访问者的访问）
-        for (Element shape : shapes) {
-            System.out.printf("周长 : %5.2f\t 面积 : %5.2f\n", shape.accept(perimeter), shape.accept(area));
-        }
+        VisitorDemo.VisitTest();
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
@@ -472,6 +455,10 @@ public class Main {
         String exp = "2 * "+ Const.FOOD_FRIEDRISE+" + 1 * "+Const.FOOD_GRASS+" + 3 * "+Const.FOOD_WORM;
         System.out.println("您应当付款：");
         try {
+            System.out.println("                                        [ MatchExpression : match() : 接受表达式并进行语法树分析 ]");
+            System.out.println("                                        [ MultipleExpression : interpret() : 完成左右元素的乘法操作 ]");
+            System.out.println("                                        [ AddExpression : interpret() : 完成左右元素的加法操作 ]");
+
             System.out.println(MatchExpression.match(exp).interpret());
         } catch (MatchException e) {
             e.printStackTrace();
@@ -496,9 +483,13 @@ public class Main {
         System.out.println("---------------- [Pattern] Producer-Customer ----------------");
 
         Table table = new Table(2);
+        System.out.println("                                        [ MakerThread : MakerThread(String name, Table table, long seed) : 实例化一个名为name的MakerThread，传入table实例，设定随机数种子seed ]");
         MakerThread m1 = new MakerThread("MakerThread-1",table,31415);
+        System.out.println("                                        [ MakerThread : MakerThread(String name, Table table, long seed) : 实例化一个名为name的MakerThread，传入table实例，设定随机数种子seed ]");
         MakerThread m2 = new MakerThread("MakerThread-2",table,12345);
+        System.out.println("                                        [ DrinkerThread : DrinkerThread(String name, Table table, long seed) : 实例化一个名为name的DrinkerThread，传入table实例，设定随机数种子seed ]");
         DrinkerThread d1 = new DrinkerThread("DrinkerThread-2",table,33333);
+        System.out.println("                                        [ DrinkerThread : DrinkerThread(String name, Table table, long seed) : 实例化一个名为name的DrinkerThread，传入table实例，设定随机数种子seed ]");
         DrinkerThread d2 = new DrinkerThread("DrinkerThread-1",table,76536);
         try{
             m1.start();
@@ -626,7 +617,9 @@ public class Main {
             vestArrayList.add(vest);
         }
 
+        System.out.println("                                        [ ChangeThread : ChangeThread(String name, ArrayList<Vest> vestArrayList) : 构造一个名为name的线程，接受一个装有Vest对象的ArrayList ]");
         ChangeThread changeThread = new ChangeThread("Athlete",vestArrayList);
+        System.out.println("                                        [ SaveThread : SaveThread(String name, ArrayList<Vest> vestArrayList) : 构造一个名为name的线程，接受一个装有Vest对象的ArrayList ]");
         SaveThread saveThread = new SaveThread("Saver",vestArrayList);
         try{
             changeThread.start();
@@ -668,34 +661,92 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] Prototype ----------------");
+        System.out.println("         ========= 类型1 - 浅克隆 =========");
         Athlete athlete1 = new Athlete("ALEX", "highJump");
         Athlete athlete2 = new Athlete("Cathy","highJump");
         Athlete athlete3 = new Athlete("Tim","highJump");
         Athlete athlete4 = new Athlete("Jerry","highJump");
 
         Certificate tmpCertificate = new Certificate(athlete1.getName(),athlete1.getSportsType(), AwardLevel.FPRSTPRIZE);
+        System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
         tmpCertificate.printCertificate();
 
         Certificate tmpCertificate2 = null;
         try {
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(浅克隆) ]");
             tmpCertificate2 = (Certificate)tmpCertificate.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
             tmpCertificate2.setName(athlete2.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
             tmpCertificate2.setPrizeLevel(AwardLevel.SECONDPRIZE);
 
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(浅克隆) ]");
             Certificate tmpCertificate3 = (Certificate)tmpCertificate.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
             tmpCertificate3.setName(athlete3.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
             tmpCertificate3.setPrizeLevel(AwardLevel.SECONDPRIZE);
 
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(浅克隆) ]");
             Certificate tmpCertificate4 = (Certificate)tmpCertificate.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
             tmpCertificate4.setName(athlete4.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
             tmpCertificate4.setPrizeLevel(AwardLevel.THIRDPRIZE);
 
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
             tmpCertificate2.printCertificate();
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
             tmpCertificate3.printCertificate();
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
             tmpCertificate4.printCertificate();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
+        System.out.println("");
+        System.out.println("         ========= 类型2 - 深克隆 =========");
+
+        Athlete athlete5 = new Athlete("ALEX", "highJump");
+        Athlete athlete6 = new Athlete("Cathy","highJump");
+        Athlete athlete7 = new Athlete("Tim","highJump");
+        Athlete athlete8 = new Athlete("Jerry","highJump");
+
+        prototypedeepcopy.Certificate tmpCertificate5 = new prototypedeepcopy.Certificate(athlete1.getName(),athlete1.getSportsType(), prototypedeepcopy.AwardLevel.FPRSTPRIZE);
+        System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
+        tmpCertificate5.printCertificate();
+        try{
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(深克隆) ]");
+            prototypedeepcopy.Certificate tmpCertificate6 = (prototypedeepcopy.Certificate)tmpCertificate5.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
+            tmpCertificate6.setName(athlete2.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
+            tmpCertificate6.setPrizeLevel(prototypedeepcopy.AwardLevel.SECONDPRIZE);
+
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(深克隆) ]");
+            prototypedeepcopy.Certificate tmpCertificate7 = (prototypedeepcopy.Certificate)tmpCertificate5.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
+            tmpCertificate7.setName(athlete3.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
+            tmpCertificate7.setPrizeLevel(prototypedeepcopy.AwardLevel.SECONDPRIZE);
+
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(深克隆) ]");
+            prototypedeepcopy.Certificate tmpCertificate8 = (prototypedeepcopy.Certificate)tmpCertificate5.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
+            tmpCertificate8.setName(athlete4.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
+            tmpCertificate8.setPrizeLevel(prototypedeepcopy.AwardLevel.THIRDPRIZE);
+
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
+            tmpCertificate6.printCertificate();
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
+            tmpCertificate7.printCertificate();
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
+            tmpCertificate8.printCertificate();
+
+        }catch (CloneNotSupportedException e){
+            e.printStackTrace();
+        }
+
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 

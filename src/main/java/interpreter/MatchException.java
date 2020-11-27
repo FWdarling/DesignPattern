@@ -6,6 +6,7 @@ package interpreter;
  * @Version: 1.0
  */
 public class MatchException extends Exception{
+    //异常处理
     public MatchException(String msg){
         System.out.println("Match Error Occur:"+msg);
     }

@@ -47,7 +47,7 @@ public class MatchExpression {
         throw new MatchException("Invalid Expression! 错误计算式输入");
     }
 
-
+    //判断具体的操作符
     static int isOperator(String str){
         switch (str.charAt(0)){
             case '+':

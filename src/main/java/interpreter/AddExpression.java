@@ -9,6 +9,7 @@ public class AddExpression implements Expression {
     //left、right不一定是number终结符，也可能是其他的非终结符
     private Expression _left, _right;
 
+    //初始化
     public AddExpression(Expression left, Expression right){
         this._left = left;
         this._right = right;
