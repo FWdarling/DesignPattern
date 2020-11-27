@@ -14,11 +14,11 @@ public class PrintMedalThread extends Thread{
     }
 
     /**
-     * description:打印当前进程名字，及进程中使用的medal
+     * description:打印当前线程名字，及线程中使用的medal
      */
     public void run() {
         int i = 0;
-        while (i < 50){
+        while (i < 20){
             System.out.println(Thread.currentThread().getName() + " prints " + medal);
             i++;
         }

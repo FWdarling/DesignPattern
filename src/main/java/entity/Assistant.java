@@ -9,6 +9,10 @@ public class Assistant extends AbstractReferees {
         this.myJudgement = myJudgement;
     }
 
+    /**
+     * 打印助理裁判的判罚
+     * @param message String
+     */
     @Override
     protected void write(String message) {
         System.out.println("The assistant's judgement: " + myJudgement);

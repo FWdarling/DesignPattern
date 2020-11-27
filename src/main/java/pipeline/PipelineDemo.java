@@ -39,20 +39,44 @@ public class PipelineDemo {
          * 测试设计模式
          * 添加奖牌，更新排名，展示检查榜 x 4
          */
+        System.out.println("                                        [ MedalBoard : updateMedalBoard(String, Material) : 添加奖牌 ]");
         medalBoard.updateMedalBoard("Fish", Material.Silver);  //添加奖牌
+        System.out.println("                                        [ RankSort : execute(MedalBoard) : 开始更新排名 ]");
+        System.out.println("                                        [ GoldSort : process(MedalBoard) : 按照金牌数目进行排名 ]");
+        System.out.println("                                        [ SilverSort : process(MedalBoard) : 按照银牌数目进行排名 ]");
+        System.out.println("                                        [ BronzeSort : process(MedalBoard) : 按照铜牌数目进行排名 ]");
         medalBoard = rankSort.execute(medalBoard);  //更新排名
+        System.out.println("                                        [ MedalBoard : showRank() : 展示奖牌榜 ]");
         medalBoard.showRank();  //展示奖牌榜
 
+        System.out.println("                                        [ MedalBoard : updateMedalBoard(String, Material) : 添加奖牌 ]");
         medalBoard.updateMedalBoard("Fish", Material.Silver);  //添加奖牌
+        System.out.println("                                        [ RankSort : execute(MedalBoard) : 开始更新排名 ]");
+        System.out.println("                                        [ GoldSort : process(MedalBoard) : 按照金牌数目进行排名 ]");
+        System.out.println("                                        [ SilverSort : process(MedalBoard) : 按照银牌数目进行排名 ]");
+        System.out.println("                                        [ BronzeSort : process(MedalBoard) : 按照铜牌数目进行排名 ]");
         medalBoard = rankSort.execute(medalBoard);  //更新排名
+        System.out.println("                                        [ MedalBoard : showRank() : 展示奖牌榜 ]");
         medalBoard.showRank();  //展示奖牌榜
 
+        System.out.println("                                        [ MedalBoard : updateMedalBoard(String, Material) : 添加奖牌 ]");
         medalBoard.updateMedalBoard("Bear", Material.Gold);  //添加奖牌
+        System.out.println("                                        [ RankSort : execute(MedalBoard) : 开始更新排名 ]");
+        System.out.println("                                        [ GoldSort : process(MedalBoard) : 按照金牌数目进行排名 ]");
+        System.out.println("                                        [ SilverSort : process(MedalBoard) : 按照银牌数目进行排名 ]");
+        System.out.println("                                        [ BronzeSort : process(MedalBoard) : 按照铜牌数目进行排名 ]");
         medalBoard = rankSort.execute(medalBoard);  //更新排名
+        System.out.println("                                        [ MedalBoard : showRank() : 展示奖牌榜 ]");
         medalBoard.showRank();  //展示奖牌榜
-
+        
+        System.out.println("                                        [ MedalBoard : updateMedalBoard(String, Material) : 添加奖牌 ]");
         medalBoard.updateMedalBoard("Bear", Material.Gold);  //添加奖牌
+        System.out.println("                                        [ RankSort : execute(MedalBoard) : 开始更新排名 ]");
+        System.out.println("                                        [ GoldSort : process(MedalBoard) : 按照金牌数目进行排名 ]");
+        System.out.println("                                        [ SilverSort : process(MedalBoard) : 按照银牌数目进行排名 ]");
+        System.out.println("                                        [ BronzeSort : process(MedalBoard) : 按照铜牌数目进行排名 ]");
         medalBoard = rankSort.execute(medalBoard);  //更新排名
+        System.out.println("                                        [ MedalBoard : showRank() : 展示奖牌榜 ]");
         medalBoard.showRank();  //展示奖牌榜
 
     }

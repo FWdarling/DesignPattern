@@ -12,7 +12,7 @@ import businessdelegate.Dog;
 import businessdelegate.OfflineQuery;
 import businessdelegate.QueryDelegate;
 import callback.CallbackDemo;
-import chainofresponsibility.SetRefereees;
+import chainofresponsibility.SetReferees;
 import command.AwardMedalCommand;
 import composite.Equipment;
 import composite.Locker;
@@ -32,6 +32,7 @@ import factorymethod.FactoryMethodDemo;
 import filter.DishesFilterDemo;
 import flyweight.FlyWeightDemo;
 import frontcontroller.FrontController;
+import immutable.ImmutableDemo;
 import interpreter.Const;
 import interpreter.MatchException;
 import interpreter.MatchExpression;
@@ -91,6 +92,7 @@ public class Main {
         }
 
         for(MyThread thread : threads){
+            System.out.println("                                        [ MyThread : run() : 重写run()方法，根据具体情景启动线程 ]");
             thread.run();
         }
         System.out.println("------------------------ END ------------------------");
@@ -98,39 +100,29 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] Singleton ----------------");
+        System.out.println("                                        " +
+                "[ Sponsor : getInstance() : 获取一个 Sponsor 实例 ]");
         Sponsor thisSponsor = Sponsor.getInstance();
+        System.out.println("                                        " +
+                "[ Sponsor : getInstance() : 获取另一个 Sponsor 实例 ]");
         Sponsor thatSponsor = Sponsor.getInstance();
         if(thisSponsor == thatSponsor) {
-            System.out.println("This Sponsor("+thisSponsor.toString()+") and that Sponsor("+thatSponsor.toString()+") are the same one.");
+            System.out.println("This Sponsor("+thisSponsor.toString()+
+                    ") and that Sponsor("+thatSponsor.toString()+") are the same one.");
+            System.out.println("                                        " +
+                    "[ Sponsor : getName() : 获取 Sponsor 名称 ]");
             System.out.println("The Sponsor's name is: "+thisSponsor.getName()+"");
         }
         else {
-            System.out.println("This Sponsor("+thisSponsor.toString()+") and that Sponsor("+thatSponsor.toString()+") are not the same one.");
+            System.out.println("This Sponsor("+thisSponsor.toString()+
+                    ") and that Sponsor("+thatSponsor.toString()+") are not the same one.");
         }
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
 
         System.out.println("---------------- [Pattern] Visitor ----------------");
-        System.out.println("利用visitor模式为多个类提供多种方法");
-        System.out.println("此时有4座形状不同的建筑物，求出他们的周长和面积");
-
-        // 一个含有5个元素的List，包含三种不同的形状
-        List<Element> shapes = new ArrayList<Element>();
-        shapes.add(new Triangle(1.3, 2.2, 3.1));
-        shapes.add(new Circle(1.2));
-        shapes.add(new Triangle(2.4, 3.3, 4.2));
-        //shapes.add(new Rectangle(2.1, 3.2));
-        shapes.add(new Circle(5.6));
-
-        // 计算周长和面积的不同策略（访问者）
-        Perimeter perimeter = new Perimeter();
-        Area area = new Area();
-
-        // 将周长和面积的计算策略传入（接受不同访问者的访问）
-        for (Element shape : shapes) {
-            System.out.printf("周长 : %5.2f\t 面积 : %5.2f\n", shape.accept(perimeter), shape.accept(area));
-        }
+        VisitorDemo.VisitTest();
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
@@ -145,15 +137,26 @@ public class Main {
         StadiumBuilder swimmingPoolBuilder = new SwimmingPoolBuilder();
 
 //        给指挥者类设定建造者
+        System.out.println("                                        [ StadiumDirector : setStadiumBuilder(StadiumBuilder) : 给指挥者类设置要建造的场馆类型 ]");
         stadiumDirector.setStadiumBuilder(racingTrackBuilder);
 
-        stadiumDirector.CompetitionAreaCount(-3).SpectatorAreaCount(14).constructStadium();
-
+        System.out.println("                                        [ StadiumDirector : setStadiumBuilder(StadiumBuilder) : 给指挥者类设置要建造的场馆类型 ]");
         stadiumDirector.setStadiumBuilder(flyingVenueBuilder);
-        stadiumDirector.SpectatorAreaCount(-3).constructStadium();
+        System.out.println("                                        [ StadiumDirector : constructStadium() : 经典模式，建造具体场馆 ]");
+        stadiumDirector.constructStadium();
 
+        System.out.println("                                        [ StadiumDirector : CompetitionAreaCount(int) : 设置场地竞赛区数 ]");
+        System.out.println("                                        [ StadiumDirector : SpectatorAreaCount(int) : 设置场地观众席数 ]");
+        System.out.println("                                        [ StadiumDirector : constructStadium() : 变种模式，链式调用自定义区域数量 ]");
+        stadiumDirector.CompetitionAreaCount(3).SpectatorAreaCount(14).constructStadium();
+
+
+        System.out.println("                                        [ StadiumDirector : setStadiumBuilder(StadiumBuilder) : 给指挥者类设置要建造的场馆类型 ]");
         stadiumDirector.setStadiumBuilder(swimmingPoolBuilder);
-        stadiumDirector.CompetitionAreaCount(20).SpectatorAreaCount(12).constructStadium();
+        System.out.println("                                        [ StadiumDirector : CompetitionAreaCount(int) : 设置场地竞赛区数，出错测试-给定数量为负数 ]");
+        System.out.println("                                        [ StadiumDirector : SpectatorAreaCount(int) : 设置场地观众席数 ]");
+        System.out.println("                                        [ StadiumDirector : constructStadium() : 变种模式，链式调用自定义区域数量 ]");
+        stadiumDirector.CompetitionAreaCount(-5).SpectatorAreaCount(12).constructStadium();
 
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -161,16 +164,30 @@ public class Main {
 
         System.out.println("---------------- [Pattern] Multiton ----------------");
         RoomDistributor roomDistributor = new RoomDistributor();
+        System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
         TrainingRoom trainingRoom1 = roomDistributor.applyRoom();
+        System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
         TrainingRoom trainingRoom2 = roomDistributor.applyRoom();
+        System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
         TrainingRoom trainingRoom3 = roomDistributor.applyRoom();
+        System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
         TrainingRoom trainingRoom4 = roomDistributor.applyRoom();
-        trainingRoom1.showRoom();
-        trainingRoom2.showRoom();
-        trainingRoom3.showRoom();
-        trainingRoom2.repayRoom();
-        trainingRoom4 = roomDistributor.applyRoom();
-        trainingRoom4.showRoom();
+        try {
+            System.out.println("                                        [ TrainingRoom : showRoom() : 展示训练房间信息 ]");
+            trainingRoom1.showRoom();
+            System.out.println("                                        [ TrainingRoom : showRoom() : 展示训练房间信息 ]");
+            trainingRoom2.showRoom();
+            System.out.println("                                        [ TrainingRoom : showRoom() : 展示训练房间信息 ]");
+            trainingRoom3.showRoom();
+            System.out.println("                                        [ TrainingRoom : repayRoom() : 返还获取的房间 ]");
+            trainingRoom2.repayRoom();
+            System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
+            trainingRoom4 = roomDistributor.applyRoom();
+            System.out.println("                                        [ TrainingRoom : showRoom() : 展示训练房间信息 ]");
+            trainingRoom4.showRoom();
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
@@ -228,9 +245,17 @@ public class Main {
         final Troll troll = new Troll();
         final Turtle turtle = new Turtle();
 
+        System.out.println("                                        " +
+                "[ SelectorDemo : boxingSelector() : 测试运动员：slime 是否有拳击比赛参赛资格 ]");
         boxingSelector(slime);
+        System.out.println("                                        " +
+                "[ SelectorDemo : boxingSelector() : 测试运动员：panda 是否有拳击比赛参赛资格 ]");
         boxingSelector(panda);
+        System.out.println("                                        " +
+                "[ SelectorDemo : boxingSelector() : 测试运动员：troll 是否有拳击比赛参赛资格 ]");
         boxingSelector(troll);
+        System.out.println("                                        " +
+                "[ SelectorDemo : boxingSelector() : 测试运动员：turtle 是否有拳击比赛参赛资格 ]");
         boxingSelector(turtle);
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -378,16 +403,25 @@ public class Main {
         System.out.println("---------------- [Pattern] Strategy ----------------");
 //        创建动物并进行进食、训练以及表演
         Rabbit rabbit = new Rabbit("兔斯基", "跑步");
+        System.out.println("                                        [ Rabbit : eat() : 兔类进食策略 ]");
         rabbit.eat();
         Bird bird = new Bird("愤怒的小鸟", "竞速飞行");
+        System.out.println("                                        [ Bird : eat() : 鸟类进食策略 ]");
         bird.eat();
         Fish fish = new Fish("小丑鱼", "花样游泳");
+        System.out.println("                                        [ Fish : eat() : 鱼类进食策略 ]");
         fish.eat();
+        System.out.println("                                        [ Rabbit : train() : 兔类训练策略 ]");
         rabbit.train();
+        System.out.println("                                        [ Bird : train() : 鸟类训练策略 ]");
         bird.train();
+        System.out.println("                                        [ Fish : train() : 鱼类训练策略 ]");
         fish.train();
+        System.out.println("                                        [ Bird : perform() : 鸟类入场表演策略 ]");
         bird.perform();
+        System.out.println("                                        [ Fish : train() : 鱼类入场表演策略 ]");
         fish.perform();
+        System.out.println("                                        [ rabbit : perform() : 兔类入场表演策略 ]");
         rabbit.perform();
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -456,6 +490,10 @@ public class Main {
         String exp = "2 * "+ Const.FOOD_FRIEDRISE+" + 1 * "+Const.FOOD_GRASS+" + 3 * "+Const.FOOD_WORM;
         System.out.println("您应当付款：");
         try {
+            System.out.println("                                        [ MatchExpression : match() : 接受表达式并进行语法树分析 ]");
+            System.out.println("                                        [ MultipleExpression : interpret() : 完成左右元素的乘法操作 ]");
+            System.out.println("                                        [ AddExpression : interpret() : 完成左右元素的加法操作 ]");
+
             System.out.println(MatchExpression.match(exp).interpret());
         } catch (MatchException e) {
             e.printStackTrace();
@@ -480,9 +518,13 @@ public class Main {
         System.out.println("---------------- [Pattern] Producer-Customer ----------------");
 
         Table table = new Table(2);
+        System.out.println("                                        [ MakerThread : MakerThread(String name, Table table, long seed) : 实例化一个名为name的MakerThread，传入table实例，设定随机数种子seed ]");
         MakerThread m1 = new MakerThread("MakerThread-1",table,31415);
+        System.out.println("                                        [ MakerThread : MakerThread(String name, Table table, long seed) : 实例化一个名为name的MakerThread，传入table实例，设定随机数种子seed ]");
         MakerThread m2 = new MakerThread("MakerThread-2",table,12345);
+        System.out.println("                                        [ DrinkerThread : DrinkerThread(String name, Table table, long seed) : 实例化一个名为name的DrinkerThread，传入table实例，设定随机数种子seed ]");
         DrinkerThread d1 = new DrinkerThread("DrinkerThread-2",table,33333);
+        System.out.println("                                        [ DrinkerThread : DrinkerThread(String name, Table table, long seed) : 实例化一个名为name的DrinkerThread，传入table实例，设定随机数种子seed ]");
         DrinkerThread d2 = new DrinkerThread("DrinkerThread-1",table,76536);
         try{
             m1.start();
@@ -554,10 +596,13 @@ public class Main {
 
         System.out.println("---------------- [Pattern] DirtyFlag ----------------");
 //        设置队伍
+        System.out.println("                                        [ RelayRaceTeam : RelayRaceTeam(String teamName, String name1, String name2, String name3" +
+                " double speed1, double speed2, double speed3) : 创建接力比赛队伍 ]");
         RelayRaceTeam team1 = new RelayRaceTeam("一队", "熊大", "熊二", "小蜗",
-                20, 30, -1);
+                20, 30, 21);
+        System.out.println("                                        [ RelayRaceTeam : RelayRaceTeam(...) : 创建接力比赛队伍，出错测试-速度小于零 ]");
         RelayRaceTeam team2 = new RelayRaceTeam("二队", "熊三", "熊四", "大蜗",
-                23, 26, 27);
+                23, 26, -5);
 //        设置队伍列表
         ArrayList<RelayRaceTeam> relayRaceTeams = new ArrayList<>();
         relayRaceTeams.add(team1);
@@ -566,6 +611,7 @@ public class Main {
         RelayRace relayRace = new RelayRace(relayRaceTeams);
 //        开始比赛
         try {
+            System.out.println("                                        [ RelayRace : start() : 开始接力比赛 ]");
             relayRace.start();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -575,7 +621,11 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] ChainOfResponsibility ----------------");
-        AbstractReferees referees = SetRefereees.SetRefereees("Unknown","Unknown",true);
+        System.out.println("                                        " +
+                "[ SetReferees : SetReferees() : 设置判罚责任链 ]");
+        AbstractReferees referees = SetReferees.SetReferees("Unknown","Unknown",true);
+        System.out.println("                                        " +
+                "[ AbstractReferees : judgement() : 进行判罚 ]");
         referees.judgement();
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -583,9 +633,17 @@ public class Main {
 
         System.out.println("---------------- [Pattern] ExtensionObjects ----------------");
         Race race = new ConcreteRace();
+        System.out.println("                                        " +
+                "[ Race : GetExtension() : 获取扩展对象：伤停补时 ]");
         Overtime overtimeInjury = race.GetExtension("Injury");
+        System.out.println("                                        " +
+                "[ Race : GetExtension() : 获取扩展对象：平局加时 ]");
         Overtime overtimeDraw = race.GetExtension("Draw");
+        System.out.println("                                        " +
+                "[ Overtime : SetOvertime() : 设定伤停补时时间 ]");
         overtimeInjury.SetOvertime(5);
+        System.out.println("                                        " +
+                "[ Overtime : SetOvertime() : 设定平局加时时间 ]");
         overtimeDraw.SetOvertime(15);
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -598,7 +656,9 @@ public class Main {
             vestArrayList.add(vest);
         }
 
+        System.out.println("                                        [ ChangeThread : ChangeThread(String name, ArrayList<Vest> vestArrayList) : 构造一个名为name的线程，接受一个装有Vest对象的ArrayList ]");
         ChangeThread changeThread = new ChangeThread("Athlete",vestArrayList);
+        System.out.println("                                        [ SaveThread : SaveThread(String name, ArrayList<Vest> vestArrayList) : 构造一个名为name的线程，接受一个装有Vest对象的ArrayList ]");
         SaveThread saveThread = new SaveThread("Saver",vestArrayList);
         try{
             changeThread.start();
@@ -640,34 +700,92 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] Prototype ----------------");
+        System.out.println("         ========= 类型1 - 浅克隆 =========");
         Athlete athlete1 = new Athlete("ALEX", "highJump");
         Athlete athlete2 = new Athlete("Cathy","highJump");
         Athlete athlete3 = new Athlete("Tim","highJump");
         Athlete athlete4 = new Athlete("Jerry","highJump");
 
         Certificate tmpCertificate = new Certificate(athlete1.getName(),athlete1.getSportsType(), AwardLevel.FPRSTPRIZE);
+        System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
         tmpCertificate.printCertificate();
 
         Certificate tmpCertificate2 = null;
         try {
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(浅克隆) ]");
             tmpCertificate2 = (Certificate)tmpCertificate.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
             tmpCertificate2.setName(athlete2.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
             tmpCertificate2.setPrizeLevel(AwardLevel.SECONDPRIZE);
 
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(浅克隆) ]");
             Certificate tmpCertificate3 = (Certificate)tmpCertificate.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
             tmpCertificate3.setName(athlete3.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
             tmpCertificate3.setPrizeLevel(AwardLevel.SECONDPRIZE);
 
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(浅克隆) ]");
             Certificate tmpCertificate4 = (Certificate)tmpCertificate.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
             tmpCertificate4.setName(athlete4.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
             tmpCertificate4.setPrizeLevel(AwardLevel.THIRDPRIZE);
 
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
             tmpCertificate2.printCertificate();
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
             tmpCertificate3.printCertificate();
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
             tmpCertificate4.printCertificate();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
+        System.out.println("");
+        System.out.println("         ========= 类型2 - 深克隆 =========");
+
+        Athlete athlete5 = new Athlete("ALEX", "highJump");
+        Athlete athlete6 = new Athlete("Cathy","highJump");
+        Athlete athlete7 = new Athlete("Tim","highJump");
+        Athlete athlete8 = new Athlete("Jerry","highJump");
+
+        prototypedeepcopy.Certificate tmpCertificate5 = new prototypedeepcopy.Certificate(athlete1.getName(),athlete1.getSportsType(), prototypedeepcopy.AwardLevel.FPRSTPRIZE);
+        System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
+        tmpCertificate5.printCertificate();
+        try{
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(深克隆) ]");
+            prototypedeepcopy.Certificate tmpCertificate6 = (prototypedeepcopy.Certificate)tmpCertificate5.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
+            tmpCertificate6.setName(athlete2.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
+            tmpCertificate6.setPrizeLevel(prototypedeepcopy.AwardLevel.SECONDPRIZE);
+
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(深克隆) ]");
+            prototypedeepcopy.Certificate tmpCertificate7 = (prototypedeepcopy.Certificate)tmpCertificate5.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
+            tmpCertificate7.setName(athlete3.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
+            tmpCertificate7.setPrizeLevel(prototypedeepcopy.AwardLevel.SECONDPRIZE);
+
+            System.out.println("                                        [ Certificate : clone() : 克隆奖状(深克隆) ]");
+            prototypedeepcopy.Certificate tmpCertificate8 = (prototypedeepcopy.Certificate)tmpCertificate5.clone();
+            System.out.println("                                        [ Certificate : setName() : 设置奖状的姓名 ]");
+            tmpCertificate8.setName(athlete4.getName());
+            System.out.println("                                        [ Certificate : setPrizeLevel() : 设置奖状级别 ]");
+            tmpCertificate8.setPrizeLevel(prototypedeepcopy.AwardLevel.THIRDPRIZE);
+
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
+            tmpCertificate6.printCertificate();
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
+            tmpCertificate7.printCertificate();
+            System.out.println("                                        [ Certificate : printCertificate() : 打印奖状 ]");
+            tmpCertificate8.printCertificate();
+
+        }catch (CloneNotSupportedException e){
+            e.printStackTrace();
+        }
+
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
@@ -697,6 +815,16 @@ public class Main {
         System.out.println("");
 
 
+        System.out.println("---------------- [Pattern] Immutable ----------------");
+        try {
+            ImmutableDemo.immutableTest();
+        }catch (InterruptedException e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println("------------------------ END ------------------------");
+        System.out.println("");
+
+
         System.out.println("---------------- [Pattern] Command ----------------");
         AwardMedalCommand command=new AwardMedalCommand(myPlayer,"Swimming", Material.Gold);
         System.out.println("                                        " +
@@ -721,8 +849,13 @@ public class Main {
         String[] questions = {"你是谁？", "你有信心获胜吗？", "你想对你的支持者说些什么？"};
 //        采访
         try {
+            System.out.println("                                        [ Reporter : interview(AthleteProxy athleteProxy," +
+                    " String interviewee, String[] questions) : 记者通过AthleteProxy间接采访对应Athlete ]");
             reporter.interview(athleteProxy, "Jerry", questions);
+            System.out.println("                                        [ Reporter : interview(AthleteProxy athleteProxy," +
+                    " String interviewee, String[] questions) : 记者通过AthleteProxy间接采访对应Athlete ]");
             reporter.interview(athleteProxy, "泡泡", questions);
+            System.out.println("                                        [ Reporter : interview(...) : 出错测试-运动员名错误 ]");
             reporter.interview(athleteProxy, "李华", questions);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -734,13 +867,19 @@ public class Main {
         System.out.println("---------------- [Pattern] WorkerThread ----------------");
 
         final CheckPoint checkPoint = new CheckPoint(99);
+        System.out.println("                                        " +
+                "[ CheckPoint : startVolunteer() : 启动所有志愿者线程 ]");
         checkPoint.startVolunteer();
 
         RunnerThread t1 = new RunnerThread("Nemo", checkPoint);
         RunnerThread t2 = new RunnerThread("Four", checkPoint);
         RunnerThread t3 = new RunnerThread("Wood", checkPoint);
 
-        // 开始并等待所有 Runner 线程结束
+
+        System.out.println("                                        " +
+                "[ Thread : start() : 依次启动所有 Runner 线程 ]");
+        System.out.println("                                        " +
+                "[ Thread : join() : 并等待所有 Runner 线程执行结束 ]");
         try {
             t1.start();
             t2.start();
@@ -754,7 +893,8 @@ public class Main {
             e.printStackTrace();
         }
         finally {
-            // 手动结束所有的 Volunteer 线程
+            System.out.println("                                        " +
+                    "[ CheckPoint : stopVolunteer() : 停止所有志愿者线程 ]");
             checkPoint.stopVolunteer();
             System.out.println("------------------------ END ------------------------");
             System.out.println("");

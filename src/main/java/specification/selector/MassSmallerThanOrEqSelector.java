@@ -17,6 +17,11 @@ public class MassSmallerThanOrEqSelector extends AbstractSelector<Athlete> {
         this.mass = new Mass(mass);
     }
 
+    /**
+     * 规约：体重小于等于
+     * @param t Athlete
+     * @return boolean
+     */
     @Override
     public boolean test(Athlete t) {
         // todo add something

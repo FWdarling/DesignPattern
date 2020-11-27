@@ -6,6 +6,12 @@ public class Equipment extends EquipmentRoom {
 //            其他问题见comments
     private String name;
     private int value;
+
+    /**
+     * 构造函数，具体的体育器材
+     * @param name
+     * @param value
+     */
     public Equipment(String name,int value)
     {
         this.name=name;

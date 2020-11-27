@@ -8,6 +8,10 @@ public class Locker extends EquipmentRoom{
     private int values;
     private ArrayList<EquipmentRoom> equipments=new ArrayList<EquipmentRoom>();
 
+    /**
+     * 构造函数
+     * @param name
+     */
     public Locker(String name)
     {
         this.name=name;

@@ -15,6 +15,9 @@ public class StateDemo {
         PingpongAthlete athlete1=new PingpongAthlete();
         PingpongAthlete athlete2=new PingpongAthlete();
 
+        System.out.println("                                        [ PingpongAthlete : addScore() : 给运动员加分 ]");
+        System.out.println("                                        [ PingpongAthlete : lost() : 运动员认输 ]");
+
         athlete1.addScore();
         showGameState(athlete1, athlete2);
         athlete1.addScore();

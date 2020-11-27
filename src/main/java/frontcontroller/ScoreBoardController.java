@@ -12,6 +12,10 @@ public class ScoreBoardController {
         this.view=view;
     }
 
+    /**
+     * 打印相关内容
+     * @param scoreBoard
+     */
     public void printDetails(ScoreBoard scoreBoard)
     {
         GetScoreBoard getScoreBoard = new GetScoreBoard(scoreBoard);

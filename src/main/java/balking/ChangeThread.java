@@ -18,11 +18,14 @@ public class ChangeThread extends Thread{
 
     private ArrayList<Vest> vestArrayList;
     private Random random=new Random();
+    //初始化
     public ChangeThread(String name, ArrayList<Vest> vestArrayList){
         super(name);//线程名称
         this.vestArrayList = vestArrayList;
     }
 
+    //重写run()方法，对vestArrayList里面的每个Vest对象进行使用，并间隔一段时间后调用回收接口。
+    //（若此时该背心已经被其他线程回收，则save()操作内不会有任何实际动作。
     @Override
     public void run(){
         try {
