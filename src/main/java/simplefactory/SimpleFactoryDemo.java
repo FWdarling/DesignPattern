@@ -16,6 +16,8 @@ public class SimpleFactoryDemo {
     public static void runSimpleFactoryDemo(){
         Vector<IceCream> myIceCream=new Vector<IceCream>();
 
+        System.out.println("                                        [ IceCreamStaff : getIceCream(String ICName) : 冰淇淋店员制造（售卖）指定冰淇淋 ]");
+
         System.out.println("买香草冰淇淋");
         myIceCream.add(IceCreamStaff.getIceCream("香草冰淇淋"));
         System.out.println("买巧克力冰淇淋");

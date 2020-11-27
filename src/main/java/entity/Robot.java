@@ -15,6 +15,10 @@ public class Robot extends AbstractReferees {
         }
     }
 
+    /**
+     * 打印机器人裁判的判罚
+     * @param message String
+     */
     @Override
     protected void write(String message) {
         System.out.println("The robot's judgement: " + myJudgement);

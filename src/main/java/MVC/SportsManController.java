@@ -32,6 +32,11 @@ public class SportsManController {
         return model.getAge();
     }
 
+    /**
+     * 打印运动员相关信息
+     * @param name
+     * @param age
+     */
     public void printDetails(String name,int age)
     {
         view.printSportsManDetails(name,age);

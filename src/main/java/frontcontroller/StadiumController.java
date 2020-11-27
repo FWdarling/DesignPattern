@@ -16,7 +16,10 @@ public class StadiumController {
     }
 
 
-
+    /**
+     * 打印相关内容
+     *
+     */
     public void printDetails()
     {
         model.getStadium();

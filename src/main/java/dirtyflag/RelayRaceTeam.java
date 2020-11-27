@@ -15,6 +15,11 @@ public class RelayRaceTeam {
     // 是否结束
     boolean finished = false;
 
+    /**
+     * 获取该队伍用时
+     *
+     * @return 赛跑时长
+     */
     public double getUsingTime() {
         return usingTime;
     }
@@ -22,14 +27,25 @@ public class RelayRaceTeam {
     // 使用时间
     double usingTime = 0;
 
+    /**
+     * 获取队伍名称
+     *
+     * @return 队伍名
+     */
     public String getTeamName() {
         return teamName;
     }
 
+    /**
+     * 设置队伍名称
+     *
+     * @param teamName 队伍名称
+     */
     public void setTeamName(String teamName) {
         this.teamName = teamName;
     }
 
+    //    队伍名称
     String teamName;
 
     /**

@@ -6,5 +6,6 @@ package prototypedeepcopy;
  * Version: 1.0
  */
 public enum AwardLevel {
+    //获奖等级
     FPRSTPRIZE,SECONDPRIZE,THIRDPRIZE
 }

@@ -14,6 +14,7 @@ import java.rmi.UnexpectedException;
 public class TerminalExpression implements Expression{
     private double number;
 
+    //初始化
     TerminalExpression(String str){
         if(Character.isDigit(str.charAt(0))){
             this.number = Double.parseDouble(str);
@@ -28,6 +29,7 @@ public class TerminalExpression implements Expression{
 
     }
 
+    //根据菜名获得菜品的价格
     public static double getValue(String str) throws UnexpectedException{
         switch (str){
             case Const.FOOD_FRIEDRISE:
@@ -41,6 +43,7 @@ public class TerminalExpression implements Expression{
         }
     }
 
+    //重写run()方法，实现终结符对于语法树的解析
     @Override
     public double interpret() {
         return number;

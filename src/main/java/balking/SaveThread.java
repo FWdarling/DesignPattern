@@ -18,11 +18,14 @@ public class SaveThread extends Thread{
 
     private ArrayList<Vest> vestArrayList; //当前所有需要收集的背心
 
+    //初始化
     public SaveThread(String name, ArrayList<Vest> vestArrayList){
         super(name);//线程名称
         this.vestArrayList = vestArrayList;
     }
 
+    //重写run()，模拟工作人员行为，设定工作人员每隔1s依次进行一件衣服的回收。
+    //（若此时该背心已经被其他线程回收，则save()操作内不会有任何实际动作。
     @Override
     public void run(){
         try {
