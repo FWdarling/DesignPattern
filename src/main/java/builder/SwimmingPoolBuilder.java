@@ -5,16 +5,27 @@ package builder;
  */
 public class SwimmingPoolBuilder extends StadiumBuilder {
 
+    /**
+     * 经典模式建造观众席
+     */
     @Override
     public void buildSpectatorArea() {
         stadium.setSpectatorArea(16, 100);
     }
 
+    /**
+     * 经典模式建造竞赛区
+     */
     @Override
     public void buildCompetitionArea() {
         stadium.setCompetitionArea(8, 50, "泳道");
     }
 
+    /**
+     * 变种模式自定义数量建造观众席
+     *
+     * @param count int自定义观众席建造数量，大于零
+     */
     @Override
     public void buildSpectatorArea(int count) {
         try {
@@ -28,6 +39,11 @@ public class SwimmingPoolBuilder extends StadiumBuilder {
         }
     }
 
+    /**
+     * 变种模式自定义数量建造竞赛区
+     *
+     * @param count int自定义比赛区建造数量，不小于2
+     */
     @Override
     public void buildCompetitionArea(int count) {
         try {
@@ -41,6 +57,9 @@ public class SwimmingPoolBuilder extends StadiumBuilder {
         }
     }
 
+    /**
+     * 设定场馆类型
+     */
     @Override
     public void setStadiumType() {
         stadium.setStadiumType("游泳馆");

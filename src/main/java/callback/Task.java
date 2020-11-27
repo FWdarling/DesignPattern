@@ -10,6 +10,8 @@ public abstract class Task {
     public void executer(Callback callback){
         exec();
         if(callback != null){
+            System.out.println("                                        " +
+                    "[ Callback : callback() : 调用回调函数 ]");
             callback.call();
         }
     }

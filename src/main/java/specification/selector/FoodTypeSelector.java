@@ -16,7 +16,7 @@ public class FoodTypeSelector extends AbstractSelector<Athlete> {
 
     /**
      * @description 测试运动员是否符合规定的食肉/食草属性
-     * @param t 运动员
+     * @param t Athlete
      * @return boolean
      */
     @Override

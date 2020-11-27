@@ -44,7 +44,8 @@ public class Competition extends Task {
             loser=team1;
         }
         System.out.println("比赛胜者是："+winner+"\n");
-
+        System.out.println("                                        " +
+                "[ ScoreBoard : updateScoreBoard() : 更新比分板 ]");
         scoreBoard.updateScoreBoard(winner,loser);
     }
 }

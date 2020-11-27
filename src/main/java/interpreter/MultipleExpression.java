@@ -8,6 +8,7 @@ package interpreter;
 public class MultipleExpression implements  Expression{
     private Expression _left,_right;
 
+    //初始化
     MultipleExpression(Expression left, Expression right){
         this._left = left;
         this._right = right;

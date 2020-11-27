@@ -4,10 +4,12 @@ import entity.TrainingStrategy;
 
 /**
  * 鸟类训练类
- * 继承自TrainingStrategy接口
- * 实例化鸟类训练方法
+ * 实现了TrainingStrategy
  */
 public class BirdTraining implements TrainingStrategy {
+    /**
+     * 鸟类训练策略
+     */
     @Override
     public void trainingAlgorithm() {
         System.out.println("——叽叽喳喳训练了一会——");

@@ -8,11 +8,12 @@ package visitor;
 public class Circle implements Element {
     private double radius;
 
-
+    //初始化
     public Circle(double radius) {
         this.radius = radius;
     }
 
+    //获得当前圆形的半径
     public double getRadius() {
         return radius;
     }

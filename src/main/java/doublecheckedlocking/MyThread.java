@@ -11,9 +11,10 @@ public class MyThread implements Runnable{
     public MyThread(int id){
         _id = id;
     }
+
+    //重写线程run方法，启动线程并调用getInstance()获取OlympicsYard实例
     @Override
     public void run() {
-        //重写线程run方法
         System.out.println("线程 " + _id + " 启动");
         _yard = OlympicsYard.getInstance();
         System.out.println("线程 "+ _id +" 获取了OlympicsYard实例");

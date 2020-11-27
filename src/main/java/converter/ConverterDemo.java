@@ -23,7 +23,8 @@ public class ConverterDemo {
 
         TransactionConverter transactionConverter=new TransactionConverter();
 
-
+        System.out.println("                                        " +
+                "[ TransactionDTO : convertToDTO() : 将存储交易信息的VO类型转换成DTO类型 ]");
         TransactionDTO transactionDTOTest1=transactionConverter.convertToDTO(transactionVOTest1);
         System.out.println("account:"+transactionDTOTest1.getAccount()+"\n");
         System.out.println("currencyType:"+transactionDTOTest1.getCurrencyType()+"\n");
@@ -36,7 +37,8 @@ public class ConverterDemo {
         transactionDTOTest2.setCurrencyType(currencyType);
         transactionDTOTest2.setAccount(account);
 
-
+        System.out.println("                                        " +
+                "[ TransactionVO : convertFromDTO() : 将存储交易信息的DTO类型转换成VO类型 ]");
         TransactionVO transactionVOTest2=transactionConverter.convertFromDTO(transactionDTOTest2);
         System.out.println("account:"+transactionVOTest2.getAccount()+"\n");
         System.out.println("currencyType:"+transactionVOTest2.getTargetCurrencyType()+"\n");

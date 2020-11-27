@@ -21,6 +21,8 @@ public class StuffInfoListProxy implements StuffInfoList{
             System.out.println("Loading the stuff information list...\n");
             stuffInfoListImpl=new StuffInfoListImpl();
         }
+        System.out.println("                                        " +
+                "[ StuffInfoListImpl : getStuffList() : 载入员工信息并且返回列表 ]");
         return stuffInfoListImpl.getStuffList();
     }
     private StuffInfoListImpl stuffInfoListImpl;
