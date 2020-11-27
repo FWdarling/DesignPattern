@@ -32,6 +32,7 @@ import factorymethod.FactoryMethodDemo;
 import filter.DishesFilterDemo;
 import flyweight.FlyWeightDemo;
 import frontcontroller.FrontController;
+import immutable.ImmutableDemo;
 import interpreter.Const;
 import interpreter.MatchException;
 import interpreter.MatchExpression;
@@ -809,6 +810,16 @@ public class Main {
         }
         catch (RuntimeException e){
             System.out.println("运动项目不存在");
+        }
+        System.out.println("------------------------ END ------------------------");
+        System.out.println("");
+
+
+        System.out.println("---------------- [Pattern] Immutable ----------------");
+        try {
+            ImmutableDemo.immutableTest();
+        }catch (InterruptedException e){
+            System.out.println(e.getMessage());
         }
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
