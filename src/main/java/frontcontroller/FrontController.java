@@ -109,7 +109,6 @@ public class FrontController {
         stadiumConstractor.constructStadium();
 
         StadiumController stadiumController1=new StadiumController(stadiumConstractor,stadiumView);
-        //Stadium的construct接口直接打印输出信息。。。。View再调用就显得多余，要不要改一改Builder?
 
 
         //stadiumController1.printDetails();
