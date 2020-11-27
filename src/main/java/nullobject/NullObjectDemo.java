@@ -25,6 +25,8 @@ public class NullObjectDemo {
         list.add("Bob");
         list.add("Cindy");
 
+        System.out.println("                                        [ Coach : named(Vector<String> list, String name) : 教练点名 ]");
+
         coach.named(list,"Abby").play();          //点名上场
         coach.named(list,"Daivy").play();         //点到不存在的人
     }
