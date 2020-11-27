@@ -12,7 +12,7 @@ import businessdelegate.Dog;
 import businessdelegate.OfflineQuery;
 import businessdelegate.QueryDelegate;
 import callback.CallbackDemo;
-import chainofresponsibility.SetRefereees;
+import chainofresponsibility.SetReferees;
 import command.AwardMedalCommand;
 import composite.Equipment;
 import composite.Locker;
@@ -98,14 +98,22 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] Singleton ----------------");
+        System.out.println("                                        " +
+                "[ Sponsor : getInstance() : 获取一个 Sponsor 实例 ]");
         Sponsor thisSponsor = Sponsor.getInstance();
+        System.out.println("                                        " +
+                "[ Sponsor : getInstance() : 获取另一个 Sponsor 实例 ]");
         Sponsor thatSponsor = Sponsor.getInstance();
         if(thisSponsor == thatSponsor) {
-            System.out.println("This Sponsor("+thisSponsor.toString()+") and that Sponsor("+thatSponsor.toString()+") are the same one.");
+            System.out.println("This Sponsor("+thisSponsor.toString()+
+                    ") and that Sponsor("+thatSponsor.toString()+") are the same one.");
+            System.out.println("                                        " +
+                    "[ Sponsor : getName() : 获取 Sponsor 名称 ]");
             System.out.println("The Sponsor's name is: "+thisSponsor.getName()+"");
         }
         else {
-            System.out.println("This Sponsor("+thisSponsor.toString()+") and that Sponsor("+thatSponsor.toString()+") are not the same one.");
+            System.out.println("This Sponsor("+thisSponsor.toString()+
+                    ") and that Sponsor("+thatSponsor.toString()+") are not the same one.");
         }
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -228,9 +236,17 @@ public class Main {
         final Troll troll = new Troll();
         final Turtle turtle = new Turtle();
 
+        System.out.println("                                        " +
+                "[ SelectorDemo : boxingSelector() : 测试运动员：slime 是否有拳击比赛参赛资格 ]");
         boxingSelector(slime);
+        System.out.println("                                        " +
+                "[ SelectorDemo : boxingSelector() : 测试运动员：panda 是否有拳击比赛参赛资格 ]");
         boxingSelector(panda);
+        System.out.println("                                        " +
+                "[ SelectorDemo : boxingSelector() : 测试运动员：troll 是否有拳击比赛参赛资格 ]");
         boxingSelector(troll);
+        System.out.println("                                        " +
+                "[ SelectorDemo : boxingSelector() : 测试运动员：turtle 是否有拳击比赛参赛资格 ]");
         boxingSelector(turtle);
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -558,7 +574,11 @@ public class Main {
 
 
         System.out.println("---------------- [Pattern] ChainOfResponsibility ----------------");
-        AbstractReferees referees = SetRefereees.SetRefereees("Unknown","Unknown",true);
+        System.out.println("                                        " +
+                "[ SetReferees : SetReferees() : 设置判罚责任链 ]");
+        AbstractReferees referees = SetReferees.SetReferees("Unknown","Unknown",true);
+        System.out.println("                                        " +
+                "[ AbstractReferees : judgement() : 进行判罚 ]");
         referees.judgement();
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -566,9 +586,17 @@ public class Main {
 
         System.out.println("---------------- [Pattern] ExtensionObjects ----------------");
         Race race = new ConcreteRace();
+        System.out.println("                                        " +
+                "[ Race : GetExtension() : 获取扩展对象：伤停补时 ]");
         Overtime overtimeInjury = race.GetExtension("Injury");
+        System.out.println("                                        " +
+                "[ Race : GetExtension() : 获取扩展对象：平局加时 ]");
         Overtime overtimeDraw = race.GetExtension("Draw");
+        System.out.println("                                        " +
+                "[ Overtime : SetOvertime() : 设定伤停补时时间 ]");
         overtimeInjury.SetOvertime(5);
+        System.out.println("                                        " +
+                "[ Overtime : SetOvertime() : 设定平局加时时间 ]");
         overtimeDraw.SetOvertime(15);
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -713,13 +741,19 @@ public class Main {
         System.out.println("---------------- [Pattern] WorkerThread ----------------");
 
         final CheckPoint checkPoint = new CheckPoint(99);
+        System.out.println("                                        " +
+                "[ CheckPoint : startVolunteer() : 启动所有志愿者线程 ]");
         checkPoint.startVolunteer();
 
         RunnerThread t1 = new RunnerThread("Nemo", checkPoint);
         RunnerThread t2 = new RunnerThread("Four", checkPoint);
         RunnerThread t3 = new RunnerThread("Wood", checkPoint);
 
-        // 开始并等待所有 Runner 线程结束
+
+        System.out.println("                                        " +
+                "[ Thread : start() : 依次启动所有 Runner 线程 ]");
+        System.out.println("                                        " +
+                "[ Thread : join() : 并等待所有 Runner 线程执行结束 ]");
         try {
             t1.start();
             t2.start();
@@ -733,7 +767,8 @@ public class Main {
             e.printStackTrace();
         }
         finally {
-            // 手动结束所有的 Volunteer 线程
+            System.out.println("                                        " +
+                    "[ CheckPoint : stopVolunteer() : 停止所有志愿者线程 ]");
             checkPoint.stopVolunteer();
             System.out.println("------------------------ END ------------------------");
             System.out.println("");
