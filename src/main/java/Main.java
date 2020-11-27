@@ -136,15 +136,26 @@ public class Main {
         StadiumBuilder swimmingPoolBuilder = new SwimmingPoolBuilder();
 
 //        给指挥者类设定建造者
+        System.out.println("                                        [ StadiumDirector : setStadiumBuilder(StadiumBuilder) : 给指挥者类设置要建造的场馆类型 ]");
         stadiumDirector.setStadiumBuilder(racingTrackBuilder);
 
-        stadiumDirector.CompetitionAreaCount(-3).SpectatorAreaCount(14).constructStadium();
-
+        System.out.println("                                        [ StadiumDirector : setStadiumBuilder(StadiumBuilder) : 给指挥者类设置要建造的场馆类型 ]");
         stadiumDirector.setStadiumBuilder(flyingVenueBuilder);
-        stadiumDirector.SpectatorAreaCount(-3).constructStadium();
+        System.out.println("                                        [ StadiumDirector : constructStadium() : 经典模式，建造具体场馆 ]");
+        stadiumDirector.constructStadium();
 
+        System.out.println("                                        [ StadiumDirector : CompetitionAreaCount(int) : 设置场地竞赛区数 ]");
+        System.out.println("                                        [ StadiumDirector : SpectatorAreaCount(int) : 设置场地观众席数 ]");
+        System.out.println("                                        [ StadiumDirector : constructStadium() : 变种模式，链式调用自定义区域数量 ]");
+        stadiumDirector.CompetitionAreaCount(3).SpectatorAreaCount(14).constructStadium();
+
+
+        System.out.println("                                        [ StadiumDirector : setStadiumBuilder(StadiumBuilder) : 给指挥者类设置要建造的场馆类型 ]");
         stadiumDirector.setStadiumBuilder(swimmingPoolBuilder);
-        stadiumDirector.CompetitionAreaCount(20).SpectatorAreaCount(12).constructStadium();
+        System.out.println("                                        [ StadiumDirector : CompetitionAreaCount(int) : 设置场地竞赛区数，出错测试-给定数量为负数 ]");
+        System.out.println("                                        [ StadiumDirector : SpectatorAreaCount(int) : 设置场地观众席数 ]");
+        System.out.println("                                        [ StadiumDirector : constructStadium() : 变种模式，链式调用自定义区域数量 ]");
+        stadiumDirector.CompetitionAreaCount(-5).SpectatorAreaCount(12).constructStadium();
 
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -152,16 +163,30 @@ public class Main {
 
         System.out.println("---------------- [Pattern] Multiton ----------------");
         RoomDistributor roomDistributor = new RoomDistributor();
+        System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
         TrainingRoom trainingRoom1 = roomDistributor.applyRoom();
+        System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
         TrainingRoom trainingRoom2 = roomDistributor.applyRoom();
+        System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
         TrainingRoom trainingRoom3 = roomDistributor.applyRoom();
+        System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
         TrainingRoom trainingRoom4 = roomDistributor.applyRoom();
-        trainingRoom1.showRoom();
-        trainingRoom2.showRoom();
-        trainingRoom3.showRoom();
-        trainingRoom2.repayRoom();
-        trainingRoom4 = roomDistributor.applyRoom();
-        trainingRoom4.showRoom();
+        try {
+            System.out.println("                                        [ TrainingRoom : showRoom() : 展示训练房间信息 ]");
+            trainingRoom1.showRoom();
+            System.out.println("                                        [ TrainingRoom : showRoom() : 展示训练房间信息 ]");
+            trainingRoom2.showRoom();
+            System.out.println("                                        [ TrainingRoom : showRoom() : 展示训练房间信息 ]");
+            trainingRoom3.showRoom();
+            System.out.println("                                        [ TrainingRoom : repayRoom() : 返还获取的房间 ]");
+            trainingRoom2.repayRoom();
+            System.out.println("                                        [ RoomDistributor : applyRoom() : 分配训练房间 ]");
+            trainingRoom4 = roomDistributor.applyRoom();
+            System.out.println("                                        [ TrainingRoom : showRoom() : 展示训练房间信息 ]");
+            trainingRoom4.showRoom();
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
@@ -377,16 +402,25 @@ public class Main {
         System.out.println("---------------- [Pattern] Strategy ----------------");
 //        创建动物并进行进食、训练以及表演
         Rabbit rabbit = new Rabbit("兔斯基", "跑步");
+        System.out.println("                                        [ Rabbit : eat() : 兔类进食策略 ]");
         rabbit.eat();
         Bird bird = new Bird("愤怒的小鸟", "竞速飞行");
+        System.out.println("                                        [ Bird : eat() : 鸟类进食策略 ]");
         bird.eat();
         Fish fish = new Fish("小丑鱼", "花样游泳");
+        System.out.println("                                        [ Fish : eat() : 鱼类进食策略 ]");
         fish.eat();
+        System.out.println("                                        [ Rabbit : train() : 兔类训练策略 ]");
         rabbit.train();
+        System.out.println("                                        [ Bird : train() : 鸟类训练策略 ]");
         bird.train();
+        System.out.println("                                        [ Fish : train() : 鱼类训练策略 ]");
         fish.train();
+        System.out.println("                                        [ Bird : perform() : 鸟类入场表演策略 ]");
         bird.perform();
+        System.out.println("                                        [ Fish : train() : 鱼类入场表演策略 ]");
         fish.perform();
+        System.out.println("                                        [ rabbit : perform() : 兔类入场表演策略 ]");
         rabbit.perform();
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
@@ -561,10 +595,13 @@ public class Main {
 
         System.out.println("---------------- [Pattern] DirtyFlag ----------------");
 //        设置队伍
+        System.out.println("                                        [ RelayRaceTeam : RelayRaceTeam(String teamName, String name1, String name2, String name3" +
+                " double speed1, double speed2, double speed3) : 创建接力比赛队伍 ]");
         RelayRaceTeam team1 = new RelayRaceTeam("一队", "熊大", "熊二", "小蜗",
-                20, 30, -1);
+                20, 30, 21);
+        System.out.println("                                        [ RelayRaceTeam : RelayRaceTeam(...) : 创建接力比赛队伍，出错测试-速度小于零 ]");
         RelayRaceTeam team2 = new RelayRaceTeam("二队", "熊三", "熊四", "大蜗",
-                23, 26, 27);
+                23, 26, -5);
 //        设置队伍列表
         ArrayList<RelayRaceTeam> relayRaceTeams = new ArrayList<>();
         relayRaceTeams.add(team1);
@@ -573,6 +610,7 @@ public class Main {
         RelayRace relayRace = new RelayRace(relayRaceTeams);
 //        开始比赛
         try {
+            System.out.println("                                        [ RelayRace : start() : 开始接力比赛 ]");
             relayRace.start();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -800,8 +838,13 @@ public class Main {
         String[] questions = {"你是谁？", "你有信心获胜吗？", "你想对你的支持者说些什么？"};
 //        采访
         try {
+            System.out.println("                                        [ Reporter : interview(AthleteProxy athleteProxy," +
+                    " String interviewee, String[] questions) : 记者通过AthleteProxy间接采访对应Athlete ]");
             reporter.interview(athleteProxy, "Jerry", questions);
+            System.out.println("                                        [ Reporter : interview(AthleteProxy athleteProxy," +
+                    " String interviewee, String[] questions) : 记者通过AthleteProxy间接采访对应Athlete ]");
             reporter.interview(athleteProxy, "泡泡", questions);
+            System.out.println("                                        [ Reporter : interview(...) : 出错测试-运动员名错误 ]");
             reporter.interview(athleteProxy, "李华", questions);
         } catch (InterruptedException e) {
             e.printStackTrace();

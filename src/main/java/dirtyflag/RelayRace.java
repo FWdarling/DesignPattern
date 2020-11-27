@@ -18,7 +18,11 @@ public class RelayRace {
         this.RelayRaceTeams = RelayRaceTeams;
     }
 
-    //    开始比赛
+    /**
+     * 开始接力比赛
+     *
+     * @throws InterruptedException
+     */
     public void start() throws InterruptedException {
 //        每一对都起跑
         for (int i = 0; i < RelayRaceTeams.size(); i++) {
