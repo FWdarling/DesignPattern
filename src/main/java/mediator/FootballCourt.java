@@ -6,6 +6,11 @@ public class FootballCourt extends AbstractCourt {
     public FootballCourt(Mediator mediator) {
         this.mediator = mediator;
     }
+
+    /**
+     *
+     * @param startTime 球场开始使用的时间
+     */
     @Override
     public void changeStartTime(String startTime) {
         this.startTime = startTime;
@@ -14,6 +19,11 @@ public class FootballCourt extends AbstractCourt {
         System.out.println("======================");
         mediator.doNotify("CFootballCourt", startTime);
     }
+
+    /**
+     *
+     * @param court 需要借用设备的球场
+     */
     @Override
     public void borrow(String court) {
         System.out.println("==========================");
@@ -21,6 +31,11 @@ public class FootballCourt extends AbstractCourt {
         System.out.println("==========================");
         mediator.doNotify("BFootballCourt", court);
     }
+
+    /**
+     *
+     * @param court
+     */
     @Override
     public void lend(String court) {
         System.out.println("==========================");
