@@ -27,6 +27,7 @@ public class AwardMedalCommand implements Command {
 	/**
 	 * 执行颁发奖牌
 	 */
+	@Override
 	public void execute() {
 		_medal.printMedalInfo();
 		_awardedPlayer.addMedal(_medal);
