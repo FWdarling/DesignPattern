@@ -276,15 +276,29 @@ public class Main {
         System.out.println("---------------- [Pattern] Iterator ----------------");
 
         ManCollection manCollection=new ManCollection(5);
+        System.out.println("                                        " +
+                "[ Iterator : appendMan() : 添加一个 SportsMan 实例 ]");
         manCollection.appendMan(new SportsMan("Healy",20));
+        System.out.println("                                        " +
+                "[ Iterator : appendMan() : 添加一个 SportsMan 实例 ]");
         manCollection.appendMan(new SportsMan("Gerald ",21));
+        System.out.println("                                        " +
+                "[ Iterator : appendMan() : 添加一个 SportsMan 实例 ]");
         manCollection.appendMan(new SportsMan("Trice ",56));
+        System.out.println("                                        " +
+                "[ Iterator : appendMan() : 添加一个 SportsMan 实例 ]");
         manCollection.appendMan(new SportsMan("Yennefa ",45));
+        System.out.println("                                        " +
+                "[ Iterator : appendMan() : 添加一个 SportsMan 实例 ]");
         manCollection.appendMan(new SportsMan("Kant ",18));
 
+        System.out.println("                                        " +
+                "[ Iterator : iterator() : 返回一个 Menuiterator 对象 ]");
         MenuIterator it=manCollection.iterator();
          // 迭代器遍历一个collection输出相关信息
         while (it.hasNext()) {
+            System.out.println("                                        " +
+                    "[ Iterator : next() : 返回下一个 SportsMan 对象 ]");
             SportsMan man = (SportsMan) it.next();
             System.out.println("姓名"+man.getName()+"年龄"+man.getAge());
         }
@@ -298,25 +312,37 @@ public class Main {
         Locker Ball=new Locker("球");
 
         Locker HollowBall=new Locker("空心球");
+
+        System.out.println("                                        " +
+                "[ composite : add() : 添加一个 Locker 对象 ]");
         Ball.add(HollowBall);
 
         Equipment basketball=new Equipment("篮球",120);
         Equipment football=new Equipment("足球",100);
 
          //在空心球这个划分下面添加具体的篮球和足球两个运动器材。
+        System.out.println("                                        " +
+                "[ composite : add() : 添加一个 Locker 对象（连续调用） ]");
         HollowBall.add(basketball).add(football);
 
-
+        System.out.println("                                        " +
+                "[ composite : printList() : 打印ball分类下的所有物品 ]");
         Ball.printList();
         System.out.println("");
+
+        System.out.println("                                        " +
+                "[ composite : getFullCategory() : 打印HollowBall被分类的路径 ]");
         HollowBall.getFullCategory();
 
 
         Equipment GymnasticsExhibitionBall=new Equipment("体操表演球",500);
+        System.out.println("                                        " +
+                "[ composite : add() : 添加一个 Equipment 对象 ]");
         HollowBall.add(GymnasticsExhibitionBall);
 
         Ball.printList();
-        System.out.println("");
+        System.out.println("                                        " +
+                "[ composite : getFullCategory() : 打印HollowBall被分类的路径 ]");
         GymnasticsExhibitionBall.getFullCategory();
 
         System.out.println("------------------------ END ------------------------");
@@ -328,26 +354,43 @@ public class Main {
         SportsMan man;
         SportsManView testView=new SportsManView();
 
+        System.out.println("                                        " +
+                "[ Iterator : hasNext() : 判断集合中是否有下一个元素 ]");
         while (it.hasNext()) {
              // 利用controller来遍历所有的运动员，并且用View来打印输出运动员的信息。
+            System.out.println("                                        " +
+                    "[ Iterator : next() : 返回下一个 SportsMan 对象 ]");
             man = (SportsMan) it.next();
             SportsManController testController=new SportsManController(man,testView);
 
+            System.out.println("                                        " +
+                    "[ MVC : printDetails() : 打印 SportsMan 具体信息 ]");
             testController.printDetails(testController.getManName(),testController.getManAge());
         }
-
+        System.out.println("                                        " +
+                "[ Iterator : iterator() : 返回一个 Menuiterator 对象 ]");
         MenuIterator its=manCollection.iterator();
+        System.out.println("                                        " +
+                "[ Iterator : next() : 返回下一个 SportsMan 对象 ]");
         man = (SportsMan) its.next();
+
         SportsManController testController=new SportsManController(man,testView);
         System.out.println("----------------");
          // 利用controller来改变对应运动员的信息。
+        System.out.println("                                        " +
+                "[ MVC : printDetails() : 打印 SportsMan 具体信息 ]");
         testController.printDetails(testController.getManName(),testController.getManAge());
 
 
         System.out.println("----------------");
+        System.out.println("                                        " +
+                "[ MVC : setManAge() : 设置 SportsMan 年龄 ]");
         testController.setManAge(56);
+        System.out.println("                                        " +
+                "[ MVC : setManName() : 设置 SportsMan 姓名 ]");
         testController.setManName("HEARLY");
-
+        System.out.println("                                        " +
+                "[ MVC : printDetails() : 打印 SportsMan 具体信息 ]");
         testController.printDetails(testController.getManName(),testController.getManAge());
 
         System.out.println("------------------------ END ------------------------");
@@ -358,13 +401,19 @@ public class Main {
 
         FrontController start=new FrontController();
         //代表验证管理员身份
+        System.out.println("                                        " +
+                "[ FrontController : identityVerification() : 辨识使用者的身份 ]");
         start.identityVerification("root");
         System.out.println("");
         //代表验证运动员身份
+        System.out.println("                                        " +
+                "[ FrontController : identityVerification() : 辨识使用者的身份 ]");
         start.identityVerification("Healy");
         System.out.println("");
 
         //代表验证其他人身份
+        System.out.println("                                        " +
+                "[ FrontController : identityVerification() : 辨识使用者的身份 ]");
         start.identityVerification("people");
         System.out.println("");
         System.out.println("------------------------ END ------------------------");

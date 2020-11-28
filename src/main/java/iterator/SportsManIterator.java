@@ -8,6 +8,10 @@ public class SportsManIterator implements MenuIterator<SportsMan>{
     private ManCollection sportsMan;
     private int index;
 
+    /**
+     * 构造函数
+     * @param Shelf
+     */
     public SportsManIterator(ManCollection Shelf) {
         this.sportsMan = Shelf;
         this.index = 0;

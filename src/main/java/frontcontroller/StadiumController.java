@@ -8,7 +8,11 @@ public class StadiumController {
     private StadiumDirector model;
     private StadiumView view;
 
-
+    /**
+     * 构造函数
+     * @param model
+     * @param view
+     */
     public StadiumController(StadiumDirector model, StadiumView view)
     {
         this.model=model;
