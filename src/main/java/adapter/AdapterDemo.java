@@ -25,10 +25,10 @@ public class AdapterDemo {
     private boolean transactionLogin(int userOption) {
 
         System.out.println("                                        " +
-                "[ payerRegistry : get() : 从支付方式链表中获取一个支付方法实例 ]");
+                "[ payerRegistry : get(int userOption) : 从支付方式链表中获取一个支付方法实例 ]");
         Payment payer = payerRegistry.get(userOption-1);
         System.out.println("                                        " +
-                "[ Payment : login() : 登录相对应的系统 ]");
+                "[ Payment : login(String id,String password) : 登录相对应的系统 ]");
         boolean loginStatus = payer.login("test1","4567");
         if(loginStatus==false){
             System.out.println("账号：test1,密码：4567 登陆失败！\n");
@@ -38,7 +38,7 @@ public class AdapterDemo {
         }
 
         System.out.println("                                        " +
-                "[ Payment : login() : 登录相对应的系统 ]");
+                "[ Payment : login(String id,String password) : 登录相对应的系统 ]");
         loginStatus=payer.login("test2","1234");
         if(loginStatus==false){
             System.out.println("账号：test2,密码：1234 登陆失败！\n");
@@ -52,11 +52,11 @@ public class AdapterDemo {
 
     private boolean transactionPay(int userOption){
         System.out.println("                                        " +
-                "[ payerRegistry : get() : 从支付方法队列中获取一个支付方法实例 ]");
+                "[ payerRegistry : get(int userOption) : 从支付方法队列中获取一个支付方法实例 ]");
         Payment payer = payerRegistry.get(userOption-1);
 
         System.out.println("                                        " +
-                "[ Payment : pay() : 调用相对应系统的支付功能 ]");
+                "[ Payment : pay(int amount) : 调用相对应系统的支付功能 ]");
         System.out.println("支付100000元！\n");
         boolean payStatus = payer.pay(100000);
         if (payStatus) {
@@ -66,7 +66,7 @@ public class AdapterDemo {
             System.out.println("支付失败！单笔交易不能超过"+payer.getLimits()+"元！\n");
         }
         System.out.println("                                        " +
-                "[ Payment : pay() : 调用相对应系统的支付功能 ]");
+                "[ Payment : pay(int amount) : 调用相对应系统的支付功能 ]");
         payStatus = payer.pay(100);
 
         System.out.println("支付100元！\n");
