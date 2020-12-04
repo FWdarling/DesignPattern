@@ -6,6 +6,10 @@ public class FacebookInformationSender extends InformationSender {
         this.informationSender = informationSender;
     }
 
+    /**
+     * 发送信息
+     * @param message 信息内容
+     */
     @Override
     public void sendInformation(String message) {
         //获取相应的wrapper

@@ -80,7 +80,7 @@ import java.util.List;
 import static specification.SelectorDemo.boxingSelector;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         System.out.println("---------------- 初始 & 通用场景构建 ----------------\n\n");
 
@@ -201,21 +201,25 @@ public class Main {
         System.out.println("---------------- [Pattern] PrivateClassData ----------------");
         Player myPlayer=new Player();
         //初始化运动员信息
+        System.out.println("                                        [ Player : initPlayerData() : 初始化运动信息 ]");
         myPlayer.initPlayerData();
         PlayerData myData=myPlayer.playerData;
-        System.out.println(myData.getPlayerId());
-        System.out.println(myData.getPlayerName());
-        System.out.println(myData.getPlayerType());
+        System.out.println("初始化时运动员ID ："+myData.getPlayerId());
+        System.out.println("初始化时运动员名字 ：" + myData.getPlayerName());
+        System.out.println("初始化时运动员比赛类型 ：" + myData.getPlayerType());
 
         //设置运动员信息
+        System.out.println("                                        [ PlayerData : setPlayerID() : 修改寻动员ID ]");
+        System.out.println("                                        [ PlayerData : setPlayerName() : 修改运动员姓名 ]");
+        System.out.println("                                        [ PlayerData : setPlayerType() : 修改运动比赛类型 ]");
         myData.setPlayerId("CNN1");
         myData.setPlayerName("KiKi");
         myData.setPlayerType("Monkey");
 
         //检查输出
-        System.out.println(myPlayer.playerData.getPlayerId());
-        System.out.println(myPlayer.playerData.getPlayerName());
-        System.out.println(myPlayer.playerData.getPlayerType());
+        System.out.println("修改后运动员ID ：" + myPlayer.playerData.getPlayerId());
+        System.out.println("修改后运动员姓名 ：" + myPlayer.playerData.getPlayerName());
+        System.out.println("修改后运动员比赛类型 ：" + myPlayer.playerData.getPlayerType());
         System.out.println("------------------------ END ------------------------");
         System.out.println("");
 
