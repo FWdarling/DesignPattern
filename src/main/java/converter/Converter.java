@@ -21,15 +21,45 @@ public class Converter<T,U> {
      **/
     private Function<U,T> toDTO;
 
+    /**
+     Constructor for Converter.
+
+     Args:
+        final Function<TransactionDTO, TransactionVO> fromDTO: A specific function that convert DTO to VO.
+        final TransactionConverter.TransactiontoDTO toDTO:A specific function that convert VO to DTO.
+
+     Return:
+     **/
     public Converter(final Function<TransactionDTO, TransactionVO> fromDTO, final TransactionConverter.TransactiontoDTO toDTO){
         this.fromDTO= (Function<T, U>) fromDTO;
         this.toDTO= (Function<U, T>) toDTO;
     }
 
+    /**
+     The universal interface for the different application of the specific conversion from DTO to VO,the interface is exposed
+     to the users and the real implementation is in the fromDTO function.
+
+     Args:
+        DTO
+
+     Return:
+        VO
+     **/
     public final U convertFromDTO(final T DTO){
         return fromDTO.apply(DTO);
     }
 
+
+    /**
+     The universal interface for the different application of the specific conversion from VO to DTO,the interface is exposed
+     to the users and the real implementation is in the toDTO function.
+
+     Args:
+        VO
+
+     Return:
+        DTO
+     **/
     public final T convertToDTO(final U VO){
         return toDTO.apply(VO);
     }

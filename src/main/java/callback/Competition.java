@@ -13,10 +13,31 @@ import java.util.Random;
 public class Competition extends Task {
     private ScoreBoard scoreBoard;
 
+    /**
+     Constructor of the Competition.
+
+     Args:
+        ScoreBoard scoreBoard: An object to record the competition results.
+
+     Return:
+     */
     public Competition(ScoreBoard scoreBoard){
         this.scoreBoard = scoreBoard;
     }
 
+    /**
+     exec is an abstract function to be defined by users, in the callback design patterns. The process is mainly devides into
+     2 parts, first part is to finish a defined action which is implemented in exec. After finishing the exec function, then
+     the callback procedure will be called, and conduct the callback actions.
+
+     Args:
+
+     Return Value:
+
+     Example:
+     >> exec();
+     >> callback();
+     **/
     @Override
     public void exec(){
         Random random=new Random();

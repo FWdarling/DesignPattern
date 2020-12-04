@@ -6,7 +6,16 @@ public abstract class EquipmentRoom{
 
     protected EquipmentRoom parent;
 
+    /**
+     * 获取详细分类路劲
+     * @return
+     */
     public abstract String getCategory();
+
+    /**
+     * 获取当前物品或者分类下的价值综合
+     * @return
+     */
     public abstract int getValue();
 
     /**
@@ -19,13 +28,24 @@ public abstract class EquipmentRoom{
         return null;
     }
 
+    /**
+     * 调用抽象函数
+     */
     public void printList()
     {
         printList("");
     }
 
+    /**
+     * 打印当前物品或者分类下的所有信息
+     * @param Type
+     */
     protected abstract void printList(String Type);
 
+    /**
+     * 重写输出函数
+     * @return
+     */
     public String toString()
     {
         return getCategory()+"["+getValue()+"]";

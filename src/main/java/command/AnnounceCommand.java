@@ -10,6 +10,9 @@ public class AnnounceCommand implements Command{
         _referee=referee;_athlete=athlete;
     }
 
+    /**
+     * 命令的执行函数，裁判员发令
+     */
     @Override
     public void execute(){
         System.out.println("裁判"+_referee.getName()+"向运动员"+ _athlete.getName()+"发令起跑");

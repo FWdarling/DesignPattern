@@ -6,7 +6,11 @@ public class ScoreBoardController {
     private ScoreBoard model;
     private ScoreBoardView view;
 
-
+    /**
+     * 构造函数
+     * @param model
+     * @param view
+     */
     public ScoreBoardController(ScoreBoard model,ScoreBoardView view) {
         this.model=model;
         this.view=view;

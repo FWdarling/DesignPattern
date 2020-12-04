@@ -13,9 +13,28 @@ public class GetScoreBoard implements Callback{
 
     private ScoreBoard scoreBoard;
 
+    /**
+     Construct for GetScoreBoard.
+
+     Args:
+        ScoreBoard scoreBoard: An object to store the competition results.
+     */
     public GetScoreBoard(ScoreBoard scoreBoard){
         this.scoreBoard = scoreBoard;
     }
+
+    /**
+     callback is called when a process comes to an end. It will callback therefore to inform the caller. The call function
+     is used to realize the specific process of a unique callback procedure.
+
+     Args:
+
+     Return Value:
+
+     Example:
+     >> Callback callback = new Callback();
+     >> callback.call();
+     **/
     @Override
     public void call(){
         System.out.println("最新的排行榜：\n");
