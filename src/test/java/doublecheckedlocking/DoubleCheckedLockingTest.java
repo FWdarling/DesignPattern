@@ -20,6 +20,7 @@ public class DoubleCheckedLockingTest {
         }
 
         for(MyThread thread : threads){
+
             thread.run();
         }
         System.out.println("------------------------ END ------------------------");

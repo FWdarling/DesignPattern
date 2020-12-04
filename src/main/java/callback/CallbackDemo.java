@@ -17,6 +17,8 @@ public class CallbackDemo {
 
         for(int i=0;i<5;i++){
             Competition competition = new Competition(scoreBoard);
+            System.out.println("                                        " +
+                    "[ Competition : executer(GetScoreBoard getScoreBoard) : 调用一个回调模式的工作流 ]");
             competition.executer(getScoreBoard);
         }
 

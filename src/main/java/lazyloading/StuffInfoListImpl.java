@@ -19,6 +19,14 @@ public class StuffInfoListImpl implements StuffInfoList {
         return getStuff();
     }
 
+    /**
+     The function simulates the process of loading the stuff list from the database or somewhere that is time-consuming.
+
+     Args:
+
+     Return:
+        ArrayList<Stuff>
+     **/
     private static ArrayList<Stuff> getStuff(){
         ArrayList<Stuff> stuffList=new ArrayList<Stuff>();
         stuffList.add(new Stuff("Ash","male",001,100000));

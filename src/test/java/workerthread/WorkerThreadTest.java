@@ -1,6 +1,5 @@
 package workerthread;
 
-
 import org.junit.Test;
 
 public class WorkerThreadTest {
@@ -15,19 +14,23 @@ public class WorkerThreadTest {
         RunnerThread t2 = new RunnerThread("Four", checkPoint);
         RunnerThread t3 = new RunnerThread("Wood", checkPoint);
 
-        t1.start();
-        t2.start();
-        t3.start();
-
-        // 等待所有线程结束
+        // 开始并等待所有 Runner 线程结束
         try {
+            t1.start();
+            t2.start();
+            t3.start();
+
             t1.join();
             t2.join();
             t3.join();
         }
         catch (Exception e) {
-
+            e.printStackTrace();
         }
-        System.out.println("------------------------ END ------------------------");
+        finally {
+            // 手动结束所有的 Volunteer 线程
+            checkPoint.stopVolunteer();
+            System.out.println("------------------------ END ------------------------");
+        }
     }
 }

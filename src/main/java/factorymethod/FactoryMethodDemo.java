@@ -16,9 +16,14 @@ public class FactoryMethodDemo {
      */
     public static void runFactoryMethodDemo(){
         RaceScorer raceScorer = new RaceScorer();
+
+        System.out.println("                                        [ RaceScorer : addResult(String name) : 赛跑记分员创建并添加运动员的成绩单 ]");
+
         raceScorer.addResult("Abby");
         raceScorer.addResult("Bob");
         raceScorer.addResult("Cindy");
+
+        System.out.println("                                        [ ShootingScorer : addResult(String name) : 射击记分员创建并添加运动员的成绩单 ]");
 
         ShootingScorer shootingScorer = new ShootingScorer();
         shootingScorer.addResult("Abby");

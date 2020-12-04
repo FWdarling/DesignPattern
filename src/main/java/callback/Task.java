@@ -7,9 +7,21 @@ package callback;
  * @Modified By:
  **/
 public abstract class Task {
+    /**
+     The workflow of the whole process, in the first part of the workflow, a function is conducted. The callback process
+     takes place when the first-part function is completed.
+
+     Args:
+        Callback
+
+     Return:
+
+     **/
     public void executer(Callback callback){
         exec();
         if(callback != null){
+            System.out.println("                                        " +
+                    "[ Callback : callback() : 调用回调函数 ]");
             callback.call();
         }
     }

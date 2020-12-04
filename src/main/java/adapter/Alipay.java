@@ -10,11 +10,29 @@ package adapter;
 public class Alipay {
     private double limits=10000;
 
+    /**
+     Get the limits of a single transaction which is platform-dependent.
+
+     Args:
+
+     Return:
+     double
+     **/
     public double getLimitAmount(){
         return limits;
     }
 
-    public boolean validation(String aliAcount,String password){
+    /**
+     The login interface provided by the simulated Alipay.The function is to get the user's input and confirm the identity.
+
+     Args:
+        String aliAccount:Account information
+        String password:password information
+
+     Return:
+        boolean:whether the login is successful.
+     **/
+    public boolean validation(String aliAccount,String password){
         if(password.equals("1234")){
             return true;
         }
@@ -22,6 +40,17 @@ public class Alipay {
             return false;
         }
     }
+
+    /**
+     The interface to pay the bill provided by Alipay.
+
+     Args:
+        String aliAccount: User's Account
+        double amount: The amount of the bill
+
+     Return:
+        boolean:Whether the payment is successful.
+     **/
     public boolean payBill(String aliAccount,double amount){
         if(amount>10000){
             return false;

@@ -18,6 +18,15 @@ public class TransactionConverter extends Converter<TransactionDTO,TransactionVO
 
     static class TransactionfromDTO implements Function<TransactionDTO,TransactionVO>{
 
+        /**
+         Read implementation of the conversion from DTO(Data Transfer Object) to VO(Visual Object).
+
+         Args:
+            TransactionDTO
+
+         Return:
+            TransactionVO
+         **/
         @Override
         public TransactionVO apply(TransactionDTO dto){
             String account=dto.getAccount();
@@ -35,6 +44,15 @@ public class TransactionConverter extends Converter<TransactionDTO,TransactionVO
 
     static class TransactiontoDTO implements Function<TransactionVO, TransactionDTO> {
 
+        /**
+         Read implementation of the conversion from VO(Visual Object) to DTO(Data Transfer Obeject).
+
+         Args:
+         TransactionVO
+
+         Return:
+         TransactionDTO
+         **/
         @Override
         public TransactionDTO apply(TransactionVO vo){
             String account=vo.getAccount();

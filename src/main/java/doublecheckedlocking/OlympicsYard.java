@@ -12,7 +12,9 @@ public class OlympicsYard {
     private final static Object _mutex = new Object();
 
 
+    //静态方法获取OlympicsYard实例，若当前未完成初始化则调用init()进行初始化
     public static OlympicsYard getInstance() {
+
         if(_instance == null) {
             //若有多个线程同时发现当前_instance为null，可能出现多个进程同时通过if条件进入if()语句体内
             synchronized (_mutex){
@@ -30,10 +32,10 @@ public class OlympicsYard {
         return _instance;
     }
 
+    //初始化OlympicsYard对象
     public static OlympicsYard init() {
         OlympicsYard olympicsYard = new OlympicsYard();
 
-        //其他初始化操作
         return olympicsYard;
     }
 

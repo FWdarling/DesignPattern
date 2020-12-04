@@ -42,27 +42,49 @@ public class RelayRaceAthlete extends Athlete {
     //    第几棒
     int number;
 
+    /**
+     * 获取运动员当前位置
+     *
+     * @return 距离起点长度
+     */
     public double getDistance() {
         return distance;
     }
 
+    /**
+     * 设置运动员起跑位置
+     *
+     * @param distance 距离起点长度
+     */
     public void setDistance(double distance) {
         this.distance = distance;
     }
 
+    /**
+     * 获取运动状态
+     *
+     * @return 是否在运动中，true/false
+     */
     public boolean isMoving() {
         return isMoving;
     }
 
+    /**
+     * 设置运动状态
+     *
+     * @param moving 是否在运动中，true/false
+     */
     public void setMoving(boolean moving) {
         isMoving = moving;
     }
 
+    /**
+     * 获取速度
+     *
+     * @return 速度
+     */
     public double getSpeed() {
         return speed;
     }
 
-    public void setSpeed(double speed) {
-        this.speed = speed;
-    }
 }

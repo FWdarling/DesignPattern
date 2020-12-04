@@ -8,6 +8,10 @@ public class ManCollection implements Aggregate {
     private int last = 0;
     //last用来指向数组的最后一个元素。
 
+    /**
+     * 构造函数运动员集合
+     * @param maxsize
+     */
     public ManCollection(int maxsize) {
         this.men = new SportsMan[maxsize];
     }
@@ -16,6 +20,10 @@ public class ManCollection implements Aggregate {
         return men[index];
     }
 
+    /**
+     * 添加运动员
+     * @param man
+     */
     public void appendMan(SportsMan man) {
         this.men[last] = man;
         last++;
@@ -30,6 +38,11 @@ public class ManCollection implements Aggregate {
     }
 
     //类似标准iterator返回一个迭代器。
+
+    /**
+     * 类似标准iterator返回一个迭代器。
+     * @return
+     */
     public MenuIterator iterator() {
         return new SportsManIterator(this);
     }

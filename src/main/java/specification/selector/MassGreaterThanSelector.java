@@ -17,6 +17,11 @@ public class MassGreaterThanSelector extends AbstractSelector<Athlete> {
         this.mass = new Mass(mass);
     }
 
+    /**
+     * 规约：体重大于
+     * @param t Athlete
+     * @return boolean
+     */
     @Override
     public boolean test(Athlete t) {
         boolean result = t.getMass().greaterThan(mass);
